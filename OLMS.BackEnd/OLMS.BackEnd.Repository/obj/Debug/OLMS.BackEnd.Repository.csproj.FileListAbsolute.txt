@@ -1,0 +1,6 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Repository.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Repository.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.csprojResolveAssemblyReference.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.csproj.CoreCompileInputs.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.pdb
