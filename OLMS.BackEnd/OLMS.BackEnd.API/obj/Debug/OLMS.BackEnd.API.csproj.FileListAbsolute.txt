@@ -140,3 +140,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Service
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.ViewModel.pdb
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.ViewModel.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.csprojResolveAssemblyReference.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Cors.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.Cors.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.Cors.xml

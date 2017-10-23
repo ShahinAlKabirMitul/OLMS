@@ -20,6 +20,10 @@ namespace OLMS.BackEnd.Repository
         {
            // return true;
             student.Id = Guid.NewGuid().ToString();
+            student.Created = System.DateTime.Now;
+            student.CreatedBy = "Admin";
+            student.ModifiedBy = "Admin";
+            student.Modified = System.DateTime.Now;
             this.db.Students.Add(student);
             int saveChanges = this.db.SaveChanges();
             return saveChanges > 0;
