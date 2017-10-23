@@ -1,5 +1,10 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Service.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Service.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Service.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.SqlServer.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\obj\Debug\OLMS.BackEnd.Service.csprojResolveAssemblyReference.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\obj\Debug\OLMS.BackEnd.Service.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\obj\Debug\OLMS.BackEnd.Service.dll

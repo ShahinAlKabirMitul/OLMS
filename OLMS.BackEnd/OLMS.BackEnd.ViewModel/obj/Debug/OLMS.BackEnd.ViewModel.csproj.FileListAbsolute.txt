@@ -1,5 +1,10 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.ViewModel.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.ViewModel.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.ViewModel.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.SqlServer.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.pdb
