@@ -219,6 +219,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentQueryController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -297,6 +299,28 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OLMS.BackEnd.Model\OLMS.BackEnd.Model.csproj">
+      <Project>{58ea2036-f1b2-4f10-8ccb-021af3412f8f}</Project>
+      <Name>OLMS.BackEnd.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.Repository\OLMS.BackEnd.Repository.csproj">
+      <Project>{c9ac14ed-e03a-49ef-a14f-4de0ebe539b9}</Project>
+      <Name>OLMS.BackEnd.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.RequestModel\OLMS.BackEnd.RequestModel.csproj">
+      <Project>{4baeac20-5f00-45de-a694-5cd0dbac086c}</Project>
+      <Name>OLMS.BackEnd.RequestModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.Service\OLMS.BackEnd.Service.csproj">
+      <Project>{77c1cdfd-cfcb-46de-8e63-168560796fe0}</Project>
+      <Name>OLMS.BackEnd.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.ViewModel\OLMS.BackEnd.ViewModel.csproj">
+      <Project>{4fd5e648-e213-4fa0-8f06-a69b63f6ad3d}</Project>
+      <Name>OLMS.BackEnd.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

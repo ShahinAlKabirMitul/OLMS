@@ -9,3 +9,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.Ba
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Model.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Model.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Model.dll.config

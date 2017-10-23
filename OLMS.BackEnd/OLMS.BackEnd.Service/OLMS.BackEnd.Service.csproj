@@ -48,10 +48,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OLMS.BackEnd.Model\OLMS.BackEnd.Model.csproj">
+      <Project>{58ea2036-f1b2-4f10-8ccb-021af3412f8f}</Project>
+      <Name>OLMS.BackEnd.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.Repository\OLMS.BackEnd.Repository.csproj">
+      <Project>{c9ac14ed-e03a-49ef-a14f-4de0ebe539b9}</Project>
+      <Name>OLMS.BackEnd.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.RequestModel\OLMS.BackEnd.RequestModel.csproj">
+      <Project>{4baeac20-5f00-45de-a694-5cd0dbac086c}</Project>
+      <Name>OLMS.BackEnd.RequestModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OLMS.BackEnd.ViewModel\OLMS.BackEnd.ViewModel.csproj">
+      <Project>{4fd5e648-e213-4fa0-8f06-a69b63f6ad3d}</Project>
+      <Name>OLMS.BackEnd.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

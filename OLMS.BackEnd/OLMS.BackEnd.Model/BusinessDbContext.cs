@@ -15,6 +15,6 @@ namespace OLMS.BackEnd.Model
             
         }
 
-        private DbSet<Student> Students { set; get; }
+        public DbSet<Student> Students { set; get; }
     }
 }
