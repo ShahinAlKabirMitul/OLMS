@@ -1,3 +1,4 @@
+import { StudentRequestModel } from '../model/studentRequestModel';
 import { Student } from './../model/student';
 import { Injectable } from '@angular/core';
 
@@ -11,6 +12,12 @@ export class StudentService {
     console.log(student);
     const header=new Headers({'Content-Type':'application/json'}) 
     return this.http.post('http://localhost:58031/api/student',student,{headers : header});
+   }
+
+   Search(student:StudentRequestModel){
+    console.log(student);
+    const header=new Headers({'Content-Type':'application/json'}) 
+    return this.http.post('http://localhost:58031/api/studentquery',student,{headers : header});
    }
 
 }

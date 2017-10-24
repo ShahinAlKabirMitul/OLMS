@@ -1,3 +1,51 @@
-<p>
-  student-list works!
-</p>
+<h1>
+  Student List</h1>
+<div class="col-xl-12">
+  <form [formGroup]="studentList">
+
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" formControlName="name" id="name" class="form-control">
+                </div>
+              </div>
+         
+            <div class="col-xl-5">
+              <div class="form-group">
+                <label for="name">Address</label>
+                <input type="text" formControlName="address" id="name" class="form-control">
+              </div>
+            </div>
+            <div class="col-xl-2">
+              <button>Search</button>
+            </div>
+        </div>
+       
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-xl-12" formArrayName="studentsformArry">
+        <div class="row" *ngFor="let ingredientContol of studentList.get('studentsformArry').controls;let i=index " [formGroupName]="i"
+          style="margin-top: 10px">
+          <div class="col-xl-8">
+            <input type="text" formControlName="name" class="form-control">
+          </div>
+          <div class="col-xl-2">
+            <input type="text" formControlName="address" class="form-control">
+          </div>
+          
+        </div>
+        <hr>
+       
+
+      </div>
+    </div>
+
+
+
+  </form>
+</div>
