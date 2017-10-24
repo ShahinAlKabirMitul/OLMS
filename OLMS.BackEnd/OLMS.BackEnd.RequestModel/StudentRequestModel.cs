@@ -10,7 +10,7 @@ namespace OLMS.BackEnd.RequestModel
     {
         public StudentRequestModel()
         {
-            PerPageCount = 10;
+            PerPageCount = 2;
             Page = 1;
         }
 

@@ -19,8 +19,8 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit() {
    
-    this.search(this.studentReq);
-    
+   // this.search(this.studentReq);
+   this.search(this.studentReq);
   }
   search(studentReq){
     this.stuservice.Search(studentReq).subscribe((responese:Response)=>{
@@ -32,13 +32,20 @@ export class StudentListComponent implements OnInit {
   sort(property:string){
     this.studentReq.isAscending=! this.studentReq.isAscending;
     this.studentReq.orderBy=property;
-    this.stuservice.Search(this.studentReq).subscribe((responese:Response)=>{
-      console.log(responese);
-      this.student =responese.json();
-    } )
+    this.search(this.studentReq);
 
   }
  
-
+next(){
+this.studentReq.Page=this.studentReq.Page+1;
+this.search(this.studentReq);
+}
+pre(){
+  this.studentReq.Page=this.studentReq.Page-1;
+  if(this.studentReq.Page<1){
+    this.studentReq.Page=1;
+  }
+  this.search(this.studentReq);
+}
   
 }

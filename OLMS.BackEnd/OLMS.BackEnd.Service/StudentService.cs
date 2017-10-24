@@ -50,7 +50,7 @@ namespace OLMS.BackEnd.Service
                 }
             }
 
-            students = students.Skip((request.Page - 1) * 10).Take(request.PerPageCount);
+            students = students.Skip((request.Page - 1) * request.PerPageCount ).Take(request.PerPageCount);
 
             List<Student> list = students.ToList();
             return list;
