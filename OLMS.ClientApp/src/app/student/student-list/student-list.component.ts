@@ -1,3 +1,4 @@
+import { StudentRequestModel } from './../../model/studentRequestModel';
 import { Response } from '@angular/http';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Student } from '../../model/student';
@@ -10,45 +11,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-  studentList:FormGroup;
-  student:Student[]
-   students=new FormArray([]);
-  constructor(private stuService:StudentService) { }
+ 
+  student:Student[];
+  studentReq:StudentRequestModel=new StudentRequestModel('','')
+  
+  constructor(private stuservice:StudentService) { }
 
   ngOnInit() {
-    this.initForm();
-    this.search();
+   
+    this.search(this.studentReq);
     
   }
-  search(){
-   this.stuService.Search(this.studentList.value).subscribe((response:Response)=>{
-      console.log(response);
-      this.student=response.json();
-      console.log( this.student);
-      for(let stu of this.student){
-        console.log(stu.name);
-        this.students.push(
-          new FormGroup({
-            'name':new FormControl(stu["Name"]),
-            'address':new FormControl(stu["Address"])
-          })
-        );
-      }
-    
-   });
+  search(studentReq){
+    this.stuservice.Search(studentReq).subscribe((responese:Response)=>{
+      console.log(responese);
+      this.student =responese.json();
+    } )
+    console.log(studentReq);
   }
-  private initForm(){
-    let studentName='';
-    let address='';
-   
-    console.log('form init');
-   
-
-    this.studentList = new FormGroup({
-     'name':new FormControl(studentName),
-     'address':new FormControl(address),
-     'studentsformArry':this.students
-   });
+  sort(property:string){
+    this.studentReq.isAscending=! this.studentReq.isAscending;
+    this.studentReq.orderBy=property;
+    this.stuservice.Search(this.studentReq).subscribe((responese:Response)=>{
+      console.log(responese);
+      this.student =responese.json();
+    } )
 
   }
+ 
+
+  
 }
