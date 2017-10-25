@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OLMS.BackEnd.Model;
 using OLMS.BackEnd.Repository;
 using OLMS.BackEnd.RequestModel;
+using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.Service
 {
     public class StudentService
     {
-        private StudentRepository repository;
+        private BaseRepository<Student> repository;
         public StudentService()
         {
-            repository=new StudentRepository();
+            repository=new BaseRepository<Student>();
         }
 
         public bool add(Student student)
         {
             return repository.Add(student);
         }
-        public List<Student> Search(StudentRequestModel request)
+        public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
             IQueryable<Student> students = this.repository.Get();
 
@@ -52,8 +54,22 @@ namespace OLMS.BackEnd.Service
 
             students = students.Skip((request.Page - 1) * request.PerPageCount ).Take(request.PerPageCount);
 
-            List<Student> list = students.ToList();
+            List<StudentGridViewModel> list = students.ToList().ConvertAll(
+                student => new StudentGridViewModel(student)
+                );
+        
             return list;
+        }
+
+        public StudentDetailViewModel Detail(string id)
+        {
+            var student = repository.GetDetail(id);
+            if (student==null)
+            {
+                throw new ObjectNotFoundException();
+            }
+            return new StudentDetailViewModel(student);
+
         }
     }
 }
