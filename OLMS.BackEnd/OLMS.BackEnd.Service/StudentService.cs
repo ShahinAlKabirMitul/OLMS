@@ -19,7 +19,7 @@ namespace OLMS.BackEnd.Service
             repository=new BaseRepository<Student>();
         }
 
-        public bool add(Student student)
+        public bool Add(Student student)
         {
             return repository.Add(student);
         }

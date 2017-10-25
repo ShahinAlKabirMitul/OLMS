@@ -60,7 +60,7 @@ namespace OLMS.BackEnd.API.Areas.HelpPage.ModelDescriptions
             },
         };
 
-        // Modify this to add more default documentations.
+        // Modify this to Add more default documentations.
         private readonly IDictionary<Type, string> DefaultTypeDocumentation = new Dictionary<Type, string>
         {
             { typeof(Int16), "integer" },

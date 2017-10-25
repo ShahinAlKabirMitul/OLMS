@@ -20,7 +20,7 @@ namespace OLMS.BackEnd.API.Controllers
 
         public IHttpActionResult Post(Student student)
         {
-            bool add = studentService.add(student);
+            bool add = studentService.Add(student);
             return this.Ok(add);
         }
     }
