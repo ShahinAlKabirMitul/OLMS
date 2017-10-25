@@ -10,3 +10,5 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.pdb
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.AddStudentV1.resources
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csproj.GenerateResource.Cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.TeacherAdded.resources

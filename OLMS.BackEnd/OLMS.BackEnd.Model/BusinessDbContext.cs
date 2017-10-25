@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OLMS.BackEnd.Model.Students;
 
 namespace OLMS.BackEnd.Model
 {
@@ -16,5 +15,6 @@ namespace OLMS.BackEnd.Model
         }
 
         public DbSet<Student> Students { set; get; }
+        public DbSet<Teacher>  Teachers { set; get; }
     }
 }

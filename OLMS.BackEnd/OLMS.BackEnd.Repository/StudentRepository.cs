@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OLMS.BackEnd.Model;
-using OLMS.BackEnd.Model.Students;
 
 namespace OLMS.BackEnd.Repository
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OLMS.BackEnd.Model.Students;
+using OLMS.BackEnd.Model;
 using OLMS.BackEnd.Repository;
 using OLMS.BackEnd.RequestModel;
 

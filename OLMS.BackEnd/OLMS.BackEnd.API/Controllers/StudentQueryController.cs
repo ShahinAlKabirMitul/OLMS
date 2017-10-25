@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using OLMS.BackEnd.Model.Students;
+using OLMS.BackEnd.Model;
 using OLMS.BackEnd.RequestModel;
 using OLMS.BackEnd.Service;
 
