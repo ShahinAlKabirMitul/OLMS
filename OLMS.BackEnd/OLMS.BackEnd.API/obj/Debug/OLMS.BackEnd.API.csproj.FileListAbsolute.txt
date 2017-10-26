@@ -1,3 +1,6 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Newtonsoft.Json.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Repository.dll.config
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Net.Http.Formatting.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\ApplicationInsights.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\roslyn\csc.exe
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\roslyn\csc.exe.config
@@ -74,7 +77,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Secur
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Security.OAuth.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Security.Twitter.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Web.Infrastructure.dll
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Newtonsoft.Json.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Model.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Repository.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.RequestModel.dll
@@ -96,7 +98,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\WebGrease.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Model.pdb
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Model.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Repository.pdb
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Repository.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.RequestModel.pdb
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.RequestModel.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Service.pdb
@@ -105,7 +106,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.ViewMod
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.ViewModel.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Newtonsoft.Json.xml
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Net.Http.Formatting.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Helpers.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.WebHost.xml

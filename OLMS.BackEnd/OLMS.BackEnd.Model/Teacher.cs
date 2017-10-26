@@ -14,5 +14,8 @@ namespace OLMS.BackEnd.Model
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
+
+        [MaxLength(20)]
+        public string PhoneNo { get; set; }
     }
 }
