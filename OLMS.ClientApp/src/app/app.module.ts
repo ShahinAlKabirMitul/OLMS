@@ -1,3 +1,4 @@
+import { TeacherService } from './service/teacher.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { HttpModule } from '@angular/http';
@@ -42,7 +43,8 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     AppRoutingModule
   ],
   providers: [
-    StudentService
+    StudentService,
+    TeacherService
   ],
   bootstrap: [AppComponent]
 })

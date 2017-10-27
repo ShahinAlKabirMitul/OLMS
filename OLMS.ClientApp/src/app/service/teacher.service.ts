@@ -22,11 +22,11 @@ export class TeacherService {
    Search(student:StudentRequestModel){
     console.log(student);
     const header=new Headers({'Content-Type':'application/json'}) 
-    return this.http.post(this.baseUrl+'studentquery',student,{headers : header});
+    return this.http.post(this.baseUrl+'teacherquery',student,{headers : header});
    }
    getStudentById(id:string){
      let studentObj:Student;
-     return  this.http.get(this.baseUrl+'studentQuery/'+id).map((response:Response)=>{
+     return  this.http.get(this.baseUrl+'teacherquery/'+id).map((response:Response)=>{
         const student:Student=response.json();
         return student;
       })
