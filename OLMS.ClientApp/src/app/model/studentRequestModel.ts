@@ -9,6 +9,6 @@ export class StudentRequestModel{
      this.name=_name;
      this.phone=_phone;
      this.Page=1;
-     this.PerPageCount=2;
+     this.PerPageCount=10;
  }
 }

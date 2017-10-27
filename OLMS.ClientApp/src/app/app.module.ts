@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
 import { HttpModule } from '@angular/http';
 import { StudentService } from './service/student.service';
@@ -14,6 +15,9 @@ import { TeacherListComponent } from './teacher/teacher-list/teacher-list.compon
 import { TeacherEntryComponent } from './teacher/teacher-entry/teacher-entry.component';
 import { ClassListComponent } from './class/class-list/class-list.component';
 import { ClassEntryComponent } from './class/class-entry/class-entry.component';
+import { CourseListComponent } from './course/course-list/course-list.component';
+import { CourseEntryComponent } from './course/course-entry/course-entry.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +29,17 @@ import { ClassEntryComponent } from './class/class-entry/class-entry.component';
     TeacherEntryComponent,
     ClassListComponent,
     ClassEntryComponent,
+    CourseListComponent,
+    CourseEntryComponent,
+    DashbordComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [
     StudentService

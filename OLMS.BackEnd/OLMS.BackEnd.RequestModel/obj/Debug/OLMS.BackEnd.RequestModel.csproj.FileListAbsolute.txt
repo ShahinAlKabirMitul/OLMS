@@ -8,3 +8,4 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\Entit
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.csprojResolveAssemblyReference.cache

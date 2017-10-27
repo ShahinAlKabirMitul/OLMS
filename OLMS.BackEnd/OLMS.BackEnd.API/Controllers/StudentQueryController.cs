@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using OLMS.BackEnd.RequestModel;
 using OLMS.BackEnd.Service;
+using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.API.Controllers
 {
@@ -22,6 +23,12 @@ namespace OLMS.BackEnd.API.Controllers
             StudentService service = new StudentService();
             var students = service.Search(request);
             return this.Ok(students);
+        }
+
+        public StudentDetailViewModel Get(string id)
+        {
+            var data = _studentService.Detail(id);
+            return data;
         }
     }
 }

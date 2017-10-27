@@ -1,27 +1,50 @@
+import { Subscription } from 'rxjs/Rx';
+import { Student } from './../../model/student';
+
+import { ActivatedRoute, Router } from '@angular/router';
 import { Response } from '@angular/http';
 import { StudentService } from './../../service/student.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import 'rxjs/Rx';
 
 @Component({
   selector: 'app-student-entry',
   templateUrl: './student-entry.component.html',
   styleUrls: ['./student-entry.component.css']
 })
-export class StudentEntryComponent implements OnInit {
+export class StudentEntryComponent implements OnInit,OnDestroy {
   studentForm:FormGroup;
-  constructor(private studentService:StudentService) {
-
+  student:Student;
+  subscription:Subscription;
+  id;
+  constructor(private studentService:StudentService,
+    private router:Router, private route:ActivatedRoute) {
+      this.id= this.route.snapshot.paramMap.get('id');
+      if(this.id){
+        this.subscription= this.studentService.getStudentById(this.id).subscribe(sp=> {
+          this.student=sp
+          console.log(this.student);
+        });
+       
+      }
+      console.log(this.student);
    }
 
   ngOnInit() {
     this.initForm();
+    
+   
+  }
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
   }
   onSubmit(){
-    console.log(this.studentForm)
+    
     this.studentService.addStudnet(this.studentForm.value).subscribe((response:Response)=>{
-      console.log(response);
+     
     })
+    this.router.navigateByUrl('/student');
   }
   private initForm(){
     let studentName='';

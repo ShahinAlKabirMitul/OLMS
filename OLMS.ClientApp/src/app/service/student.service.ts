@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs/Rx';
 import { environment } from './../../environments/environment';
 
 
@@ -9,7 +10,7 @@ import { Http,Response,Headers } from '@angular/http';
 @Injectable()
 export class StudentService {
  baseUrl:string;
-
+ public selectStudent=new Subject<Student>();
   constructor(private http:Http) { 
   //  this.baseUrl='http://localhost:58031/api/';
     this.baseUrl=environment.api;
@@ -24,6 +25,14 @@ export class StudentService {
     console.log(student);
     const header=new Headers({'Content-Type':'application/json'}) 
     return this.http.post(this.baseUrl+'studentquery',student,{headers : header});
+   }
+   getStudentById(id:string){
+     let studentObj:Student;
+     return  this.http.get(this.baseUrl+'studentQuery/'+id).map((response:Response)=>{
+        const student:Student=response.json();
+        return student;
+      })
+      //return studentObj;
    }
 
 }

@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace OLMS.BackEnd.API.Controllers
 {
-    [Authorize]
+   
     public class ValuesController : ApiController
     {
         // GET api/values

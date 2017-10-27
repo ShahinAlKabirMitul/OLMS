@@ -2,60 +2,66 @@
   Student List</h1>
 <div class="col-xl-12">
   <form #f="ngForm" (ngSubmit)="search(f.value)">
-
+    <div class="row">
+        <div class="col-xl-12">
+            <P>
+                <a routerLink="/student/new" class="btn btn-primary">New Student</a>
+            </P>
+        </div>
+    </div>
     <div class="row">
       <div class="col-xl-12">
         <div class="row">
-            <div class="col-xl-5">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text"  [(ngModel)]="studentReq.name" name="name" id="name" class="form-control">
-                </div>
-              </div>
-              <div class="col-xl-5">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text"  [(ngModel)]="studentReq.phone" name="phone" id="phone" class="form-control">
-                </div>
-              </div>
-           
-            <div class="col-xl-2">
-              <button>Search</button>
+          <div class="col-xl-5">
+            <div class="form-group">
+
+              <input type="text" [(ngModel)]="studentReq.name" placeholder="Name.." name="name" id="name" class="form-control">
             </div>
+          </div>
+          <div class="col-xl-5">
+            <div class="form-group">
+
+              <input type="text" [(ngModel)]="studentReq.phone" placeholder="Phone..." name="phone" id="phone" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-xl-2">
+            <button class="btn btn-success" >Search</button>
+          </div>
         </div>
-       
+
+      </div>
     </div>
-  </div>
-  <div class="row" >
-   
-    <table class="table">
-      <thead>
-          <tr>
-              <td (click)="sort('name')" >Name  </td>
-              <td (click)="sort('phone')">Phone</td>
-              <td>Address</td>
-          </tr>
-      </thead>
-     <tbody>
-        <tr *ngFor="let stu of student">
-            <td>{{stu["Name"]}}</td>
-            <td>{{stu["Phone"]}}</td>
-            <td>{{stu["Address"]}}</td>
-          </tr>
-     </tbody>
-  
-    </table>
-    <button class="btn btn-primaty" (click)="pre()" >Pre</button>
-    <label for="">Current Page :{{studentReq.Page}}   </label>
-    <button class="btn btn-primaty" (click)="next()" >Next</button>
-  </div>
-  
-
-
-     
-
+    <hr>
+    <div class="row">
+      <div class="col-xl-12">
+          <table class="table">
+              <thead>
+                <tr>
+                  <td (click)="sort('name')">Name </td>
+                  <td (click)="sort('phone')">Phone</td>
+                  <td>Address</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let stu of student">
+                  <td>{{stu["Name"]}}</td>
+                  <td>{{stu["Phone"]}}</td>
+                  <td>{{stu["Id"]}}</td>
+                  <td>
+                      <button class="btn btn-info" (click)= "editStudent(stu)" >Edit </button>
+                  </td>
+                </tr>
+              </tbody>
+      
+            </table>
+            <button class="btn btn-primaty btn-sm" (click)="pre()">Pre</button>
+            <label for="">Current Page :{{studentReq.Page}} </label>
+            <button class="btn btn-primaty btn-sm" (click)="next()">Next</button>
+      </div>
+      
     
-
+    </div>
 
 
   </form>
