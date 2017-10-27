@@ -20,8 +20,8 @@ namespace OLMS.BackEnd.API.Controllers
         }
         public IHttpActionResult Post(StudentRequestModel request)
         {
-            StudentService service = new StudentService();
-            var students = service.Search(request);
+           // StudentService service = new StudentService();
+            var students = _studentService.Search(request);
             return this.Ok(students);
         }
 
