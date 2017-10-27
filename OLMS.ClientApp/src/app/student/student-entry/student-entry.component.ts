@@ -1,43 +1,37 @@
-import { Subscription } from 'rxjs/Rx';
-import { Student } from './../../model/student';
-
+import { Student } from '../../model/student';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Response } from '@angular/http';
 import { StudentService } from './../../service/student.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import 'rxjs/Rx';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-student-entry',
   templateUrl: './student-entry.component.html',
   styleUrls: ['./student-entry.component.css']
 })
-export class StudentEntryComponent implements OnInit,OnDestroy {
+export class StudentEntryComponent implements OnInit {
   studentForm:FormGroup;
-  student:Student;
-  subscription:Subscription;
   id;
+  editMode:boolean;
+  student:Student;
   constructor(private studentService:StudentService,
     private router:Router, private route:ActivatedRoute) {
       this.id= this.route.snapshot.paramMap.get('id');
-      if(this.id){
-        this.subscription= this.studentService.getStudentById(this.id).subscribe(sp=> {
-          this.student=sp
-          console.log(this.student);
-        });
-       
-      }
-      console.log(this.student);
    }
 
   ngOnInit() {
     this.initForm();
-    
-   
-  }
-  ngOnDestroy(){
-    this.subscription.unsubscribe();
+    if(this.id){
+      this.editMode=true;
+      this.studentService.getStudentById(this.id).subscribe(s=>{
+         this.editMode=true;
+         this.student=s;
+         console.log(s);
+         
+         this.initForm();
+      });
+    }
   }
   onSubmit(){
     
@@ -47,9 +41,15 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
     this.router.navigateByUrl('/student');
   }
   private initForm(){
+
     let studentName='';
     let address='';
     let phone='';
+    if(this.editMode){
+      studentName=this.student["Name"];
+      address=this.student["Address"];
+      phone=this.student["Phone"];
+    }
     this.studentForm = new FormGroup({
      'name':new FormControl(studentName,Validators.required),
      'address':new FormControl(address,Validators.required),

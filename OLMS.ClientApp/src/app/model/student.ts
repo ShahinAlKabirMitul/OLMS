@@ -3,4 +3,5 @@ export class Student{
     public address:string;
     public phone :string;
     public id :string;
+   
 }

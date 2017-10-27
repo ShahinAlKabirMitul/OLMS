@@ -1,7 +1,7 @@
+import { StudentRequestModel } from './../../request.model/studentRequestModel';
 import { of } from 'rxjs/observable/of';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router } from '@angular/router';
-import { StudentRequestModel } from './../../model/studentRequestModel';
 import { Response } from '@angular/http';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Student } from '../../model/student';
@@ -18,7 +18,9 @@ export class StudentListComponent implements OnInit {
   student:Student[];
   studentReq:StudentRequestModel=new StudentRequestModel('','')
   
-  constructor(private stuservice:StudentService,private router:Router) { }
+  constructor(private stuservice:StudentService,private router:Router) {
+    
+   }
 
   ngOnInit() {
    
@@ -45,13 +47,13 @@ export class StudentListComponent implements OnInit {
   }
  
 next(){
-this.studentReq.Page=this.studentReq.Page+1;
+this.studentReq.page=this.studentReq.page+1;
 this.search(this.studentReq);
 }
 pre(){
-  this.studentReq.Page=this.studentReq.Page-1;
-  if(this.studentReq.Page<1){
-    this.studentReq.Page=1;
+  this.studentReq.page=this.studentReq.page-1;
+  if(this.studentReq.page<1){
+    this.studentReq.page=1;
   }
   this.search(this.studentReq);
 }
