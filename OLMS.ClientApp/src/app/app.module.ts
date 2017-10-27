@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { StudentEntryComponent } from './student/student-entry/student-entry.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TeacherListComponent } from './teacher/teacher-list/teacher-list.component';
+import { TeacherEntryComponent } from './teacher/teacher-entry/teacher-entry.component';
+import { ClassListComponent } from './class/class-list/class-list.component';
+import { ClassEntryComponent } from './class/class-entry/class-entry.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     StudentEntryComponent,
     StudentListComponent,
     NavbarComponent,
+    TeacherListComponent,
+    TeacherEntryComponent,
+    ClassListComponent,
+    ClassEntryComponent,
     
   ],
   imports: [
