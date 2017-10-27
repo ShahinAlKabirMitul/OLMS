@@ -6,7 +6,7 @@ export class BaseRequestModel{
 
    constructor( ){
    this.page=1;
-   this.perPageCount=10;
+   this.perPageCount=5;
     
 }
 }

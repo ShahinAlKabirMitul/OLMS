@@ -13,7 +13,7 @@ export class StudentService {
   //  this.baseUrl='http://localhost:58031/api/';
     this.baseUrl=environment.api;
   }
-  addStudnet(student:Student){
+   addStudnet(student:Student){
     console.log(student);
     const header=new Headers({'Content-Type':'application/json'}) 
     return this.http.post(this.baseUrl+'student',student,{headers : header});

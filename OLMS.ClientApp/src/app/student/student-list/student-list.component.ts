@@ -16,10 +16,10 @@ import { Component, OnInit } from '@angular/core';
 export class StudentListComponent implements OnInit {
  
   student:Student[];
-  studentReq:StudentRequestModel=new StudentRequestModel('','')
+  studentReq:StudentRequestModel;
   
   constructor(private stuservice:StudentService,private router:Router) {
-    
+    this.studentReq=new StudentRequestModel('','');
    }
 
   ngOnInit() {
@@ -48,6 +48,7 @@ export class StudentListComponent implements OnInit {
  
 next(){
 this.studentReq.page=this.studentReq.page+1;
+
 this.search(this.studentReq);
 }
 pre(){

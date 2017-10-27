@@ -1,3 +1,5 @@
+import { TeacherRequestModel } from './../request.model/teacher.request.model';
+import { Teacher } from '../model/teacher';
 import { StudentRequestModel } from './../request.model/studentRequestModel';
 
 import { Student } from './../model/student';
@@ -13,16 +15,18 @@ export class TeacherService {
   //  this.baseUrl='http://localhost:58031/api/';
     this.baseUrl=environment.api;
   }
-  addStudnet(student:Student){
-    console.log(student);
+   addStudnet(teacher:Teacher){
+    console.log(teacher);
     const header=new Headers({'Content-Type':'application/json'}) 
-    return this.http.post(this.baseUrl+'student',student,{headers : header});
+    let result=  this.http.post(this.baseUrl+'Teacher',teacher,{headers : header});
+    console.log(result);
+    return result;
    }
 
-   Search(student:StudentRequestModel){
-    console.log(student);
+   Search(teacher:TeacherRequestModel){
+    console.log(teacher);
     const header=new Headers({'Content-Type':'application/json'}) 
-    return this.http.post(this.baseUrl+'teacherquery',student,{headers : header});
+    return this.http.post(this.baseUrl+'teacherquery',teacher,{headers : header});
    }
    getStudentById(id:string){
      let studentObj:Student;

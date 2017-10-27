@@ -4,7 +4,7 @@
     {
         public BaseRequestModel()
         {
-            PerPageCount = 10;
+            PerPageCount = 5;
             Page = 1;
         }
         public int Page { get; set; }

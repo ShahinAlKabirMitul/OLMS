@@ -1,3 +1,4 @@
+import { TeacherEntryComponent } from '../teacher/teacher-entry/teacher-entry.component';
 import { StudentEntryComponent } from '../student/student-entry/student-entry.component';
 import { DashbordComponent } from '../dashbord/dashbord.component';
 import { CourseListComponent } from './../course/course-list/course-list.component';
@@ -15,6 +16,8 @@ const appRouting:Routes=[
   {path:'student/new',component:StudentEntryComponent},
   {path:'student/:id',component:StudentEntryComponent},
   {path:'teacher',component:TeacherListComponent},
+  {path:'teacher/new',component:TeacherEntryComponent},
+  {path:'teacher/:id',component:TeacherEntryComponent},
   {path:'class',component:ClassListComponent},
   {path:'course',component:CourseListComponent},
  
