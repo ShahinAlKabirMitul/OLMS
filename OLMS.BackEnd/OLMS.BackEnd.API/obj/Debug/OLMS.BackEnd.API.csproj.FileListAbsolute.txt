@@ -140,3 +140,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.A
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Cors.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.Cors.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.Cors.xml

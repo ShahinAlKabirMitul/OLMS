@@ -1,3 +1,4 @@
+
 import { HttpModule } from '@angular/http';
 import { StudentService } from './service/student.service';
 
@@ -13,7 +14,8 @@ import { StudentListComponent } from './student/student-list/student-list.compon
   declarations: [
     AppComponent,
     StudentEntryComponent,
-    StudentListComponent
+    StudentListComponent,
+    
   ],
   imports: [
     BrowserModule,
