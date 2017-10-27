@@ -12,7 +12,7 @@ import { Response } from '@angular/http';
 })
 export class TeacherListComponent implements OnInit {
 
-  student:Teacher[];
+  teacher:Teacher[];
   teacherRequestModel:TeacherRequestModel=new TeacherRequestModel('','')
   
   constructor(private teacherService:TeacherService,private router:Router) {
@@ -27,7 +27,9 @@ export class TeacherListComponent implements OnInit {
   search(teacherReq){
     this.teacherService.Search(teacherReq).subscribe((responese:Response)=>{
      
-      this.student =responese.json();
+      
+      this.teacher =responese.json();
+      console.log(this.teacher);
       
     } )
 
