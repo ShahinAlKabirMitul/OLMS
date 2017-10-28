@@ -1,40 +1,32 @@
+import { RepogitoryService } from '../common/repogitory.service';
+import { Teacher } from './../model/teacher';
+
 import { TeacherRequestModel } from './../request.model/teacher.request.model';
-import { Teacher } from '../model/teacher';
+
 import { StudentRequestModel } from './../request.model/studentRequestModel';
 
 import { Student } from './../model/student';
 import { environment } from './../../environments/environment';
-import { Http, Headers,Response} from '@angular/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TeacherService {
 
-  baseUrl:string;
-  constructor(private http:Http) { 
-  //  this.baseUrl='http://localhost:58031/api/';
-    this.baseUrl=environment.api;
+
+  constructor(private repo:RepogitoryService) { 
+   
   }
-   addStudnet(teacher:Teacher){
-    console.log(teacher);
-    const header=new Headers({'Content-Type':'application/json'}) 
-    let result=  this.http.post(this.baseUrl+'Teacher',teacher,{headers : header});
-    console.log(result);
-    return result;
+   add(teacher:Teacher){
+    return this.repo.post('teacher',teacher)
    }
 
-   Search(teacher:TeacherRequestModel){
-    console.log(teacher);
-    const header=new Headers({'Content-Type':'application/json'}) 
-    return this.http.post(this.baseUrl+'teacherquery',teacher,{headers : header});
+    Search(teacher:TeacherRequestModel) {
+    return this.repo.post('teacherquery',teacher);
    }
-   getStudentById(id:string){
+   getById(id:string){
      let studentObj:Student;
-     return  this.http.get(this.baseUrl+'teacherquery/'+id).map((response:Response)=>{
-        const student:Student=response.json();
-        return student;
-      })
-      //return studentObj;
+     return  this.repo.get('teacherquery',id);
+  
    }
 
 }

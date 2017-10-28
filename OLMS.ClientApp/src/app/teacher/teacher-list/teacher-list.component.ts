@@ -1,3 +1,4 @@
+import { async } from 'rxjs/scheduler/async';
 import { Router } from '@angular/router';
 import { TeacherService } from '../../service/teacher.service';
 import { TeacherRequestModel } from './../../request.model/teacher.request.model';
@@ -13,26 +14,19 @@ import { Response } from '@angular/http';
 export class TeacherListComponent implements OnInit {
 
   teacher:Teacher[];
+  bra$;
   teacherRequestModel:TeacherRequestModel=new TeacherRequestModel('','')
   
   constructor(private teacherService:TeacherService,private router:Router) {
-    
+  
    }
 
   ngOnInit() {
-   
-   // this.search(this.studentReq);
-   this.search(this.teacherRequestModel);
+  
   }
-  search(teacherReq){
-    this.teacherService.Search(teacherReq).subscribe((responese:Response)=>{
-     
-      
-      this.teacher =responese.json();
-      console.log(this.teacher);
-      
-    } )
+  async search(teacherReq){
 
+   await this.teacherService.Search(teacherReq).toPromise( ).then(s => this.teacher=s.json());
    
   
   }
@@ -47,12 +41,13 @@ export class TeacherListComponent implements OnInit {
  
 next(){
 this.teacherRequestModel.page=this.teacherRequestModel.page+1;
-this.search(this.teacherRequestModel);
+ this.search(this.teacherRequestModel);
 }
 pre(){
-  this.teacherRequestModel.page=this.teacherRequestModel.page-1;
-  if(this.teacherRequestModel.page<1){
-    this.teacherRequestModel.page=1;
+  
+  if(this.teacherRequestModel.page>1){
+    this.teacherRequestModel.page=this.teacherRequestModel.page-1;
+   
   }
   this.search(this.teacherRequestModel);
 }

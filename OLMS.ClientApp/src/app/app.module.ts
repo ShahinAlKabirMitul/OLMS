@@ -1,3 +1,4 @@
+import { RepogitoryService } from './common/repogitory.service';
 import { TeacherService } from './service/teacher.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -19,6 +20,7 @@ import { ClassEntryComponent } from './class/class-entry/class-entry.component';
 import { CourseListComponent } from './course/course-list/course-list.component';
 import { CourseEntryComponent } from './course/course-entry/course-entry.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { DashbordComponent } from './dashbord/dashbord.component';
   ],
   providers: [
     StudentService,
-    TeacherService
+    TeacherService,
+    RepogitoryService
+   
   ],
   bootstrap: [AppComponent]
 })

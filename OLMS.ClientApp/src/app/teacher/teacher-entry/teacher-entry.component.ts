@@ -1,3 +1,4 @@
+import { async } from 'rxjs/scheduler/async';
 import { Router } from '@angular/router';
 import { TeacherService } from './../../service/teacher.service';
 import { Teacher } from './../../model/teacher';
@@ -16,10 +17,9 @@ export class TeacherEntryComponent implements OnInit {
 
   ngOnInit() {
   }
-   save(){
-    console.log(this.teacher);
-   let result=  this.techerService.addStudnet(this.teacher).subscribe(s=>{
+  async save(){
+  
+    await this.techerService.add(this.teacher).toPromise();
     this.router.navigateByUrl('/teacher');
-   });
  }
 }
