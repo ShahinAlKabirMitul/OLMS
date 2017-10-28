@@ -1,20 +1,23 @@
+import { async } from '@angular/core/testing';
+import { Subscription } from 'rxjs/Rx';
 import { Student } from '../../model/student';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Response } from '@angular/http';
 import { StudentService } from './../../service/student.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-student-entry',
   templateUrl: './student-entry.component.html',
   styleUrls: ['./student-entry.component.css']
 })
-export class StudentEntryComponent implements OnInit {
+export class StudentEntryComponent implements OnInit,OnDestroy {
   studentForm:FormGroup;
   id;
   editMode:boolean;
   student:Student;
+  subscription=new Subscription();
   constructor(private studentService:StudentService,
     private router:Router, private route:ActivatedRoute) {
       this.id= this.route.snapshot.paramMap.get('id');
@@ -24,14 +27,17 @@ export class StudentEntryComponent implements OnInit {
     this.initForm();
     if(this.id){
       this.editMode=true;
-      this.studentService.getStudentById(this.id).subscribe(s=>{
+        this.subscription= this.studentService.getStudentById(this.id).subscribe( (s:Response) =>{
          this.editMode=true;
-         this.student=s;
+         this.student=s.json();
          console.log(s);
          
          this.initForm();
       });
     }
+  }
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
   }
   onSubmit(){
     
