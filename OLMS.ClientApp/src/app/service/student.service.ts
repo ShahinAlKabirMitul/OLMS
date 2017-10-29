@@ -8,7 +8,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class StudentService {
- baseUrl:string;
   constructor(private repo:RepogitoryService) { 
   }
    addStudnet(student:Student){

@@ -1,3 +1,4 @@
+import { BaseService } from './../common/base.service';
 import { RepogitoryService } from '../common/repogitory.service';
 import { Teacher } from './../model/teacher';
 
@@ -13,11 +14,11 @@ import { Injectable } from '@angular/core';
 export class TeacherService {
 
 
-  constructor(private repo:RepogitoryService) { 
+  constructor(private repo:RepogitoryService,private baseService:BaseService<Teacher>) { 
    
   }
    add(teacher:Teacher){
-    return this.repo.post('teacher',teacher)
+    return this.baseService.save(teacher,'teacher')
    }
 
     Search(teacher:TeacherRequestModel) {

@@ -1,5 +1,7 @@
-import { BaseModel } from './baseModel';
-export class Teacher extends BaseModel {
+import { Entity } from "./entity";
+
+
+export class Teacher extends Entity {
     public name:string;
     public address:string;
     public phoneNo :string;

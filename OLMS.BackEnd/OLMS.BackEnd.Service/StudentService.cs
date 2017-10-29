@@ -13,7 +13,7 @@ namespace OLMS.BackEnd.Service
 {
     public class StudentService
     {
-        private BaseRepository<Student> repository;
+        private IBaseRepository<Student> repository;
         public StudentService()
         {
             repository=new BaseRepository<Student>();

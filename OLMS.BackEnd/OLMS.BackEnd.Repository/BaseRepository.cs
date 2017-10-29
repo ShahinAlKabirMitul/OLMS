@@ -4,7 +4,7 @@ using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.Repository
 {
-    public class BaseRepository<T> where T:Entity
+    public class BaseRepository<T> : IBaseRepository<T> where T:Entity
     {
         protected readonly BusinessDbContext db;
 

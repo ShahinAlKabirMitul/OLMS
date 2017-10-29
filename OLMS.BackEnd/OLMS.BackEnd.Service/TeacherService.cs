@@ -13,7 +13,7 @@ namespace OLMS.BackEnd.Service
 {
    public class TeacherService
    {
-       private readonly BaseRepository<Teacher> _repository;
+       private readonly IBaseRepository<Teacher> _repository;
         public TeacherService()
         {
             _repository=new BaseRepository<Teacher>();
