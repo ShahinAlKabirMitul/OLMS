@@ -1,3 +1,4 @@
+import { UrlService } from '../common/url.service';
 import { BaseService } from './../common/base.service';
 import { RepogitoryService } from '../common/repogitory.service';
 import { Teacher } from './../model/teacher';
@@ -11,22 +12,16 @@ import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class TeacherService {
-
-
-  constructor(private repo:RepogitoryService,private baseService:BaseService<Teacher>) { 
+export class TeacherService extends BaseService<Teacher> {
+ 
+  constructor(public repo:RepogitoryService,public urlService:UrlService ){
    
+    super(repo,urlService.teacher);
+    
   }
-   add(teacher:Teacher){
-    return this.baseService.save(teacher,'teacher')
-   }
-
-    Search(teacher:TeacherRequestModel) {
-    return this.repo.post('teacherquery',teacher);
-   }
    getById(id:string){
      let studentObj:Student;
-     return  this.repo.get('teacherquery',id);
+     return  this.getDataById(id);
   
    }
 

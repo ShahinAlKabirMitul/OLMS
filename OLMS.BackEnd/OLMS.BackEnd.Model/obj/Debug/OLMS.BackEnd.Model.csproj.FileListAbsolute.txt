@@ -12,3 +12,4 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache

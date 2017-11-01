@@ -1,3 +1,5 @@
+import { UrlService } from './../common/url.service';
+import { BaseService } from '../common/base.service';
 import { RepogitoryService } from './../common/repogitory.service';
 import { StudentRequestModel } from './../request.model/studentRequestModel';
 import { Subject } from 'rxjs/Rx';
@@ -7,21 +9,10 @@ import { Student } from './../model/student';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class StudentService {
-  constructor(private repo:RepogitoryService) { 
+export class StudentService extends BaseService<Student> {
+  constructor(public repo:RepogitoryService,public urlService:UrlService) { 
+    super(repo,urlService.student);
   }
-   addStudnet(student:Student){
-    
-    return this.repo.post('student',student);
-   }
-
-   Search(student:StudentRequestModel){
-   
-    const header=new Headers({'Content-Type':'application/json'}) 
-    return this.repo.post('studentquery',student);
-   }
-   getStudentById(id:string){
-     return  this.repo.get('studentQuery/',id);
-   }
+  
 
 }

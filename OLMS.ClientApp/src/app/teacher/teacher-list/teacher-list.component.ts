@@ -26,7 +26,7 @@ export class TeacherListComponent implements OnInit {
   }
   async search(teacherReq){
 
-   await this.teacherService.Search(teacherReq).toPromise( ).then(s => this.teacher=s.json());
+   await this.teacherService.search(teacherReq).toPromise( ).then(s => this.teacher=s.json());
    
   
   }

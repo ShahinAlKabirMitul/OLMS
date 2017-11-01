@@ -1,3 +1,4 @@
+import { UrlService } from './common/url.service';
 import { RepogitoryService } from './common/repogitory.service';
 import { TeacherService } from './service/teacher.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -47,7 +48,8 @@ import { DashbordComponent } from './dashbord/dashbord.component';
   providers: [
     StudentService,
     TeacherService,
-    RepogitoryService
+    RepogitoryService,
+    UrlService
    
   ],
   bootstrap: [AppComponent]

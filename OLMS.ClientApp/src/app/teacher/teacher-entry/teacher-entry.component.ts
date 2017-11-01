@@ -19,7 +19,7 @@ export class TeacherEntryComponent implements OnInit {
   }
   async save(){
   
-    await this.techerService.add(this.teacher).toPromise();
+    await this.techerService.save(this.teacher).toPromise();
     this.router.navigateByUrl('/teacher');
  }
 }

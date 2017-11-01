@@ -28,7 +28,7 @@ export class StudentListComponent implements OnInit {
    this.search(this.studentReq);
   }
   search(studentReq){
-    this.stuservice.Search(studentReq).subscribe((responese:Response)=>{
+    this.stuservice.search(studentReq).subscribe((responese:Response)=>{
      
       this.student =responese.json();
       

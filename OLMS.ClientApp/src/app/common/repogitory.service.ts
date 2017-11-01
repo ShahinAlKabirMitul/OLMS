@@ -9,14 +9,15 @@ export class RepogitoryService {
   header=new Headers({'Content-Type':'application/json'}) 
   constructor(private http:Http) { 
     this.baseUrl=environment.api;
+    
   }
 
-  post(subUrl:string,entity:any){
-    return  this.http.post(this.baseUrl+subUrl,entity,{headers : this.header});
+  post(subUrl:string,data:any){
+    return  this.http.post(this.baseUrl+subUrl,data,{headers : this.header});
 
    }
 
-  get(subUrl:string,entity:any){
-    return this.http.get(this.baseUrl+subUrl+entity);
+  get(subUrl:string,data:any){
+    return this.http.get(this.baseUrl+subUrl+"/"+data);
   } 
 }
