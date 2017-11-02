@@ -27,9 +27,9 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
     this.initForm();
     if(this.id){
       this.editMode=true;
-        this.subscription= this.studentService.getDataById(this.id).subscribe( (s:Response) =>{
+        this.subscription= this.studentService.getDataById(this.id).subscribe( (s:any) =>{
          this.editMode=true;
-         this.model=s.json();
+         this.model=s;
          console.log(s);
          
          this.initForm();
@@ -52,9 +52,9 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
     let address='';
     let phone='';
     if(this.editMode){
-      studentName=this.model["Name"];
-      address=this.model["Address"];
-      phone=this.model["Phone"];
+      studentName=this.model.name;
+      address=this.model.address;
+      phone=this.model.phone;
     }
     this.studentForm = new FormGroup({
      'name':new FormControl(studentName,Validators.required),

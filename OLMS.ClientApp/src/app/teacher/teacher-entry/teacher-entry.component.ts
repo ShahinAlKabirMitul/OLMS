@@ -1,5 +1,9 @@
+import { any } from 'codelyzer/util/function';
+import { serialize } from '@angular/compiler/src/i18n/serializers/xml_helper';
+import { Response } from '@angular/http';
+import { Subscription } from 'rxjs/Rx';
 import { async } from 'rxjs/scheduler/async';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { TeacherService } from './../../service/teacher.service';
 import { Teacher } from './../../model/teacher';
 import { Component, OnInit } from '@angular/core';
@@ -10,16 +14,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teacher-entry.component.css']
 })
 export class TeacherEntryComponent implements OnInit {
-  teacher:Teacher;
-  constructor(private techerService:TeacherService,private router:Router) { 
-    this.teacher=new Teacher();
+  model:Teacher;
+  title='Teacher Entry';
+  id:string;
+  editMode:boolean;
+  subscription:Subscription;
+  constructor(private techerService:TeacherService,private router:Router,private route:ActivatedRoute) { 
+    this.model=new Teacher();
+    this.id= this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {
+    if(this.id){
+      this.editMode=true;
+        this.subscription= this.techerService.getDataById(this.id).subscribe( (data:any) =>{
+         this.editMode=true;
+         console.log(data);
+        this.model=data;
+        
+         
+         //this.initForm();
+      });
+    }
   }
   async save(){
   
-    await this.techerService.save(this.teacher).toPromise();
+    await this.techerService.save(this.model).toPromise();
     this.router.navigateByUrl('/teacher');
+ }
+ reset(){
+   this.model=new Teacher();
  }
 }

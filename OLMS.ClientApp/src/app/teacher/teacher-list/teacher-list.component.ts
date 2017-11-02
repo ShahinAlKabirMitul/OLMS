@@ -26,12 +26,15 @@ export class TeacherListComponent implements OnInit {
   }
   async search(teacherReq){
 
-   await this.teacherService.search(teacherReq).toPromise( ).then(s => this.teacher=s.json());
+   await this.teacherService.search(teacherReq).toPromise( ).then(s => {
+     this.teacher=s.json();
+     console.log(this.teacher);
+    });
    
   
   }
   editStudent(student:Teacher){
-    this.router.navigate(['/teacher',student["Id"]])
+    this.router.navigate(['/teacher',student.id])
   }
   sort(property:string){
     this.teacherRequestModel.isAscending=! this.teacherRequestModel.isAscending;

@@ -45,9 +45,9 @@
               </thead>
               <tbody>
                 <tr *ngFor="let stu of student">
-                  <td>{{stu["Name"]}}</td>
-                  <td>{{stu["Phone"]}}</td>
-                  <td>{{stu["Id"]}}</td>
+                  <td>{{stu.name}}</td>
+                  <td>{{stu.phone}}</td>
+                  
                   <td>
                       <button class="btn btn-info" (click)= "editStudent(stu)" >Edit </button>
                   </td>

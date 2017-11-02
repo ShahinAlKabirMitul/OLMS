@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Rx';
 
 import { RepogitoryService } from './repogitory.service';
 import { Injectable } from '@angular/core';
@@ -17,8 +18,8 @@ export class BaseService<T> {
   search(viewModel:any) {
     return this.repo.post(this.subUrl+'query',viewModel);
    }
-   getDataById(id: string) {
-    return this.repo.get(this.subUrl+'query',id);
+   getDataById(id: string):Observable<T> {
+    return this.repo.get(this.subUrl+'query',id).map( (res)=>{ return <T> res.json()})
   }
 
 }

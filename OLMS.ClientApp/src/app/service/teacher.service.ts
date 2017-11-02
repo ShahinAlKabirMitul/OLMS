@@ -15,14 +15,8 @@ import { Injectable } from '@angular/core';
 export class TeacherService extends BaseService<Teacher> {
  
   constructor(public repo:RepogitoryService,public urlService:UrlService ){
-   
     super(repo,urlService.teacher);
-    
   }
-   getById(id:string){
-     let studentObj:Student;
-     return  this.getDataById(id);
   
-   }
 
 }

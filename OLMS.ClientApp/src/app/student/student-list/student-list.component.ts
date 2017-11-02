@@ -17,6 +17,7 @@ export class StudentListComponent implements OnInit {
  
   student:Student[];
   studentReq:StudentRequestModel;
+
   
   constructor(private stuservice:StudentService,private router:Router) {
     this.studentReq=new StudentRequestModel('','');
@@ -31,6 +32,7 @@ export class StudentListComponent implements OnInit {
     this.stuservice.search(studentReq).subscribe((responese:Response)=>{
      
       this.student =responese.json();
+
       
     } )
 
@@ -38,7 +40,7 @@ export class StudentListComponent implements OnInit {
   
   }
   editStudent(student:Student){
-    this.router.navigate(['/student',student["Id"]])
+    this.router.navigate(['/student',student.id])
   }
   sort(property:string){
     this.studentReq.isAscending=! this.studentReq.isAscending;
