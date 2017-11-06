@@ -56,5 +56,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OLMS.BackEnd.Model\OLMS.BackEnd.Model.csproj">
+      <Project>{58EA2036-F1B2-4F10-8CCB-021AF3412F8F}</Project>
+      <Name>OLMS.BackEnd.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
