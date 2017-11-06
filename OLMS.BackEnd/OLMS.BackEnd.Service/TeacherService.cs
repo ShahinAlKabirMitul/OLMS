@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Data.Entity.Core;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
+
 using OLMS.BackEnd.Model;
 using OLMS.BackEnd.Repository;
 using OLMS.BackEnd.RequestModel;
@@ -32,10 +32,8 @@ namespace OLMS.BackEnd.Service
        {
            IQueryable<Teacher> teachers = this._repository.Get();
 
-           if (!string.IsNullOrWhiteSpace(request.Name))
-           {
-               teachers = teachers.Where(x => x.Name.ToLower().Contains(request.Name.ToLower()));
-           }
+           Expression<Func<Teacher, bool>> expression = request.GetExpression();
+           teachers= teachers.Where(expression);
            teachers = teachers.OrderBy(x => x.Modified);
 
            if (!string.IsNullOrWhiteSpace(request.OrderBy))
@@ -46,8 +44,8 @@ namespace OLMS.BackEnd.Service
                }
            }
 
-           teachers = teachers.Skip((request.Page - 1) * request.PerPageCount).Take(request.PerPageCount);
-
+          // teachers = teachers.Skip((request.Page - 1) * request.PerPageCount).Take(request.PerPageCount);
+           teachers = request.SkipAndTake(teachers);
            List<TeacherGridViewModel> list = teachers.ToList().ConvertAll(
                teacher => new TeacherGridViewModel(teacher)
            );

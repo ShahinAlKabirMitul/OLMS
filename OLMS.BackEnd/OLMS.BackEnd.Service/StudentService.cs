@@ -32,20 +32,8 @@ namespace OLMS.BackEnd.Service
         public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
             IQueryable<Student> students = this.repository.Get();
-            Expression<Func<Student, bool>> nameExpression = x => x.Name.ToLower().Contains(request.Name.ToLower());
-            Expression<Func<Student, bool>> phoneExpression = x => x.Phone.ToLower().Contains(request.Phone.ToLower());
-
-            if (!string.IsNullOrWhiteSpace(request.Name))
-            {
-               
-                students = students.Where(nameExpression);
-            }
-
-            if (!string.IsNullOrWhiteSpace(request.Phone))
-            {
-               
-                students = students.Where(phoneExpression);
-            }
+            var expression = request.GetExpression();
+            students = students.Where(expression);
 
             students = students.OrderBy(x => x.Modified);
 
@@ -62,7 +50,7 @@ namespace OLMS.BackEnd.Service
                 }
             }
 
-            students = students.Skip((request.Page - 1) * request.PerPageCount ).Take(request.PerPageCount);
+            students = request.SkipAndTake(students);
 
             List<StudentGridViewModel> list = students.ToList().ConvertAll(
                 student => new StudentGridViewModel(student)

@@ -10,28 +10,24 @@ namespace OLMS.BackEnd.RequestModel
 {
     public class StudentRequestModel:BaseRequestModel
     {
-        public StudentRequestModel()
-        {
-           
-        }
+       
 
         private Expression<Func<Student, bool>> expression;
-        Expression<Func<Student, bool>> GetExpression()
+        public Expression<Func<Student, bool>> GetExpression()
         {
+            if (!string.IsNullOrWhiteSpace(Keyword))
+            {
+                expression = x =>
+                    x.Name.ToLower().Contains(Keyword.ToLower()) ||
+                    x.Phone.ToLower().Contains(Keyword.ToLower()) ||
+                    x.Email.ToLower().Contains(Keyword.ToLower());
 
-            if (!string.IsNullOrWhiteSpace(Name))
-            {
-                expression = x => x.Name.ToLower().Contains(Name.ToLower());
             }
-            if (!string.IsNullOrWhiteSpace(Phone))
-            {
-                expression = expression.And(x => x.Phone.ToLower().Contains(Phone.ToLower()));
-            }
-            
+
             return expression;
         }
-        public string Name { get; set; }
+      
 
-        public string Phone { get; set; }
+       
     }
 }
