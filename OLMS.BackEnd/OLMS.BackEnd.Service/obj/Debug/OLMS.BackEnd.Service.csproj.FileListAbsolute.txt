@@ -1,7 +1,7 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Service.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Service.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Service.pdb
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\EntityFramework.SqlServer.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Model.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Service\bin\Debug\OLMS.BackEnd.Repository.dll

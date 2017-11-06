@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Core;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using OLMS.BackEnd.Model;
@@ -31,15 +32,19 @@ namespace OLMS.BackEnd.Service
         public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
             IQueryable<Student> students = this.repository.Get();
+            Expression<Func<Student, bool>> nameExpression = x => x.Name.ToLower().Contains(request.Name.ToLower());
+            Expression<Func<Student, bool>> phoneExpression = x => x.Phone.ToLower().Contains(request.Phone.ToLower());
 
             if (!string.IsNullOrWhiteSpace(request.Name))
             {
-                students = students.Where(x => x.Name.ToLower().Contains(request.Name.ToLower()));
+               
+                students = students.Where(nameExpression);
             }
 
             if (!string.IsNullOrWhiteSpace(request.Phone))
             {
-                students = students.Where(x => x.Phone.ToLower().Contains(request.Phone.ToLower()));
+               
+                students = students.Where(phoneExpression);
             }
 
             students = students.OrderBy(x => x.Modified);
