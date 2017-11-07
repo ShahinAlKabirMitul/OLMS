@@ -4,7 +4,7 @@ using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.RequestModel
 {
-    public class TeacherRequestModel:BaseRequestModel
+    public class TeacherRequestModel:BaseRequestModel<Teacher>
     {
         private Expression<Func<Teacher, bool>> expression;
         public Expression<Func<Teacher, bool>> GetExpression()

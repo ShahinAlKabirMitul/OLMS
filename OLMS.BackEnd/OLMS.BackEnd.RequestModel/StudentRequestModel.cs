@@ -8,7 +8,7 @@ using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.RequestModel
 {
-    public class StudentRequestModel:BaseRequestModel
+    public class StudentRequestModel:BaseRequestModel<Student>
     {
        
 
