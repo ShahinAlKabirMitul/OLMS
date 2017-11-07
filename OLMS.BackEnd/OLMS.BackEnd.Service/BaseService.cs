@@ -10,17 +10,19 @@ using OLMS.BackEnd.RequestModel;
 
 namespace OLMS.BackEnd.Service
 {
-    public class BaseService<T> where T : Entity
+    public class BaseService<T> where T:Entity    
     {
-        public IQueryable<T> SearchQueryable(BaseRequestModel<T> request)
+        public  IQueryable<T> SearchQueryable(BaseRequestModel<T> request)
         {
-            var repository = new GenericRepository<T>();
-            IQueryable<T> queryable = repository.Get();
-            Expression<Func<T, bool>> expression = request.GetExpression();
-            queryable = queryable.Where(expression);
-            queryable = request.OrderByFunc()(queryable);
-            queryable = request.SkipAndTake(queryable);
-            return queryable;
+            var repository = new BaseRepository<T>();
+            IQueryable<T> students = repository.Get();
+            var expression = request.GetExpression();
+            students = students.Where(expression);
+            students = request.OrderByFunc()(students);
+            students = request.SkipAndTake(students);
+            return students;
         }
     }
+
+   
 }

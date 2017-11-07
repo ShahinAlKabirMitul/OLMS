@@ -12,7 +12,7 @@ using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.Service
 {
-    public class StudentService
+    public class StudentService:BaseService<Student>
     {
         private IBaseRepository<Student> repository;
         public StudentService()
@@ -31,27 +31,7 @@ namespace OLMS.BackEnd.Service
         }
         public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
-            IQueryable<Student> students = this.repository.Get();
-            var expression = request.GetExpression();
-            students = students.Where(expression);
-
-            students = students.OrderBy(x => x.Modified);
-
-            if (!string.IsNullOrWhiteSpace(request.OrderBy))
-            {
-                if (request.OrderBy.ToLower() == "name")
-                {
-                    students = request.IsAscending ? students.OrderBy(x => x.Name) : students.OrderByDescending(x => x.Name);
-                }
-
-                if (request.OrderBy.ToLower() == "phone")
-                {
-                    students = request.IsAscending ? students.OrderBy(x => x.Phone) : students.OrderByDescending(x => x.Phone);
-                }
-            }
-
-            students = request.SkipAndTake(students);
-
+            IQueryable<Student> students = base.SearchQueryable(request);
             List<StudentGridViewModel> list = students.ToList().ConvertAll(
                 student => new StudentGridViewModel(student)
                 );

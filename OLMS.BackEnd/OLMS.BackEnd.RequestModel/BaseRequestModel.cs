@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace OLMS.BackEnd.RequestModel
 {
-    public class BaseRequestModel<T>
+    public abstract class BaseRequestModel<T>
     {
         public BaseRequestModel()
         {
@@ -45,6 +45,9 @@ namespace OLMS.BackEnd.RequestModel
 
             return queryable;
         }
+
+        public abstract Expression<Func<T, bool>> GetExpression();
+
     }
 
     public static class ExpressionHelper

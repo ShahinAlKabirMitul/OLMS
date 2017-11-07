@@ -11,7 +11,7 @@ using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.Service
 {
-   public class TeacherService
+   public class TeacherService:BaseService<Teacher>
    {
        private readonly IBaseRepository<Teacher> _repository;
         public TeacherService()
@@ -30,27 +30,7 @@ namespace OLMS.BackEnd.Service
 
        public List<TeacherGridViewModel> Search(TeacherRequestModel request)
        {
-           IQueryable<Teacher> teachers = this._repository.Get();
-
-           Expression<Func<Teacher, bool>> expression = request.GetExpression();
-           if (!string.IsNullOrWhiteSpace(request.Keyword))
-           {
-               teachers = teachers.Where(expression);
-            }
-         
-
-           teachers = teachers.OrderBy(x => x.Modified);
-
-           if (!string.IsNullOrWhiteSpace(request.OrderBy))
-           {
-               if (request.OrderBy.ToLower() == "name")
-               {
-                   teachers = request.IsAscending ? teachers.OrderBy(x => x.Name) : teachers.OrderByDescending(x => x.Name);
-               }
-           }
-
-          // teachers = teachers.Skip((request.Page - 1) * request.PerPageCount).Take(request.PerPageCount);
-           teachers = request.SkipAndTake(teachers);
+           var teachers = SearchQueryable(request);
            List<TeacherGridViewModel> list = teachers.ToList().ConvertAll(
                teacher => new TeacherGridViewModel(teacher)
            );

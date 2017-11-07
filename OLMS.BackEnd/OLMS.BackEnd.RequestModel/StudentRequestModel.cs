@@ -8,12 +8,10 @@ using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.RequestModel
 {
-    public class StudentRequestModel:BaseRequestModel<Student>
+    public class StudentRequestModel: BaseRequestModel<Student>
     {
-       
-
         private Expression<Func<Student, bool>> expression;
-        public Expression<Func<Student, bool>> GetExpression()
+        public override Expression<Func<Student, bool>> GetExpression()
         {
             if (!string.IsNullOrWhiteSpace(Keyword))
             {
@@ -26,8 +24,5 @@ namespace OLMS.BackEnd.RequestModel
 
             return expression;
         }
-      
-
-       
     }
 }
