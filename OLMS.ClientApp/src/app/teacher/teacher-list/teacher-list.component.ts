@@ -1,7 +1,8 @@
+import { BaseRequestModel } from '../../request.model/base.request';
 import { async } from 'rxjs/scheduler/async';
 import { Router } from '@angular/router';
 import { TeacherService } from '../../service/teacher.service';
-import { TeacherRequestModel } from './../../request.model/teacher.request.model';
+
 import { Teacher } from './../../model/teacher';
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
@@ -15,7 +16,7 @@ export class TeacherListComponent implements OnInit {
 
   teacher:Teacher[];
   bra$;
-  teacherRequestModel:TeacherRequestModel=new TeacherRequestModel('','')
+  teacherRequestModel:BaseRequestModel=new BaseRequestModel()
   
   constructor(private teacherService:TeacherService,private router:Router) {
   
@@ -25,7 +26,7 @@ export class TeacherListComponent implements OnInit {
   
   }
   async search(teacherReq){
-
+   console.log(teacherReq);
    await this.teacherService.search(teacherReq).toPromise( ).then(s => {
      this.teacher=s.json();
      console.log(this.teacher);

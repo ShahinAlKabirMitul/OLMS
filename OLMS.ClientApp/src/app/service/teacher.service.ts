@@ -3,9 +3,7 @@ import { BaseService } from './../common/base.service';
 import { RepogitoryService } from '../common/repogitory.service';
 import { Teacher } from './../model/teacher';
 
-import { TeacherRequestModel } from './../request.model/teacher.request.model';
 
-import { StudentRequestModel } from './../request.model/studentRequestModel';
 
 import { Student } from './../model/student';
 import { environment } from './../../environments/environment';

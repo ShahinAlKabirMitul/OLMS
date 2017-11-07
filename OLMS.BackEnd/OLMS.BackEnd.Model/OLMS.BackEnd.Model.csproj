@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201710261648427_Modify Teacher.Designer.cs">
       <DependentUpon>201710261648427_Modify Teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711070141409_studentEmailAddted.cs" />
+    <Compile Include="Migrations\201711070141409_studentEmailAddted.Designer.cs">
+      <DependentUpon>201711070141409_studentEmailAddted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710261648427_Modify Teacher.resx">
       <DependentUpon>201710261648427_Modify Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711070141409_studentEmailAddted.resx">
+      <DependentUpon>201711070141409_studentEmailAddted.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

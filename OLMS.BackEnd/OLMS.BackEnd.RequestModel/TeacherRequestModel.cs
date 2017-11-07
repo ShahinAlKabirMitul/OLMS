@@ -12,7 +12,7 @@ namespace OLMS.BackEnd.RequestModel
             if (!string.IsNullOrWhiteSpace(Keyword))
             {
                 expression = x =>
-                    x.Name.ToLower().Contains(Keyword.ToLower());
+                    x.Name.ToLower().Contains(Keyword.ToLower())|| x.PhoneNo.ToLower().Contains(Keyword.ToLower());
             }
 
             return expression;

@@ -33,7 +33,12 @@ namespace OLMS.BackEnd.Service
            IQueryable<Teacher> teachers = this._repository.Get();
 
            Expression<Func<Teacher, bool>> expression = request.GetExpression();
-           teachers= teachers.Where(expression);
+           if (!string.IsNullOrWhiteSpace(request.Keyword))
+           {
+               teachers = teachers.Where(expression);
+            }
+         
+
            teachers = teachers.OrderBy(x => x.Modified);
 
            if (!string.IsNullOrWhiteSpace(request.OrderBy))

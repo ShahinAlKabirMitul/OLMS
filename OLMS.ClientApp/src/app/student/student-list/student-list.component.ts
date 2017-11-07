@@ -1,4 +1,5 @@
-import { StudentRequestModel } from './../../request.model/studentRequestModel';
+import { BaseRequestModel } from '../../request.model/base.request';
+
 import { of } from 'rxjs/observable/of';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router } from '@angular/router';
@@ -16,11 +17,11 @@ import { Component, OnInit } from '@angular/core';
 export class StudentListComponent implements OnInit {
  
   student:Student[];
-  studentReq:StudentRequestModel;
+  studentReq:BaseRequestModel;
 
   
   constructor(private stuservice:StudentService,private router:Router) {
-    this.studentReq=new StudentRequestModel('','');
+    this.studentReq=new BaseRequestModel();
    }
 
   ngOnInit() {
@@ -29,6 +30,7 @@ export class StudentListComponent implements OnInit {
    this.search(this.studentReq);
   }
   search(studentReq){
+    console.log(studentReq);
     this.stuservice.search(studentReq).subscribe((responese:Response)=>{
      
       this.student =responese.json();
