@@ -9,6 +9,7 @@ namespace OLMS.BackEnd.RequestModel
         private Expression<Func<Teacher, bool>> expression;
         public override Expression<Func<Teacher, bool>> GetExpression()
         {
+            this.expression = s => true;
             if (!string.IsNullOrWhiteSpace(Keyword))
             {
                 expression = x =>

@@ -8,5 +8,6 @@ export class BaseRequestModel{
    this.page=1;
    this.perPageCount=5;
     
+    
 }
 }

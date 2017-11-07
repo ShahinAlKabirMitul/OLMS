@@ -14,10 +14,15 @@ namespace OLMS.BackEnd.Service
     {
         public  IQueryable<T> SearchQueryable(BaseRequestModel<T> request)
         {
+            
             var repository = new BaseRepository<T>();
             IQueryable<T> students = repository.Get();
             var expression = request.GetExpression();
             students = students.Where(expression);
+            if (request.OrderBy == null)
+            {
+                request.OrderBy = "Name";
+            }
             students = request.OrderByFunc()(students);
             students = request.SkipAndTake(students);
             return students;

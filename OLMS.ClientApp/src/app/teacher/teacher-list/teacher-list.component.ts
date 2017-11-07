@@ -16,18 +16,21 @@ export class TeacherListComponent implements OnInit {
 
   teacher:Teacher[];
   bra$;
-  teacherRequestModel:BaseRequestModel=new BaseRequestModel()
+  teacherRequestModel:BaseRequestModel;
   
   constructor(private teacherService:TeacherService,private router:Router) {
-  
+    this.teacherRequestModel=new BaseRequestModel();
+    
    }
 
   ngOnInit() {
   
   }
-  async search(teacherReq){
-   console.log(teacherReq);
-   await this.teacherService.search(teacherReq).toPromise( ).then(s => {
+  async search(teacherRequestModel:BaseRequestModel){
+   
+  
+    console.log(teacherRequestModel);
+   await this.teacherService.search(teacherRequestModel).toPromise( ).then(s => {
      this.teacher=s.json();
      console.log(this.teacher);
     });

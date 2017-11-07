@@ -22,6 +22,7 @@ export class StudentListComponent implements OnInit {
   
   constructor(private stuservice:StudentService,private router:Router) {
     this.studentReq=new BaseRequestModel();
+    
    }
 
   ngOnInit() {
@@ -29,7 +30,7 @@ export class StudentListComponent implements OnInit {
    // this.search(this.studentReq);
    this.search(this.studentReq);
   }
-  search(studentReq){
+  search( studentReq:BaseRequestModel){
     console.log(studentReq);
     this.stuservice.search(studentReq).subscribe((responese:Response)=>{
      

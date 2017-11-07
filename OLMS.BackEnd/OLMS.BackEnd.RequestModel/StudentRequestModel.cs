@@ -13,6 +13,7 @@ namespace OLMS.BackEnd.RequestModel
         private Expression<Func<Student, bool>> expression;
         public override Expression<Func<Student, bool>> GetExpression()
         {
+            this.expression= s=> true;
             if (!string.IsNullOrWhiteSpace(Keyword))
             {
                 expression = x =>
