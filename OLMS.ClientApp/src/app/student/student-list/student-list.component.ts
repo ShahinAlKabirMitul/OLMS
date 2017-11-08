@@ -17,22 +17,25 @@ import { Component, OnInit } from '@angular/core';
 export class StudentListComponent implements OnInit {
  
   student:Student[];
-  studentReq:BaseRequestModel;
+  requestModel:BaseRequestModel;
 
   
   constructor(private stuservice:StudentService,private router:Router) {
-    this.studentReq=new BaseRequestModel();
-    
+    this.requestModel=new BaseRequestModel();
+   
    }
 
   ngOnInit() {
    
-   // this.search(this.studentReq);
-   this.search(this.studentReq);
   }
-  search( studentReq:BaseRequestModel){
-    console.log(studentReq);
-    this.stuservice.search(studentReq).subscribe((responese:Response)=>{
+  search( requestModel:BaseRequestModel){
+
+    if(!requestModel.orderBy){
+      requestModel.orderBy='name';
+    }
+   
+    console.log(requestModel);
+    this.stuservice.search(requestModel).subscribe((responese:Response)=>{
      
       this.student =responese.json();
 
@@ -46,22 +49,22 @@ export class StudentListComponent implements OnInit {
     this.router.navigate(['/student',student.id])
   }
   sort(property:string){
-    this.studentReq.isAscending=! this.studentReq.isAscending;
-    this.studentReq.orderBy=property;
-    this.search(this.studentReq);
+    this.requestModel.isAscending=! this.requestModel.isAscending;
+    this.requestModel.orderBy=property;
+    this.search(this.requestModel);
   }
  
 next(){
-this.studentReq.page=this.studentReq.page+1;
+this.requestModel.page=this.requestModel.page+1;
 
-this.search(this.studentReq);
+this.search(this.requestModel);
 }
 pre(){
-  this.studentReq.page=this.studentReq.page-1;
-  if(this.studentReq.page<1){
-    this.studentReq.page=1;
+  this.requestModel.page=this.requestModel.page-1;
+  if(this.requestModel.page<1){
+    this.requestModel.page=1;
   }
-  this.search(this.studentReq);
+  this.search(this.requestModel);
 }
   
 }

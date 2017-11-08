@@ -15,7 +15,7 @@
           <div class="col-xl-5">
             <div class="form-group">
 
-              <input type="text" [(ngModel)]="studentReq.keyword" placeholder="Name.." name="keyword" id="keyword" class="form-control">
+              <input type="text" [(ngModel)]="requestModel.keyword" placeholder="Name.." name="keyword" id="keyword" class="form-control">
             </div>
           </div>
         
@@ -51,7 +51,7 @@
       
             </table>
             <button class="btn btn-primaty btn-sm" (click)="pre()">Pre</button>
-            <label for="">Current Page :{{studentReq.page}} </label>
+            <label for="">Current Page :{{requestModel.page}} </label>
             <button class="btn btn-primaty btn-sm" (click)="next()">Next</button>
       </div>
       

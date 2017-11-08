@@ -16,21 +16,23 @@ export class TeacherListComponent implements OnInit {
 
   teacher:Teacher[];
   bra$;
-  teacherRequestModel:BaseRequestModel;
+  RequestModel:BaseRequestModel;
   
   constructor(private teacherService:TeacherService,private router:Router) {
-    this.teacherRequestModel=new BaseRequestModel();
+    this.RequestModel=new BaseRequestModel();
     
    }
 
   ngOnInit() {
   
   }
-  async search(teacherRequestModel:BaseRequestModel){
+  async search(RequestModel:BaseRequestModel){
    
-  
-    console.log(teacherRequestModel);
-   await this.teacherService.search(teacherRequestModel).toPromise( ).then(s => {
+    if(!RequestModel.orderBy){
+      RequestModel.orderBy='name';
+    }
+    console.log(RequestModel);
+   await this.teacherService.search(RequestModel).toPromise( ).then(s => {
      this.teacher=s.json();
      console.log(this.teacher);
     });
@@ -41,22 +43,22 @@ export class TeacherListComponent implements OnInit {
     this.router.navigate(['/teacher',student.id])
   }
   sort(property:string){
-    this.teacherRequestModel.isAscending=! this.teacherRequestModel.isAscending;
-    this.teacherRequestModel.orderBy=property;
-    this.search(this.teacherRequestModel);
+    this.RequestModel.isAscending=! this.RequestModel.isAscending;
+    this.RequestModel.orderBy=property;
+    this.search(this.RequestModel);
   }
  
 next(){
-this.teacherRequestModel.page=this.teacherRequestModel.page+1;
- this.search(this.teacherRequestModel);
+this.RequestModel.page=this.RequestModel.page+1;
+ this.search(this.RequestModel);
 }
 pre(){
   
-  if(this.teacherRequestModel.page>1){
-    this.teacherRequestModel.page=this.teacherRequestModel.page-1;
+  if(this.RequestModel.page>1){
+    this.RequestModel.page=this.RequestModel.page-1;
    
   }
-  this.search(this.teacherRequestModel);
+  this.search(this.RequestModel);
 }
 
 }
