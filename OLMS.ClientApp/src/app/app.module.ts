@@ -1,3 +1,5 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppErrorHandler } from './common/error/app-error-handler';
 import { UrlService } from './common/url.service';
 import { RepogitoryService } from './common/repogitory.service';
 import { TeacherService } from './service/teacher.service';
@@ -8,7 +10,7 @@ import { StudentService } from './service/student.service';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { StudentEntryComponent } from './student/student-entry/student-entry.component';
@@ -21,7 +23,7 @@ import { ClassEntryComponent } from './class/class-entry/class-entry.component';
 import { CourseListComponent } from './course/course-list/course-list.component';
 import { CourseEntryComponent } from './course/course-entry/course-entry.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
-
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 @NgModule({
   declarations: [
@@ -43,13 +45,16 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule, 
+    SimpleNotificationsModule.forRoot()
   ],
   providers: [
     StudentService,
     TeacherService,
     RepogitoryService,
     UrlService
+    
    
   ],
   bootstrap: [AppComponent]

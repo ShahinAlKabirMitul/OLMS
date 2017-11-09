@@ -6,6 +6,7 @@ import { Response } from '@angular/http';
 import { StudentService } from './../../service/student.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NotificationsService } from 'angular2-notifications';
 
 @Component({
   selector: 'app-student-entry',
@@ -18,8 +19,13 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
   editMode:boolean;
   model:Student;
   subscription=new Subscription();
+  public options = {
+    position: ["right"],
+    timeOut: 0,
+    lastOnBottom: true
+  }
   constructor(private studentService:StudentService,
-    private router:Router, private route:ActivatedRoute) {
+    private router:Router, private route:ActivatedRoute,private _service: NotificationsService) {
       this.id= this.route.snapshot.paramMap.get('id');
    }
 
@@ -42,9 +48,9 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
   onSubmit(){
     
     this.studentService.save(this.studentForm.value).subscribe((response:Response)=>{
-     
+     this._service.success("Save");
     })
-    this.router.navigateByUrl('/student');
+    //this.router.navigateByUrl('/student');
   }
   private initForm(){
 

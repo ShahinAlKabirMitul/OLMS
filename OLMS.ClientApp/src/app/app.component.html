@@ -1,8 +1,19 @@
+
 <app-navbar></app-navbar>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <router-outlet></router-outlet>
+
+<body>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <router-outlet></router-outlet>
+            </div>
         </div>
-    </div>
-</div>
+    </main>
+    
+    <footer class="footer navbar-fixed-bottom">
+        <div class="container">
+          <span class="text-muted">Footer</span>
+        </div>
+    </footer>
+</body>
+

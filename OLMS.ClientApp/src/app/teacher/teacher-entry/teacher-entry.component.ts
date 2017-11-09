@@ -1,3 +1,4 @@
+import { NotificationsService } from 'angular2-notifications';
 import { any } from 'codelyzer/util/function';
 import { serialize } from '@angular/compiler/src/i18n/serializers/xml_helper';
 import { Response } from '@angular/http';
@@ -19,7 +20,13 @@ export class TeacherEntryComponent implements OnInit {
   id:string;
   editMode:boolean;
   subscription:Subscription;
-  constructor(private techerService:TeacherService,private router:Router,private route:ActivatedRoute) { 
+  public options = {
+    position: ["right"],
+    timeOut: 0,
+    lastOnBottom: true
+  }
+
+  constructor(private techerService:TeacherService,private router:Router,private route:ActivatedRoute,private _service: NotificationsService) { 
     this.model=new Teacher();
     this.id= this.route.snapshot.paramMap.get('id');
   }
@@ -43,6 +50,7 @@ export class TeacherEntryComponent implements OnInit {
     this.router.navigateByUrl('/teacher');
  }
  reset(){
+   this._service.info("Save");
    this.model=new Teacher();
  }
 }

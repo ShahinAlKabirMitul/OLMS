@@ -1,5 +1,8 @@
 
   <h1>Student Entry</h1>
+  <div class="row">
+    <simple-notifications [options]="options"></simple-notifications>
+  </div>
   <div class="col-xl-12">
     <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
       
