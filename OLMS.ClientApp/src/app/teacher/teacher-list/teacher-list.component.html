@@ -39,7 +39,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let stu of teacher">
+                <tr *ngFor="let stu of teacher | async ">
                   <td>{{stu.name}}</td>
                   <td>{{stu.phoneNo}}</td>
                   

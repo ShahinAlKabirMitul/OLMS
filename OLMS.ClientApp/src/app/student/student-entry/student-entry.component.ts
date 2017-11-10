@@ -22,7 +22,9 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
   public options = {
     position: ["right"],
     timeOut: 0,
-    lastOnBottom: true
+    lastOnBottom: true,
+    
+    animate:  'fromTop' 
   }
   constructor(private studentService:StudentService,
     private router:Router, private route:ActivatedRoute,private _service: NotificationsService) {

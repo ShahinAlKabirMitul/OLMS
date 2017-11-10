@@ -22,8 +22,10 @@ export class TeacherEntryComponent implements OnInit {
   subscription:Subscription;
   public options = {
     position: ["right"],
-    timeOut: 0,
-    lastOnBottom: true
+    timeOut: 1000,
+    lastOnBottom: true,
+    animate:  'rotate' 
+    
   }
 
   constructor(private techerService:TeacherService,private router:Router,private route:ActivatedRoute,private _service: NotificationsService) { 
@@ -50,7 +52,10 @@ export class TeacherEntryComponent implements OnInit {
     this.router.navigateByUrl('/teacher');
  }
  reset(){
-   this._service.info("Save");
+  
+  
+   this._service.alert("Save");
+   
    this.model=new Teacher();
  }
 }

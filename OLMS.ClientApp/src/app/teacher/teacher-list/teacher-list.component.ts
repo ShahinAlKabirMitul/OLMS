@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Rx';
 import { BaseRequestModel } from '../../request.model/base.request';
 import { async } from 'rxjs/scheduler/async';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ import { Response } from '@angular/http';
 })
 export class TeacherListComponent implements OnInit {
 
-  teacher:Teacher[];
+  teacher:Observable<Teacher[]>;
   bra$;
   RequestModel:BaseRequestModel;
   
@@ -32,10 +33,7 @@ export class TeacherListComponent implements OnInit {
       RequestModel.orderBy='name';
     }
     console.log(RequestModel);
-   await this.teacherService.search(RequestModel).toPromise( ).then(s => {
-     this.teacher=s.json();
-     console.log(this.teacher);
-    });
+    this.teacher= await this.teacherService.search(RequestModel);
    
   
   }

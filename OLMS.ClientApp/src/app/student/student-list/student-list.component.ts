@@ -1,3 +1,6 @@
+import { Observable } from 'rxjs/Rx';
+
+import { async } from 'rxjs/scheduler/async';
 import { BaseRequestModel } from '../../request.model/base.request';
 
 import { of } from 'rxjs/observable/of';
@@ -16,7 +19,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentListComponent implements OnInit {
  
-  student:Student[];
+  student$;
+  student:Observable<Student[]>;
   requestModel:BaseRequestModel;
 
   
@@ -28,23 +32,20 @@ export class StudentListComponent implements OnInit {
   ngOnInit() {
    
   }
-  search( requestModel:BaseRequestModel){
+async search( requestModel:BaseRequestModel){
 
     if(!requestModel.orderBy){
       requestModel.orderBy='name';
     }
    
-    console.log(requestModel);
-    this.stuservice.search(requestModel).subscribe((responese:Response)=>{
-     
-      this.student =responese.json();
-
-      
-    } )
+    this.student= await this.stuservice.search(requestModel);
+   // this.student=this.student$;
+    console.log(this.student$);
 
    
   
   }
+  
   editStudent(student:Student){
     this.router.navigate(['/student',student.id])
   }

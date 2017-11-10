@@ -1,3 +1,5 @@
+import { SimpleNotificationsModule } from 'angular2-notifications';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppErrorHandler } from './common/error/app-error-handler';
 import { UrlService } from './common/url.service';
@@ -23,7 +25,7 @@ import { ClassEntryComponent } from './class/class-entry/class-entry.component';
 import { CourseListComponent } from './course/course-list/course-list.component';
 import { CourseEntryComponent } from './course/course-entry/course-entry.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
-import { SimpleNotificationsModule } from 'angular2-notifications';
+
 
 @NgModule({
   declarations: [
