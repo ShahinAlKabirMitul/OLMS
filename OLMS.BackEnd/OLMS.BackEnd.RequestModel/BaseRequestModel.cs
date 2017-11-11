@@ -18,6 +18,7 @@ namespace OLMS.BackEnd.RequestModel
         public bool IsAscending { get; set; }
         public string Keyword { get; set; }
 
+        public Expression<Func<T, bool>> Expression { get; set; }
 
         public Func<IQueryable<T>, IOrderedQueryable<T>> OrderByFunc()
         {

@@ -1,0 +1,16 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\OLMS.BackEnd.Model.dll.config
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\OLMS.BackEnd.Model.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\OLMS.BackEnd.Model.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\EntityFramework.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\EntityFramework.SqlServer.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\EntityFramework.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Release\EntityFramework.SqlServer.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.Migrations.AddStudentV1.resources
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.Migrations.TeacherAdded.resources
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.Migrations.ModifyTeacher.resources
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.Migrations.studentEmailAddted.resources
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.csproj.GenerateResource.Cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.csproj.CoreCompileInputs.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Release\OLMS.BackEnd.Model.pdb

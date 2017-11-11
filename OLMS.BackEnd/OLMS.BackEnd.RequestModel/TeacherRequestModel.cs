@@ -6,17 +6,17 @@ namespace OLMS.BackEnd.RequestModel
 {
     public class TeacherRequestModel : BaseRequestModel<Teacher>
     {
-        private Expression<Func<Teacher, bool>> expression;
+       
         public override Expression<Func<Teacher, bool>> GetExpression()
         {
-            this.expression = s => true;
+            this.Expression = s => true;
             if (!string.IsNullOrWhiteSpace(Keyword))
             {
-                expression = x =>
+                Expression = x =>
                     x.Name.ToLower().Contains(Keyword.ToLower()) || x.PhoneNo.ToLower().Contains(Keyword.ToLower());
             }
 
-            return expression;
+            return Expression;
         }
 
     }

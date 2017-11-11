@@ -1,4 +1,5 @@
-import { SimpleNotificationsModule } from 'angular2-notifications';
+
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppErrorHandler } from './common/error/app-error-handler';
@@ -49,15 +50,13 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     HttpModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
-    SimpleNotificationsModule.forRoot()
+    
   ],
   providers: [
     StudentService,
     TeacherService,
     RepogitoryService,
     UrlService
-    
-   
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { NotificationsService } from 'angular2-notifications';
+
 import { any } from 'codelyzer/util/function';
 import { serialize } from '@angular/compiler/src/i18n/serializers/xml_helper';
 import { Response } from '@angular/http';
@@ -28,7 +28,7 @@ export class TeacherEntryComponent implements OnInit {
     
   }
 
-  constructor(private techerService:TeacherService,private router:Router,private route:ActivatedRoute,private _service: NotificationsService) { 
+  constructor(private techerService:TeacherService,private router:Router,private route:ActivatedRoute) { 
     this.model=new Teacher();
     this.id= this.route.snapshot.paramMap.get('id');
   }
@@ -54,7 +54,7 @@ export class TeacherEntryComponent implements OnInit {
  reset(){
   
   
-   this._service.alert("Save");
+   //this._service.alert("Save");
    
    this.model=new Teacher();
  }

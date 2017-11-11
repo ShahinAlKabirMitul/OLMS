@@ -1,0 +1,14 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\OLMS.BackEnd.RequestModel.dll.config
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\OLMS.BackEnd.RequestModel.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\OLMS.BackEnd.RequestModel.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\EntityFramework.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\EntityFramework.SqlServer.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\OLMS.BackEnd.Model.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\OLMS.BackEnd.Model.pdb
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\OLMS.BackEnd.Model.dll.config
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\EntityFramework.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Release\EntityFramework.SqlServer.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Release\OLMS.BackEnd.RequestModel.csprojResolveAssemblyReference.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Release\OLMS.BackEnd.RequestModel.csproj.CoreCompileInputs.cache
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Release\OLMS.BackEnd.RequestModel.dll
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Release\OLMS.BackEnd.RequestModel.pdb
