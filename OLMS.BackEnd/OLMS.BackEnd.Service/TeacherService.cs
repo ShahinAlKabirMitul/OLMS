@@ -18,15 +18,7 @@ namespace OLMS.BackEnd.Service
         {
             _repository=new BaseRepository<Teacher>();
         }
-        public bool Add(Teacher teacher)
-        {
-            teacher.Id = Guid.NewGuid().ToString();
-            teacher.CreatedBy = "Admin";
-            teacher.Created = System.DateTime.Now;
-            teacher.Modified = System.DateTime.Now;
-            teacher.ModifiedBy = "Admin";
-            return _repository.Add(teacher);
-        }
+        
 
        public List<TeacherGridViewModel> Search(TeacherRequestModel request)
        {

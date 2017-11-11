@@ -12,10 +12,14 @@ namespace OLMS.BackEnd.Service
 {
     public class BaseService<T> where T:Entity    
     {
+        BaseRepository<T> repository;
+
+        public BaseService()
+        {
+            repository=new BaseRepository<T>();
+        }
         public  IQueryable<T> SearchQueryable(BaseRequestModel<T> request)
         {
-            
-            var repository = new BaseRepository<T>();
             IQueryable<T> students = repository.Get();
             var expression = request.GetExpression();
             students = students.Where(expression);
@@ -23,6 +27,16 @@ namespace OLMS.BackEnd.Service
             students = request.OrderByFunc()(students);
             students = request.SkipAndTake(students);
             return students;
+        }
+
+        public bool Add(T t)
+        {
+            t.Id = Guid.NewGuid().ToString();
+            t.CreatedBy = "Admin";
+            t.Created = System.DateTime.Now;
+            t.Modified = System.DateTime.Now;
+            t.ModifiedBy = "Admin";
+            return repository.Add(t);
         }
     }
 

@@ -20,15 +20,7 @@ namespace OLMS.BackEnd.Service
             repository=new BaseRepository<Student>();
         }
 
-        public bool Add(Student student)
-        {
-            student.Id = Guid.NewGuid().ToString();
-            student.CreatedBy = "Admin";
-            student.Created = System.DateTime.Now;
-            student.Modified = System.DateTime.Now;
-            student.ModifiedBy = "Admin";
-            return repository.Add(student);
-        }
+       
         public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
             IQueryable<Student> students = base.SearchQueryable(request);

@@ -18,21 +18,21 @@ namespace OLMS.BackEnd.RequestModel
         public bool IsAscending { get; set; }
         public string Keyword { get; set; }
 
-        public Expression<Func<T, bool>> Expression { get; set; }
+        public Expression<Func<T, bool>> Expression;
 
         public Func<IQueryable<T>, IOrderedQueryable<T>> OrderByFunc()
         {
             string propertyName = OrderBy;
             bool ascending = IsAscending;
-            var source = Expression.Parameter(typeof(IQueryable<T>), "source");
-            var item = Expression.Parameter(typeof(T), "item");
-            var member = Expression.Property(item, propertyName);
-            var selector = Expression.Quote(Expression.Lambda(member, item));
-            var body = Expression.Call(
+            var source = System.Linq.Expressions.Expression.Parameter(typeof(IQueryable<T>), "source");
+            var item = System.Linq.Expressions.Expression.Parameter(typeof(T), "item");
+            var member = System.Linq.Expressions.Expression.Property(item, propertyName);
+            var selector = System.Linq.Expressions.Expression.Quote(System.Linq.Expressions.Expression.Lambda(member, item));
+            var body = System.Linq.Expressions.Expression.Call(
                 typeof(Queryable), @ascending ? "OrderBy" : "OrderByDescending",
                 new[] { item.Type, member.Type },
                 source, selector);
-            var expr = Expression.Lambda<Func<IQueryable<T>, IOrderedQueryable<T>>>(body, source);
+            var expr = System.Linq.Expressions.Expression.Lambda<Func<IQueryable<T>, IOrderedQueryable<T>>>(body, source);
             var func = expr.Compile();
             return func;
         }
