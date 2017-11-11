@@ -23,8 +23,8 @@ namespace OLMS.BackEnd.Service
        
         public List<StudentGridViewModel> Search(StudentRequestModel request)
         {
-            IQueryable<Student> students = base.SearchQueryable(request);
-            List<StudentGridViewModel> list = students.ToList().ConvertAll(
+            var students = base.SearchQueryable(request);
+            var list = students.ToList().ConvertAll(
                 student => new StudentGridViewModel(student)
                 );
         

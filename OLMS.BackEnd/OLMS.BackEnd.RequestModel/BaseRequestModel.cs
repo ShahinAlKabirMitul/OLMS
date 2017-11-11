@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.RequestModel
 {
-    public abstract class BaseRequestModel<T>
+    public abstract class BaseRequestModel<T> where T:Entity
     {
         public BaseRequestModel()
         {
             PerPageCount = 5;
             Page = 1;
+            ExpressionObj = s => true;
         }
         public int Page { get; set; }
         public int PerPageCount { get; set; }
@@ -18,21 +20,40 @@ namespace OLMS.BackEnd.RequestModel
         public bool IsAscending { get; set; }
         public string Keyword { get; set; }
 
-        public Expression<Func<T, bool>> Expression;
+        public DateTime Start { get; set; }
+        public DateTime End { get; set; }
+        protected Expression<Func<T, bool>> ExpressionObj { get; set; }
+
+
+        protected Expression<Func<T, bool>> GenerateBaseExpression()
+        {
+            Expression<Func<T, bool>> expressionObj=e=>true;
+            if (Start!=new DateTime())
+            {
+                if (End==new DateTime())
+                {
+                    End = Start.Date.AddDays(1).AddMinutes(-1);
+                }
+               expressionObj = expressionObj.And(s => s.Modified >= Start && s.Modified <= End);
+              
+            }
+            return expressionObj;
+        }
+      
 
         public Func<IQueryable<T>, IOrderedQueryable<T>> OrderByFunc()
         {
             string propertyName = OrderBy;
             bool ascending = IsAscending;
-            var source = System.Linq.Expressions.Expression.Parameter(typeof(IQueryable<T>), "source");
-            var item = System.Linq.Expressions.Expression.Parameter(typeof(T), "item");
-            var member = System.Linq.Expressions.Expression.Property(item, propertyName);
-            var selector = System.Linq.Expressions.Expression.Quote(System.Linq.Expressions.Expression.Lambda(member, item));
-            var body = System.Linq.Expressions.Expression.Call(
+            var source = Expression.Parameter(typeof(IQueryable<T>), "source");
+            var item = Expression.Parameter(typeof(T), "item");
+            var member = Expression.Property(item, propertyName);
+            var selector = Expression.Quote(System.Linq.Expressions.Expression.Lambda(member, item));
+            var body = Expression.Call(
                 typeof(Queryable), @ascending ? "OrderBy" : "OrderByDescending",
                 new[] { item.Type, member.Type },
                 source, selector);
-            var expr = System.Linq.Expressions.Expression.Lambda<Func<IQueryable<T>, IOrderedQueryable<T>>>(body, source);
+            var expr = Expression.Lambda<Func<IQueryable<T>, IOrderedQueryable<T>>>(body, source);
             var func = expr.Compile();
             return func;
         }
