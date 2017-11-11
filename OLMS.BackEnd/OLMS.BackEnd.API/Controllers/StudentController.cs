@@ -13,18 +13,9 @@ using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.API.Controllers
 {
-    public class StudentController : ApiController
+    [RoutePrefix("api/Student")]
+    public class StudentController : BaseController<Student,StudentRequestModel,StudentViewModel>
     {
-        private StudentService studentService;
-
-        public StudentController()
-        {
-            studentService = new StudentService();
-        }
-        public IHttpActionResult Post(Student student)
-        {
-            bool add = studentService.Add(student);
-            return this.Ok(add);
-        }
+       
     }
 }

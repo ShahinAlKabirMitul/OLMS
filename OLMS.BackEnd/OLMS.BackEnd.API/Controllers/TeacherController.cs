@@ -5,23 +5,14 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using OLMS.BackEnd.Model;
+using OLMS.BackEnd.RequestModel;
 using OLMS.BackEnd.Service;
+using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.API.Controllers
 {
-    public class TeacherController : ApiController
+    [RoutePrefix("api/Teacher")]
+    public class TeacherController  : BaseController<Student, StudentRequestModel, StudentViewModel>
     {
-        private TeacherService teacherService;
-
-        public TeacherController()
-        {
-            teacherService = new TeacherService();
-        }
-
-        public IHttpActionResult Post(Teacher teacher)
-        {
-            bool add = teacherService.Add(teacher);
-            return this.Ok(add);
-        }
     }
 }
