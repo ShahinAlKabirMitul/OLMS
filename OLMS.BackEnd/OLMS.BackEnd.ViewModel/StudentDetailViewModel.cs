@@ -2,7 +2,7 @@
 
 namespace OLMS.BackEnd.ViewModel
 {
-    public class StudentDetailViewModel : BaseViewModel
+    public class StudentDetailViewModel : BaseViewModel<Student>
     {
         public StudentDetailViewModel(Student student):base(student)
         {

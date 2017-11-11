@@ -11,7 +11,7 @@ using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.Service
 {
-   public class TeacherService:BaseService<Teacher>
+   public class TeacherService:BaseService<Teacher,TeacherRequestModel,TeacherViewModel>
    {
        private readonly IBaseRepository<Teacher> _repository;
         public TeacherService()
@@ -20,25 +20,6 @@ namespace OLMS.BackEnd.Service
         }
         
 
-       public List<TeacherGridViewModel> Search(TeacherRequestModel request)
-       {
-           var teachers = SearchQueryable(request);
-           List<TeacherGridViewModel> list = teachers.ToList().ConvertAll(
-               teacher => new TeacherGridViewModel(teacher)
-           );
-
-           return list;
-       }
-
-       public TeacherDetailViewModel Detail(string id)
-       {
-           var teacher = _repository.GetDetail(id);
-           if (teacher == null)
-           {
-               throw new ObjectNotFoundException();
-           }
-           return new TeacherDetailViewModel(teacher);
-
-       }
+     
     }
 }

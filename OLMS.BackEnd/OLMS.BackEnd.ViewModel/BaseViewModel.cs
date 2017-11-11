@@ -3,16 +3,16 @@ using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.ViewModel
 {
-    public class BaseViewModel
+    public class BaseViewModel<T> where T:Entity
     {
-        public BaseViewModel(Entity teacher)
+        public BaseViewModel(Entity entity)
         {
 
-            Id = teacher.Id;
-            Created = teacher.Created;
-            CreatedBy = teacher.CreatedBy;
-            ModifiedBy = teacher.ModifiedBy;
-            Modified = teacher.Modified;
+            Id = entity.Id;
+            Created = entity.Created;
+            CreatedBy = entity.CreatedBy;
+            ModifiedBy = entity.ModifiedBy;
+            Modified = entity.Modified;
         }
         public string Id { get; set; }
         public DateTime Created { get; set; }    

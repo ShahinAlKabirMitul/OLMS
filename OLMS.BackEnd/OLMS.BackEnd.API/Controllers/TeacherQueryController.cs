@@ -12,7 +12,7 @@ namespace OLMS.BackEnd.API.Controllers
 {
     public class TeacherQueryController : ApiController
     {
-        private TeacherService teacherService;
+        private readonly TeacherService teacherService;
 
         public TeacherQueryController()
         {
@@ -24,7 +24,7 @@ namespace OLMS.BackEnd.API.Controllers
             return this.Ok(students);
         }
 
-        public TeacherDetailViewModel Get(string id)
+        public TeacherViewModel Get(string id)
         {
             var data = teacherService.Detail(id);
             return data;

@@ -51,8 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentDetailViewModel.cs" />
     <Compile Include="StudentGridViewModel.cs" />
+    <Compile Include="StudentViewModel.cs" />
     <Compile Include="TeacherDetailViewModel.cs" />
     <Compile Include="TeacherGridViewModel.cs" />
+    <Compile Include="TeacherViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

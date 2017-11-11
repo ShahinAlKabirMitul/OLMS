@@ -25,7 +25,7 @@ namespace OLMS.BackEnd.API.Controllers
             return this.Ok(students);
         }
 
-        public StudentDetailViewModel Get(string id)
+        public StudentViewModel Get(string id)
         {
             var data = _studentService.Detail(id);
             return data;
