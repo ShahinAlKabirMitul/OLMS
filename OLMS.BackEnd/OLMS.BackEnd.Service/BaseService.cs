@@ -9,7 +9,7 @@ using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.Service
 {
-    public class BaseService<T,Tr,Tv> where T:Entity where Tr:BaseRequestModel<T> where Tv:BaseViewModel<T>
+    public class BaseService<T,TR,TV> where T:Entity where TR:BaseRequestModel<T> where TV:BaseViewModel<T>
     {
         BaseRepository<T> repository;
 
@@ -37,7 +37,7 @@ namespace OLMS.BackEnd.Service
             model.ModifiedBy = "Admin";
             return repository.Add(model);
         }
-        public List<Tv> Search(Tr request)
+        public List<TV> Search(TR request)
         {
             var students = SearchQueryable(request);
             var list = students.ToList().ConvertAll(CreateVModelInstence);
@@ -45,12 +45,12 @@ namespace OLMS.BackEnd.Service
             return list;
         }
 
-        public static Tv CreateVModelInstence(T x)
+        public static TV CreateVModelInstence(T x)
         {
-            return (Tv) Activator.CreateInstance(typeof(Tv), x);
+            return (TV) Activator.CreateInstance(typeof(TV), x);
         }
 
-        public Tv Detail(string id)
+        public TV Detail(string id)
         {
             T x = repository.GetDetail(id);
             if (x == null)

@@ -14,7 +14,7 @@ export class BaseService<T> {
    }
    
   save(model: Entity) {
-    return this.repo.post(this.subUrl,model);
+    return this.repo.post(this.subUrl+'/add',model);
   }
   // search(viewModel:any) {
   //   return this.repo.post(this.subUrl+'query',viewModel);

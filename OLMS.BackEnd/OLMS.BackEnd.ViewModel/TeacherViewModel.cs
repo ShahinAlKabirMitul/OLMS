@@ -4,8 +4,13 @@ namespace OLMS.BackEnd.ViewModel
 {
     public class TeacherViewModel:BaseViewModel<Teacher>
     {
-        public TeacherViewModel(Entity entity) : base(entity)
+        public string Name { get; set; }
+        public string PhoneNo { get; set; }
+        public TeacherViewModel(Teacher entity) : base(entity)
         {
+            Name = entity.Name;
+            PhoneNo = entity.PhoneNo;
         }
+
     }
 }

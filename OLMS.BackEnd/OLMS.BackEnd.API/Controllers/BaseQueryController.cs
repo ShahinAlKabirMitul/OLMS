@@ -13,7 +13,9 @@ namespace OLMS.BackEnd.API.Controllers
 {
     public class BaseQueryController<T,TR,TV>  : ApiController where T:Entity where TR:BaseRequestModel<T> where TV:BaseViewModel<T>
     {
-        private BaseService<T, TR, TV> _studentService;
+        private readonly BaseService<T, TR, TV> _studentService;
+
+
 
         public BaseQueryController()
         {

@@ -12,6 +12,7 @@ using OLMS.BackEnd.ViewModel;
 namespace OLMS.BackEnd.API.Controllers
 {
     [RoutePrefix("api/StudentQuery")]
+
     public class StudentQueryController : BaseQueryController<Student,StudentRequestModel,StudentViewModel>
     {
         //private StudentService _studentService;

@@ -5,6 +5,7 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramew
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramework.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.AddStudentV1.resources
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.TeacherAdded.resources
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.ModifyTeacher.resources

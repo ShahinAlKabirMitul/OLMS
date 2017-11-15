@@ -15,8 +15,6 @@ namespace OLMS.BackEnd.Repository
 
         public bool Add(T entity)
         {
-            //DbSet<T> dbSet = this.db.Set<T>();
-            //T add = dbSet.Add(entity);
             db.Set<T>().Add(entity);
             int i = db.SaveChanges();
             return i > 0;

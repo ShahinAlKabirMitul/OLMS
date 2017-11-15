@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using OLMS.BackEnd.Model;
+﻿using OLMS.BackEnd.Model;
 using OLMS.BackEnd.RequestModel;
-using OLMS.BackEnd.Service;
 using OLMS.BackEnd.ViewModel;
+using System.Web.Http;
 
 namespace OLMS.BackEnd.API.Controllers
 {
     [RoutePrefix("api/Teacher")]
-    public class TeacherController  : BaseController<Student, StudentRequestModel, StudentViewModel>
+    public class TeacherController : BaseController<Teacher, TeacherRequestModel, TeacherViewModel>
     {
+
     }
 }
