@@ -1,19 +1,30 @@
+import { Entity } from './../model/entity';
+
+
 
 import { Observable } from 'rxjs/Rx';
 
 import { RepogitoryService } from './repogitory.service';
 import { Injectable } from '@angular/core';
-import { Entity } from '../model/entity';
+
 
 
 @Injectable()
 
 export class BaseService<T> {
+  public subUrl:string;
+  model:T;
+  constructor(public repo:RepogitoryService) {
+   // let d=this.createInstence(T) as Entity;
 
-  constructor(public repo:RepogitoryService,public subUrl:string) {
    }
-   
-  save(model: Entity) {
+  
+  createInstence<T>(c:new ()=> Entity):Entity{
+    return new c();
+
+  }
+
+  save(model) {
     return this.repo.post(this.subUrl+'/add',model);
   }
   // search(viewModel:any) {

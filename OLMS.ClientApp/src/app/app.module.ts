@@ -1,3 +1,4 @@
+import { BaseService } from './common/base.service';
 
 
 
@@ -53,6 +54,7 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     
   ],
   providers: [
+    BaseService,
     StudentService,
     TeacherService,
     RepogitoryService,

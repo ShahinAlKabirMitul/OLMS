@@ -1,11 +1,12 @@
+import { BaseService } from './../../common/base.service';
 import { Student } from './../../model/student';
 import { async } from '@angular/core/testing';
 import { Subscription } from 'rxjs/Rx';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Response } from '@angular/http';
-import { StudentService } from './../../service/student.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { StudentService } from '../../service/student.service';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
     
     animate:  'fromTop' 
   }
-  constructor(private studentService:StudentService,
+  constructor(private service:StudentService,
     private router:Router, private route:ActivatedRoute) {
       this.id= this.route.snapshot.paramMap.get('id');
    }
@@ -35,7 +36,7 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
     this.initForm();
     if(this.id){
       this.editMode=true;
-        this.subscription= this.studentService.getDataById(this.id).subscribe( (s:any) =>{
+        this.subscription= this.service.getDataById(this.id).subscribe( (s:any) =>{
          this.editMode=true;
          this.model=s;
          console.log(s);
@@ -49,7 +50,7 @@ export class StudentEntryComponent implements OnInit,OnDestroy {
   }
   onSubmit(){
     
-    this.studentService.save(this.studentForm.value).subscribe((response:Response)=>{
+    this.service.save(this.studentForm.value).subscribe((response:Response)=>{
      
     })
     //this.router.navigateByUrl('/student');

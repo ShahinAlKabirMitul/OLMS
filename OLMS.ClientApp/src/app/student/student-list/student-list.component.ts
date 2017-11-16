@@ -1,15 +1,15 @@
-import { Observable } from 'rxjs/Rx';
 
+import { StudentService } from './../../service/student.service';
+import { BaseService } from '../../common/base.service';
+import { Observable } from 'rxjs/Rx';
 import { async } from 'rxjs/scheduler/async';
 import { BaseRequestModel } from '../../request.model/base.request';
-
 import { of } from 'rxjs/observable/of';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router } from '@angular/router';
 import { Response } from '@angular/http';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Student } from '../../model/student';
-import { StudentService } from '../../service/student.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -24,8 +24,11 @@ export class StudentListComponent implements OnInit {
   requestModel:BaseRequestModel;
 
   
-  constructor(private stuservice:StudentService,private router:Router) {
+  constructor(private service:StudentService,private router:Router) {
+
+    console.log(' I am StudentList')
     this.requestModel=new BaseRequestModel();
+   
    
    }
 
@@ -38,7 +41,7 @@ async search( requestModel:BaseRequestModel){
       requestModel.orderBy='name';
     }
    
-    this.student= await this.stuservice.search(requestModel);
+    this.student= await this.service.search(requestModel);
    // this.student=this.student$;
     console.log(this.student$);
 
