@@ -8,20 +8,21 @@ export abstract class BaseController<T extends Entity>  {
     service: BaseService<T>;
     constructor(baseService: BaseService<T>) {
         this.service = baseService;
-        this.requestModel=new BaseRequestModel();
-        this.requestModel.page=1;
-        this.requestModel.perPageCount=5;
+        this.requestModel = new BaseRequestModel();
+        this.requestModel.page = 1;
+        this.requestModel.perPageCount = 5;
         this.requestModel.orderBy = 'Modified';
-        this.model =this.createInstence(Entity) as T;
-       
+        this.model = this.createInstence(Entity) as T;
+        console.log(this.model);
+
     }
 
-    createInstence<Entity>(c:new ()=> Entity):Entity{
+    createInstence<Entity>(c: new () => Entity): Entity {
         return new c();
-    
-      }
-      
-    async  save() {
+
+    }
+   
+    async save() {
         console.log(this.model);
         await this.service.save(this.model).toPromise();
 
@@ -34,7 +35,7 @@ export abstract class BaseController<T extends Entity>  {
 
     async search() {
 
-      
+
         console.log(this.requestModel);
         this.models = await this.service.search(this.requestModel);
 
@@ -48,7 +49,7 @@ export abstract class BaseController<T extends Entity>  {
 
     next() {
         this.requestModel.page = this.requestModel.page + 1;
-        
+
         this.search();
     }
     pre() {
@@ -57,8 +58,8 @@ export abstract class BaseController<T extends Entity>  {
             this.requestModel.page = this.requestModel.page - 1;
             this.search();
         }
-        
+
     }
-  
+
 
 }

@@ -31,7 +31,7 @@ export class StudentListComponent extends BaseController<Student> implements OnI
   }
 
 
-  editStudent(student: Student) {
+  edit(student: Student) {
     this.router.navigate(['/student', student.id])
   }
   reset() {
