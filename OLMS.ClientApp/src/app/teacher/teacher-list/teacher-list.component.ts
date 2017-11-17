@@ -8,56 +8,29 @@ import { Teacher } from './../../model/teacher';
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
 import { TeacherService } from '../../service/teacher.service';
+import { BaseController } from '../../controller/baseController';
 
 @Component({
   selector: 'app-teacher-list',
   templateUrl: './teacher-list.component.html',
   styleUrls: ['./teacher-list.component.css']
 })
-export class TeacherListComponent implements OnInit {
+export class TeacherListComponent extends BaseController<Teacher> implements OnInit {
+  constructor(public teacherService: TeacherService, private router: Router) {
+    super(teacherService);
+    this.reset();
 
-  teacher:Observable<Teacher[]>;
-  bra$;
-  RequestModel:BaseRequestModel;
-  
-  constructor(private teacherService:TeacherService,private router:Router) {
-    this.RequestModel=new BaseRequestModel();
-    
-   }
+  }
 
   ngOnInit() {
-  
-  }
-  async search(RequestModel:BaseRequestModel){
-   
-    if(!RequestModel.orderBy){
-      RequestModel.orderBy='name';
-    }
-    console.log(RequestModel);
-    this.teacher= await this.teacherService.search(RequestModel);
-   
-  
-  }
-  editStudent(student:Teacher){
-    this.router.navigate(['/teacher',student.id])
-  }
-  sort(property:string){
-    this.RequestModel.isAscending=! this.RequestModel.isAscending;
-    this.RequestModel.orderBy=property;
-    this.search(this.RequestModel);
-  }
- 
-next(){
-this.RequestModel.page=this.RequestModel.page+1;
- this.search(this.RequestModel);
-}
-pre(){
-  
-  if(this.RequestModel.page>1){
-    this.RequestModel.page=this.RequestModel.page-1;
-   
-  }
-  this.search(this.RequestModel);
-}
 
+  }
+
+  editStudent(student: Teacher) {
+    this.router.navigate(['/teacher', student.id])
+  }
+
+  reset() {
+    this.requestModel = new BaseRequestModel();
+  }
 }

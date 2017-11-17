@@ -12,11 +12,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 
 export class BaseService<T> {
-  public subUrl:string;
   model:T;
-  constructor(public repo:RepogitoryService) {
-   // let d=this.createInstence(T) as Entity;
-
+  constructor(public repo:RepogitoryService,public subUrl:string) {
    }
   
   createInstence<T>(c:new ()=> Entity):Entity{
@@ -35,6 +32,7 @@ export class BaseService<T> {
   }
    search(viewModel:any):Observable<T[]> {
      return this.repo.post(this.subUrl+'query',viewModel).map( res=>res.json());
+    // return data.subscribe(s=>)
    }
 
 }

@@ -26,6 +26,7 @@ export class TeacherEntryComponent extends BaseController<Teacher>  implements O
     super(service);
    // this.model=new Teacher();
     this.reset();
+  
     this.id= this.route.snapshot.paramMap.get('id');
   }
 

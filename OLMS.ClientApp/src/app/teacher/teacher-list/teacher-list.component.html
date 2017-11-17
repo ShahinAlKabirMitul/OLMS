@@ -15,7 +15,7 @@
           <div class="col-xl-10">
             <div class="form-group">
 
-              <input type="text" [(ngModel)]="RequestModel.keyword" placeholder="keyword.." name="keyword" id="keyword" class="form-control">
+              <input type="text" [(ngModel)]="requestModel.keyword" placeholder="keyword.." name="keyword" id="keyword" class="form-control">
             </div>
           </div>
          
@@ -39,7 +39,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let stu of teacher | async ">
+                <tr *ngFor="let stu of models | async ">
                   <td>{{stu.name}}</td>
                   <td>{{stu.phoneNo}}</td>
                   
@@ -51,7 +51,7 @@
       
             </table>
             <button class="btn btn-primaty btn-sm" (click)="pre()">Pre</button>
-            <label for="">Current Page :{{RequestModel.page}} </label>
+            <label for="">Current Page :{{requestModel.page}} </label>
             <button class="btn btn-primaty btn-sm" (click)="next()">Next</button>
       </div>
       
