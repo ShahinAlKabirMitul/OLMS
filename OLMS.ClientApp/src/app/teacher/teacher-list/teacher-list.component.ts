@@ -32,5 +32,6 @@ export class TeacherListComponent extends BaseController<Teacher> implements OnI
 
   reset() {
     //this.requestModel = new BaseRequestModel();
+    this.search();
   }
 }

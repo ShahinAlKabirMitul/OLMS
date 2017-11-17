@@ -24,7 +24,7 @@ export class StudentListComponent extends BaseController<Student> implements OnI
 
   constructor(public service: StudentService, private router: Router) {
     super(service);
-
+    this.reset();
     console.log(' I am StudentList')
   }
 
@@ -38,6 +38,7 @@ export class StudentListComponent extends BaseController<Student> implements OnI
   }
   reset() {
     //this.requestModel=new BaseRequestModel();
+    this.search();
   }
 
 }

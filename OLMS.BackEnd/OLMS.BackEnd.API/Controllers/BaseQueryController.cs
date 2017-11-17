@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using OLMS.BackEnd.Model;
+﻿using OLMS.BackEnd.Model;
 using OLMS.BackEnd.RequestModel;
 using OLMS.BackEnd.Service;
 using OLMS.BackEnd.ViewModel;
+using System.Web.Http;
 
 namespace OLMS.BackEnd.API.Controllers
 {
-    public class BaseQueryController<T,TR,TV>  : ApiController where T:Entity where TR:BaseRequestModel<T> where TV:BaseViewModel<T>
+    public class BaseQueryController<T, TR, TV> : ApiController where T : Entity where TR : BaseRequestModel<T> where TV : BaseViewModel<T>
     {
         private readonly BaseService<T, TR, TV> _studentService;
 

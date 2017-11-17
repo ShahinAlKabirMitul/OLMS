@@ -12,17 +12,15 @@
     <div class="row">
       <div class="col-xl-12">
         <div class="row">
-          <div class="col-xl-10">
+          <div class="col-xl-12">
             <div class="form-group">
 
-              <input type="text" [(ngModel)]="requestModel.keyword" placeholder="keyword.." name="keyword" id="keyword" class="form-control">
+              <input type="text" [(ngModel)]="requestModel.keyword" (keypress)="search()" (change)="search()"  placeholder="Search.." name="keyword" id="keyword" class="form-control">
             </div>
           </div>
          
 
-          <div class="col-xl-2">
-            <button class="btn btn-success" >Search</button>
-          </div>
+         
         </div>
 
       </div>

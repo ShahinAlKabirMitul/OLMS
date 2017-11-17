@@ -3,25 +3,20 @@
 <div class="col-xl-12">
   <form #f="ngForm" (ngSubmit)="search(f.value)">
     <div class="row">
-        <div class="col-xl-12">
-            <P>
-                <a routerLink="/student/new" class="btn btn-primary">New Student</a>
-            </P>
-        </div>
+      <div class="col-xl-12">
+        <P>
+          <a routerLink="/student/new" class="btn btn-primary">New Student</a>
+        </P>
+      </div>
     </div>
     <div class="row">
       <div class="col-xl-12">
         <div class="row">
-          <div class="col-xl-5">
+          <div class="col-xl-12">
             <div class="form-group">
-
-              <input type="text" [(ngModel)]="requestModel.keyword" placeholder="Name.." name="keyword" id="keyword" class="form-control">
+              <input type="text" [(ngModel)]="requestModel.keyword" (keypress)="search()" placeholder="Search ......" name="keyword" id="keyword"
+                class="form-control">
             </div>
-          </div>
-        
-
-          <div class="col-xl-2">
-            <button class="btn btn-success" >Search</button>
           </div>
         </div>
 
@@ -30,32 +25,32 @@
     <hr>
     <div class="row">
       <div class="col-xl-12">
-          <table class="table table-striped custab">
-              <thead>
-                <tr>
-                  <td (click)="sort('name')">Name </td>
-                  <td (click)="sort('phone')">Phone</td>
-                  <td>Address</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let stu of  models |async ">
-                  <td>{{stu.name}}</td>
-                  <td>{{stu.phone}}</td>
-                  
-                  <td>
-                      <button class="btn btn-info" (click)= "editStudent(stu)" >Edit </button>
-                  </td>
-                </tr>
-              </tbody>
-      
-            </table>
-            <button class="btn btn-primaty btn-sm" (click)="pre()">Pre</button>
-            <label for="">Current Page :{{requestModel.page}} </label>
-            <button class="btn btn-primaty btn-sm" (click)="next()">Next</button>
+        <table class="table table-striped custab">
+          <thead>
+            <tr>
+              <td (click)="sort('name')">Name </td>
+              <td (click)="sort('phone')">Phone</td>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stu of  models |async ">
+              <td>{{stu.name}}</td>
+              <td>{{stu.phone}}</td>
+
+              <td>
+                <button class="btn btn-info" (click)="editStudent(stu)">Edit </button>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+        <button class="btn btn-primaty btn-sm" (click)="pre()">Pre</button>
+        <label for="">Current Page :{{requestModel.page}} </label>
+        <button class="btn btn-primaty btn-sm" (click)="next()">Next</button>
       </div>
-      
-    
+
+
     </div>
 
 

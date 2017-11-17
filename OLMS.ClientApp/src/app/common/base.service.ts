@@ -17,10 +17,7 @@ export class BaseService<T> {
   constructor(public repo:RepogitoryService,public subUrl:string) {
    }
   
-  createInstence<T>(c:new ()=> Entity):Entity{
-    return new c();
 
-  }
 
   save(model) {
     return this.repo.post(this.subUrl+'/add',model);
