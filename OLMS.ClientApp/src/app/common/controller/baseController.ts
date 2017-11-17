@@ -1,13 +1,10 @@
+
 import { Entity } from './../../model/entity';
 import { BaseService } from './../base.service';
 import { BaseRequestModel } from './../../request.model/base.request';
 import { Observable } from 'rxjs/Rx';
-
-
-
-
-export abstract class BaseController<T>  {
-   public model: T;
+export abstract class BaseController<T extends Entity>  {
+    public model: T;
     service: BaseService<T>;
     constructor(baseService: BaseService<T>) {
         this.service = baseService;
@@ -15,15 +12,16 @@ export abstract class BaseController<T>  {
         this.requestModel.page=1;
         this.requestModel.perPageCount=5;
         this.requestModel.orderBy = 'Modified';
-        
+        this.model =this.createInstence(Entity) as T;
+       
     }
 
-    createInstence<T>(c:new ()=> Entity):Entity{
+    createInstence<Entity>(c:new ()=> Entity):Entity{
         return new c();
     
       }
       
-    async save() {
+    async  save() {
         console.log(this.model);
         await this.service.save(this.model).toPromise();
 
@@ -35,8 +33,12 @@ export abstract class BaseController<T>  {
     models: Observable<T[]>;
 
     async search() {
+
+      
         console.log(this.requestModel);
         this.models = await this.service.search(this.requestModel);
+
+
     }
     sort(property: string) {
         this.requestModel.isAscending = !this.requestModel.isAscending;
@@ -46,6 +48,7 @@ export abstract class BaseController<T>  {
 
     next() {
         this.requestModel.page = this.requestModel.page + 1;
+        
         this.search();
     }
     pre() {
@@ -56,5 +59,6 @@ export abstract class BaseController<T>  {
         }
         
     }
+  
 
 }

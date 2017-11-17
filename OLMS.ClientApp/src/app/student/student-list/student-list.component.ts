@@ -1,6 +1,4 @@
 import { BaseController } from '../../common/controller/baseController';
-
-
 import { StudentService } from './../../service/student.service';
 import { BaseService } from '../../common/base.service';
 import { Observable } from 'rxjs/Rx';
