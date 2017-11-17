@@ -3,6 +3,7 @@ import { Entity } from './../model/entity';
 
 
 import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map'
 
 import { RepogitoryService } from './repogitory.service';
 import { Injectable } from '@angular/core';

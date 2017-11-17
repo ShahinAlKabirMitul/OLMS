@@ -1,6 +1,9 @@
+import { BaseController } from '../../common/controller/baseController';
+import { selector } from 'rxjs/operator/publish';
+
 
 import { BaseService } from './../../common/base.service';
-import { BaseController } from '../../controller/baseController';
+
 
 
 import { any } from 'codelyzer/util/function';
@@ -32,17 +35,7 @@ export class TeacherEntryComponent extends BaseController<Teacher>  implements O
 
   ngOnInit() {
 
-    // if(this.id){
-    //   this.editMode=true;
-    //     this.subscription= this.service.getDataById(this.id).subscribe( (data:any) =>{
-    //      this.editMode=true;
-    //      console.log(data);
-    //     this.model=data;
-        
-         
-    //      //this.initForm();
-    //   });
-    // }
+   
   }
 
   reset(){

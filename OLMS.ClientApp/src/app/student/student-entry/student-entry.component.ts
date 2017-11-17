@@ -1,75 +1,27 @@
-import { BaseService } from './../../common/base.service';
-import { Student } from './../../model/student';
-import { async } from '@angular/core/testing';
-import { Subscription } from 'rxjs/Rx';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Response } from '@angular/http';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { StudentService } from '../../service/student.service';
+import { BaseController } from '../../common/controller/baseController';
 
+
+
+
+import { StudentService } from '../../service/student.service';
+import { Component, OnInit } from '@angular/core';
+import { Student } from '../../model/student';
 
 @Component({
   selector: 'app-student-entry',
   templateUrl: './student-entry.component.html',
   styleUrls: ['./student-entry.component.css']
 })
-export class StudentEntryComponent implements OnInit,OnDestroy {
-  studentForm:FormGroup;
-  id;
-  editMode:boolean;
-  model:Student;
-  subscription=new Subscription();
-  public options = {
-    position: ["right"],
-    timeOut: 0,
-    lastOnBottom: true,
-    
-    animate:  'fromTop' 
-  }
-  constructor(private service:StudentService,
-    private router:Router, private route:ActivatedRoute) {
-      this.id= this.route.snapshot.paramMap.get('id');
-   }
+export class StudentEntryComponent extends BaseController<Student>  implements OnInit {
+
+  constructor(service:StudentService) {
+    super(service);
+    this.reset();
+ }
 
   ngOnInit() {
-    this.initForm();
-    if(this.id){
-      this.editMode=true;
-        this.subscription= this.service.getDataById(this.id).subscribe( (s:any) =>{
-         this.editMode=true;
-         this.model=s;
-         console.log(s);
-         
-         this.initForm();
-      });
-    }
   }
-  ngOnDestroy(){
-    this.subscription.unsubscribe();
-  }
-  onSubmit(){
-    
-    this.service.save(this.studentForm.value).subscribe((response:Response)=>{
-     
-    })
-    //this.router.navigateByUrl('/student');
-  }
-  private initForm(){
-
-    let studentName='';
-    let address='';
-    let phone='';
-    if(this.editMode){
-      studentName=this.model.name;
-      address=this.model.address;
-      phone=this.model.phone;
-    }
-    this.studentForm = new FormGroup({
-     'name':new FormControl(studentName,Validators.required),
-     'address':new FormControl(address,Validators.required),
-     'phone':new FormControl(phone,Validators.required),
-   });
-
-  }
+reset(){
+  this.model=new Student();
+}
 }

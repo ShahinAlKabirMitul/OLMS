@@ -1,3 +1,4 @@
+import { BaseController } from '../../common/controller/baseController';
 
 
 import { StudentService } from './../../service/student.service';
@@ -12,7 +13,7 @@ import { Response } from '@angular/http';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { Student } from '../../model/student';
 import { Component, OnInit } from '@angular/core';
-import { BaseController } from '../../controller/baseController';
+
 
 @Component({
   selector: 'app-student-list',
@@ -20,29 +21,23 @@ import { BaseController } from '../../controller/baseController';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent extends BaseController<Student> implements OnInit {
- 
 
-
-  
-  constructor(public service:StudentService,private router:Router) {
+  constructor(public service: StudentService, private router: Router) {
     super(service);
 
     console.log(' I am StudentList')
-   
-   
-   
-   }
+  }
 
   ngOnInit() {
-   
+
   }
 
-  
-  editStudent(student:Student){
-    this.router.navigate(['/student',student.id])
+
+  editStudent(student: Student) {
+    this.router.navigate(['/student', student.id])
   }
-reset(){
-  this.requestModel=new BaseRequestModel();
-}
-  
+  reset() {
+    //this.requestModel=new BaseRequestModel();
+  }
+
 }

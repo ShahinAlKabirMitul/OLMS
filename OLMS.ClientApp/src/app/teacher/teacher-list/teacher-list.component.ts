@@ -8,7 +8,7 @@ import { Teacher } from './../../model/teacher';
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
 import { TeacherService } from '../../service/teacher.service';
-import { BaseController } from '../../controller/baseController';
+import { BaseController } from '../../common/controller/baseController';
 
 @Component({
   selector: 'app-teacher-list',
@@ -31,6 +31,6 @@ export class TeacherListComponent extends BaseController<Teacher> implements OnI
   }
 
   reset() {
-    this.requestModel = new BaseRequestModel();
+    //this.requestModel = new BaseRequestModel();
   }
 }

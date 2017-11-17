@@ -1,18 +1,21 @@
+import { BaseService } from './../base.service';
+import { BaseRequestModel } from './../../request.model/base.request';
 import { Observable } from 'rxjs/Rx';
-import { BaseRequestModel } from './../request.model/base.request';
 
 
-import { Entity } from './../model/entity';
-import { BaseService } from '../common/base.service';
+
 
 export abstract class BaseController<T>  {
-    model: T;
+   public model: T;
     service: BaseService<T>;
 
 
     constructor(baseService: BaseService<T>) {
         this.service = baseService;
         this.requestModel=new BaseRequestModel();
+        this.requestModel.page=1;
+        this.requestModel.perPageCount=5;
+        this.requestModel.orderBy = 'Modified';
     }
 
     async  save() {
@@ -28,9 +31,7 @@ export abstract class BaseController<T>  {
 
     async search() {
 
-        if (!this.requestModel.orderBy) {
-            this.requestModel.orderBy = 'name';
-        }
+      
         console.log(this.requestModel);
         this.models = await this.service.search(this.requestModel);
 
