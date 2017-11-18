@@ -21,6 +21,18 @@ namespace OLMS.BackEnd.Model
         [MaxLength(550)]
         public string Description { get; set; }
 
+        [Index]
+        [Required]
+        [MaxLength(50)]
+        public string Email { get; set; }
+        [Index]
+        [Required]
+        [MaxLength(20)]
+        public string Phone { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string Address { get; set; }
+
 
         public virtual ICollection<Course> Courses { get; set; }
     }

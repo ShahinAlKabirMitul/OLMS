@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OLMS.BackEnd.Model
@@ -19,6 +20,44 @@ namespace OLMS.BackEnd.Model
         [Required]
         [MaxLength(100)]
         public string Tags { get; set; }
+        [Required]
+        public int TotalStudentsEnrolled { get; set; }
+
+        [Required]
+        public DateTime PublishDate { get; set; }
+
+        [Required]
+        public int TotalLecturesCount { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string SubTitle { get; set; }
+
+
+        [MaxLength(150)]
+        public string CourseSummary { get; set; }
+
+
+        [MaxLength(250)]
+        public string CourseShortDescription { get; set; }
+
+
+        [MaxLength(50)]
+        public string Language { get; set; }
+
+
+        [MaxLength(50)]
+        public string Achieve { get; set; }
+
+
+        [MaxLength(50)]
+        public string Requirements { get; set; }
+
+
+        [MaxLength(500)]
+        public string FullDescription { get; set; }
+
+
 
         [Index]
         [MaxLength(128)]
