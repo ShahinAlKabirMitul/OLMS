@@ -54,6 +54,14 @@
     <Compile Include="Migrations\201711180834256_Init.Designer.cs">
       <DependentUpon>201711180834256_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711181606025_modify teacher.cs" />
+    <Compile Include="Migrations\201711181606025_modify teacher.Designer.cs">
+      <DependentUpon>201711181606025_modify teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711181608293_modify teacher delete index of description.cs" />
+    <Compile Include="Migrations\201711181608293_modify teacher delete index of description.Designer.cs">
+      <DependentUpon>201711181608293_modify teacher delete index of description.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
@@ -66,6 +74,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201711180834256_Init.resx">
       <DependentUpon>201711180834256_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711181606025_modify teacher.resx">
+      <DependentUpon>201711181606025_modify teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711181608293_modify teacher delete index of description.resx">
+      <DependentUpon>201711181608293_modify teacher delete index of description.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
