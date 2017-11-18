@@ -1,3 +1,5 @@
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Razor.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\ApplicationInsights.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\roslyn\csc.exe
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\roslyn\csc.exe.config
@@ -117,7 +119,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.AspNet.Ide
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.AspNet.Identity.Owin.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Security.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Security.Cookies.xml
@@ -135,7 +136,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.Owin
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.WebHost.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Mvc.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Optimization.xml
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Razor.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.Deployment.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.Razor.xml

@@ -7,13 +7,13 @@ namespace OLMS.BackEnd.Model.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class studentEmailAddted : IMigrationMetadata
+    public sealed partial class Init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(studentEmailAddted));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711070141409_studentEmailAddted"; }
+            get { return "201711180834256_Init"; }
         }
         
         string IMigrationMetadata.Source

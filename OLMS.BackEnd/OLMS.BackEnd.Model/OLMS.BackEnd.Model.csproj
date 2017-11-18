@@ -48,22 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessDbContext.cs" />
+    <Compile Include="Course.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="Migrations\201710230205080_AddStudentV1.cs" />
-    <Compile Include="Migrations\201710230205080_AddStudentV1.Designer.cs">
-      <DependentUpon>201710230205080_AddStudentV1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710250240498_TeacherAdded.cs" />
-    <Compile Include="Migrations\201710250240498_TeacherAdded.Designer.cs">
-      <DependentUpon>201710250240498_TeacherAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710261648427_Modify Teacher.cs" />
-    <Compile Include="Migrations\201710261648427_Modify Teacher.Designer.cs">
-      <DependentUpon>201710261648427_Modify Teacher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711070141409_studentEmailAddted.cs" />
-    <Compile Include="Migrations\201711070141409_studentEmailAddted.Designer.cs">
-      <DependentUpon>201711070141409_studentEmailAddted.cs</DependentUpon>
+    <Compile Include="Migrations\201711180834256_Init.cs" />
+    <Compile Include="Migrations\201711180834256_Init.Designer.cs">
+      <DependentUpon>201711180834256_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,19 +64,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710230205080_AddStudentV1.resx">
-      <DependentUpon>201710230205080_AddStudentV1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710250240498_TeacherAdded.resx">
-      <DependentUpon>201710250240498_TeacherAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710261648427_Modify Teacher.resx">
-      <DependentUpon>201710261648427_Modify Teacher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711070141409_studentEmailAddted.resx">
-      <DependentUpon>201711070141409_studentEmailAddted.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711180834256_Init.resx">
+      <DependentUpon>201711180834256_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

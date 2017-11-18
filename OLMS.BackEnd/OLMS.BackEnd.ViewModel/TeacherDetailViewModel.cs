@@ -9,7 +9,7 @@ namespace OLMS.BackEnd.ViewModel
         public TeacherDetailViewModel(Teacher entity) : base(entity)
         {
             this.Name = entity.Name;
-            this.PhoneNo = entity.PhoneNo;
+           // this.PhoneNo = entity.PhoneNo;
         }
     }
 }

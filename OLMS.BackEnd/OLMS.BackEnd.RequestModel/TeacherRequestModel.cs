@@ -1,6 +1,6 @@
-﻿using System;
+﻿using OLMS.BackEnd.Model;
+using System;
 using System.Linq.Expressions;
-using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.RequestModel
 {
@@ -12,11 +12,11 @@ namespace OLMS.BackEnd.RequestModel
 
         public override Expression<Func<Teacher, bool>> GetExpression()
         {
-          
+
             if (!string.IsNullOrWhiteSpace(Keyword))
             {
                 ExpressionObj = x =>
-                    x.Name.ToLower().Contains(Keyword.ToLower()) || x.PhoneNo.ToLower().Contains(Keyword.ToLower());
+                    x.Name.ToLower().Contains(Keyword.ToLower());
             }
             if (!string.IsNullOrWhiteSpace(Name))
             {
