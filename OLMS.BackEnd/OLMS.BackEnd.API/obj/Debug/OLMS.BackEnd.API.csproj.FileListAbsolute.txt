@@ -1,5 +1,4 @@
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.xml
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Razor.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\WebGrease.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\ApplicationInsights.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\roslyn\csc.exe
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\roslyn\csc.exe.config
@@ -96,7 +95,6 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Razor.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.Deployment.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.Razor.dll
-D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\WebGrease.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Model.pdb
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Model.dll.config
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.BackEnd.Repository.pdb
@@ -119,6 +117,7 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.AspNet.Ide
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.AspNet.Identity.Owin.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Security.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Security.Cookies.xml
@@ -136,6 +135,7 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.Owin
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Http.WebHost.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Mvc.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Optimization.xml
+D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.Razor.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.Deployment.xml
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\System.Web.WebPages.Razor.xml
