@@ -57,8 +57,6 @@ namespace OLMS.BackEnd.Model
         [MaxLength(500)]
         public string FullDescription { get; set; }
 
-
-
         [Index]
         [MaxLength(128)]
         public string TeacherId { get; set; }
