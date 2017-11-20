@@ -37,6 +37,15 @@ namespace OLMS.BackEnd.Service
             model.ModifiedBy = "Admin";
             return repository.Add(model);
         }
+        public bool Add2(T model)
+        {
+            model.Id = Guid.NewGuid().ToString();
+            model.CreatedBy = "Admin";
+            model.Created = System.DateTime.Now;
+            model.Modified = System.DateTime.Now;
+            model.ModifiedBy = "Admin";
+            return repository.Add(model);
+        }
         public List<TV> Search(TR request)
         {
             var students = SearchQueryable(request);

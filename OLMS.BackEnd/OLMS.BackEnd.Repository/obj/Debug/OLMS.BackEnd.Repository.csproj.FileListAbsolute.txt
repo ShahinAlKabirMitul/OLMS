@@ -12,3 +12,17 @@ D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.Ba
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.csproj.CoreCompileInputs.cache
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.dll
 D:\Tutorial\Projects\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.pdb
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Repository.dll.config
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Repository.dll
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Repository.pdb
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\EntityFramework.dll
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Model.dll
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Model.pdb
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\OLMS.BackEnd.Model.dll.config
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\EntityFramework.xml
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.csprojResolveAssemblyReference.cache
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.csproj.CoreCompileInputs.cache
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.dll
+C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.Repository\obj\Debug\OLMS.BackEnd.Repository.pdb
