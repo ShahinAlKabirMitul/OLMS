@@ -26,17 +26,3 @@ C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\
 C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.csproj.CoreCompileInputs.cache
 C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.dll
 C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.pdb
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.ViewModel.dll.config
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.ViewModel.dll
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.ViewModel.pdb
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.dll
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.Model.dll
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.Model.pdb
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\OLMS.BackEnd.Model.dll.config
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.xml
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.csprojResolveAssemblyReference.cache
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.csproj.CoreCompileInputs.cache
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.dll
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.ViewModel\obj\Debug\OLMS.BackEnd.ViewModel.pdb
