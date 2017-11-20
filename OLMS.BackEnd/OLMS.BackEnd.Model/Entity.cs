@@ -11,7 +11,6 @@ namespace OLMS.BackEnd.Model
     public class Entity
     {
         public string Id { get; set; }
-
         [Index]
         [Required]
         public DateTime Created { get; set; }
