@@ -25,6 +25,17 @@
                </div>
           </div>
        </div>
+       <div class="row">
+        <div class="col-md-12">
+           <div class="form-group">
+               <label for="">Address</label>
+               <input #phone="ngModel" name="address" [(ngModel)]="model.address" type="text" class="form-control" required>
+               <div class="alert alert-danger" *ngIf="phone.touched && phone.invalid">
+                  Enter Phone
+               </div>
+             </div>
+        </div>
+     </div>
        <button 
        [disabled]="!f.valid"
        (click)="save()"
