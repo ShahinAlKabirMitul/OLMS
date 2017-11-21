@@ -26,3 +26,17 @@ C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Deb
 C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.csproj.CoreCompileInputs.cache
 C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.dll
 C:\Users\mitul\Documents\git\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.pdb
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\OLMS.BackEnd.RequestModel.dll.config
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\OLMS.BackEnd.RequestModel.dll
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\OLMS.BackEnd.RequestModel.pdb
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\EntityFramework.dll
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\OLMS.BackEnd.Model.dll
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\OLMS.BackEnd.Model.pdb
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\OLMS.BackEnd.Model.dll.config
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\EntityFramework.xml
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.csprojResolveAssemblyReference.cache
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.csproj.CoreCompileInputs.cache
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.dll
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.RequestModel\obj\Debug\OLMS.BackEnd.RequestModel.pdb
