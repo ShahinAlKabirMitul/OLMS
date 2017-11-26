@@ -1,1 +1,30 @@
-<app-course-card></app-course-card>
+<div class="row">
+
+  <div class="col">
+    <div class="row" >
+      <ng-container *ngFor="let p of courses | async ;let i=index">
+        <div class="col">
+          <course-card [course]=p></course-card>
+          
+        </div>
+        
+      </ng-container>
+    
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col">
+    <ng-container *ngFor="let p of courses | async ;let i=index">
+      <div class="col">
+        <course-card [course]=p></course-card>
+        
+      </div>
+      
+    </ng-container>
+  
+  </div>
+</div> -->
+

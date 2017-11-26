@@ -16,11 +16,9 @@ import { Observable } from 'rxjs/Observable';
 export class CourseEntryComponent extends BaseController<Course> {
 
  public teachers: Observable<Teacher[]>;
-  modelss: Observable<Teacher[]>;
+ 
   constructor(service:CourseService,public teacherService:TeacherService) {
     super(service)
-  
-   
     this.reset();
     this.loadTeacher();
 
