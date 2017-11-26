@@ -29,7 +29,13 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { StudentEntryComponent } from './student/student-entry/student-entry.component';
 import { CourseService } from './service/course.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';'@angular/material/select';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { CourseCardComponent } from './course/course-card/course-card.component';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +51,7 @@ import {MatSelectModule} from '@angular/material/select';'@angular/material/sele
     CourseEntryComponent,
     DashbordComponent,
     StudentEntryComponent,
+    CourseCardComponent,
     
  
     
@@ -57,7 +64,14 @@ import {MatSelectModule} from '@angular/material/select';'@angular/material/sele
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    MatSelectModule
+    MatSelectModule,
+    MatNativeDateModule
+    ,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule
+  
+    
     
   ],
   providers: [

@@ -1,66 +1,196 @@
-
-
 <div class="row">
   <div class="col-xl-10">
     <form #f="ngForm">
-        <div class="row">
-            <div class="col-md-12">
-               <div class="form-group">
-                   <label for="">Title</label>
-                   <input #title="ngModel" name="title" [(ngModel)]="model.title" type="text" class="form-control" required>
-                   <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
-                     Enter Name
-                   </div>
-                 </div>
-            </div>
-         </div>
-
-     <div class="row">
-       <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
           <div class="form-group">
-              <label for="">Teacher</label>
-              <mat-form-field  class="form-control">
-                  <mat-select >
-                    <mat-option *ngFor="let food of teachers |async" [value]="food.id">
-                      {{ food.name}}
-                    </mat-option>
-                  </mat-select>
-                </mat-form-field>
+            <label for="">Title</label>
+            <input #title="ngModel" name="title" [(ngModel)]="model.title" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+              Enter Title
+            </div>
           </div>
-       </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-           <div class="form-group">
-               <label for="">Price</label>
-               <input #price="ngModel" name="price" [(ngModel)]="model.price" type="text" class="form-control" required>
-               <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
-                 Enter Price
-               </div>
-             </div>
         </div>
-     </div>
+      </div>
 
-     <div class="row">
+      <div class="row">
         <div class="col-md-12">
-           <div class="form-group">
-               <label for="">Tags</label>
-               <input #tags="ngModel" name="tags" [(ngModel)]="model.tags" type="text" class="form-control" required>
-               <div class="alert alert-danger" *ngIf="price.tags && price.tags">
-                 Enter Price
-               </div>
-             </div>
+          <div class="form-group">
+            <label for="">Sub Title</label>
+            <input #subTitle="ngModel" name="subTitle" [(ngModel)]="model.subTitle" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="subTitle.touched && subTitle.invalid">
+              Enter Total Sub Title
+            </div>
+          </div>
         </div>
-     </div>
-    
-      
-     
-       <button 
-       [disabled]="!f.valid"
-       (click)="save()"
-       class="btn btn-primary">Save</button>
-       <button class="btn btn-danger" (click)="reset()" >reset</button>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Course Summary</label>
+            <input #courseSummary="ngModel" name="courseSummary" [(ngModel)]="model.courseSummary" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="courseSummary.touched && courseSummary.invalid">
+              Enter CourseSummary
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for=""> Course Short Description </label>
+            <input #courseShortDescription="ngModel" name="courseShortDescription" [(ngModel)]="model.courseShortDescription" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="courseShortDescription.touched && courseShortDescription.invalid">
+              Course Short Description
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for=""> Language</label>
+            <input #language="ngModel" name="language" [(ngModel)]="model.language" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="language.touched && language.invalid">
+              Course Short Description
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Teacher</label>
+            <mat-form-field class="form-control">
+              <mat-select [(ngModel)]="model.teacherId" name="teacher">
+                <mat-option *ngFor="let food of teachers |async" [value]="food.id">
+                  {{ food.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Price</label>
+            <input #price="ngModel" name="price" [(ngModel)]="model.price" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+              Enter Price
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Tags</label>
+            <input #tags="ngModel" name="tags" [(ngModel)]="model.tags" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf="tags.touched && tags.invalid">
+              Enter Tags
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Total Students Enrolled</label>
+            <input #totalStudentsEnrolled="ngModel" name="totalStudentsEnrolled" [(ngModel)]="model.totalStudentsEnrolled" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="totalStudentsEnrolled.touched && totalStudentsEnrolled.invalid">
+              Enter total Students Enrolled
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Publish Date</label>
+            <mat-form-field class="form-control">
+              <input matInput c [matDatepicker]="picker" placeholder="Choose a date" name="publishDate" #publishDate="ngModel" [(ngModel)]="model.publishDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <div class="alert alert-danger" *ngIf="publishDate.touched && publishDate.invalid">
+              Enter Publish Date
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">TotalLecturesCount</label>
+            <input #totalLecturesCount="ngModel" name="totalLecturesCount" [(ngModel)]="model.totalLecturesCount" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="totalLecturesCount.touched && totalLecturesCount.invalid">
+              Enter Total LecturesCount
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Achieve</label>
+            <input #achieve="ngModel" name="achieve" [(ngModel)]="model.achieve" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="achieve.touched && achieve.invalid">
+              Enter Total LecturesCount
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Requirements</label>
+            <input #requirements="ngModel" name="achieve" [(ngModel)]="model.requirements" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="requirements.touched && achieve.requirements">
+              Requirements
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Full Description</label>
+            <input #fullDescription="ngModel" name="fullDescription" [(ngModel)]="model.fullDescription" type="text"
+              class="form-control" required>
+            <div class="alert alert-danger" *ngIf="achieve.touched && achieve.invalid">
+              Full Description
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <button [disabled]="!f.valid" (click)="save()" class="btn btn-primary">Save</button>
+      <button class="btn btn-danger" (click)="reset()">reset</button>
     </form>
   </div>
 </div>

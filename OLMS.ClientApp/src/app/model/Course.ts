@@ -5,7 +5,7 @@ export class Course extends Entity {
     public price:number;
     public tags:string;
     public totalStudentsEnrolled:number;
-    public PublishDate:Date;
+    public publishDate:Date;
     public totalLecturesCount:number;
     public subTitle:string;
     public courseSummary:string;
