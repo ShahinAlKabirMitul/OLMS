@@ -2,7 +2,6 @@ import { BaseService } from './common/base.service';
 
 
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppErrorHandler } from './common/error/app-error-handler';
 import { UrlService } from './common/url.service';
 import { RepogitoryService } from './common/repogitory.service';
@@ -28,7 +27,9 @@ import { CourseListComponent } from './course/course-list/course-list.component'
 import { CourseEntryComponent } from './course/course-entry/course-entry.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { StudentEntryComponent } from './student/student-entry/student-entry.component';
-
+import { CourseService } from './service/course.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';'@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,8 @@ import { StudentEntryComponent } from './student/student-entry/student-entry.com
     DashbordComponent,
     StudentEntryComponent,
     
+ 
+    
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,9 @@ import { StudentEntryComponent } from './student/student-entry/student-entry.com
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+
+    MatSelectModule
     
   ],
   providers: [
@@ -60,7 +65,8 @@ import { StudentEntryComponent } from './student/student-entry/student-entry.com
     StudentService,
     TeacherService,
     RepogitoryService,
-    UrlService
+    UrlService,
+    CourseService
   ],
   bootstrap: [AppComponent]
 })

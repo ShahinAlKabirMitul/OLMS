@@ -1,3 +1,25 @@
-<p>
-  course-entry works!
-</p>
+
+
+<div class="row">
+  <div class="col-xl-10">
+    <form #f="ngForm">
+      
+     
+
+      <mat-form-field>
+        <mat-select placeholder="Favorite food">
+          <mat-option *ngFor="let food of teachers |async" [value]="food.id">
+            {{ food.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+       <button 
+       [disabled]="!f.valid"
+       (click)="save()"
+       class="btn btn-primary">Save</button>
+       <button class="btn btn-danger" (click)="reset()" >reset</button>
+    </form>
+  </div>
+</div>

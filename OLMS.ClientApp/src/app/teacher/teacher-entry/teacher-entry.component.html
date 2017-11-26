@@ -15,11 +15,55 @@
          </div>
       </div>
       <div class="row">
+        <div class="col-md-12">
+           <div class="form-group">
+               <label for="">Designation</label>
+               <input #designation="ngModel" name="designation" [(ngModel)]="model.designation" type="text" class="form-control" required>
+               <div class="alert alert-danger" *ngIf="designation.touched && designation.invalid">
+                  Enter Designation
+               </div>
+             </div>
+        </div>
+     </div>
+     <div class="row">
+      <div class="col-md-12">
+         <div class="form-group">
+             <label for="">Description</label>
+             <input #description="ngModel" name="description" [(ngModel)]="model.description" type="text" class="form-control" required>
+             <div class="alert alert-danger" *ngIf="phone.touched && phone.invalid">
+                Enter Description
+             </div>
+           </div>
+      </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+       <div class="form-group">
+           <label for="">Email</label>
+           <input #email="ngModel" name="email" [(ngModel)]="model.email" type="text" class="form-control" required>
+           <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
+              Enter Email
+           </div>
+         </div>
+    </div>
+ </div>
+ <div class="row">
+  <div class="col-md-12">
+     <div class="form-group">
+         <label for="">Phone</label>
+         <input #phone="ngModel" name="phone" [(ngModel)]="model.phone" type="text" class="form-control" required>
+         <div class="alert alert-danger" *ngIf="phone.touched && phone.invalid">
+            Enter Phone
+         </div>
+       </div>
+  </div>
+</div>
+      <div class="row">
           <div class="col-md-12">
              <div class="form-group">
-                 <label for="">Phone</label>
-                 <input #phone="ngModel" name="phone" [(ngModel)]="model.phoneNo" type="text" class="form-control" required>
-                 <div class="alert alert-danger" *ngIf="phone.touched && phone.invalid">
+                 <label for="">address</label>
+                 <input #address="ngModel" name="address" [(ngModel)]="model.address" type="text" class="form-control" required>
+                 <div class="alert alert-danger" *ngIf="address.touched && address.invalid">
                     Enter Phone
                  </div>
                </div>

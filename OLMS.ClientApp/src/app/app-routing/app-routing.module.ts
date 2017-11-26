@@ -8,6 +8,7 @@ import { StudentListComponent } from './../student/student-list/student-list.com
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CourseEntryComponent } from '../course/course-entry/course-entry.component';
 
 const appRouting:Routes=[
   {path:'',redirectTo:'/dashbord',pathMatch:'full'},
@@ -20,6 +21,7 @@ const appRouting:Routes=[
   {path:'teacher/:id',component:TeacherEntryComponent},
   {path:'class',component:ClassListComponent},
   {path:'course',component:CourseListComponent},
+  {path:'course/new',component:CourseEntryComponent},
  
 ]
 @NgModule({
