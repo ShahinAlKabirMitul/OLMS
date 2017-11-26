@@ -20,6 +20,7 @@ export class BaseService<T> {
 
 
   save(model) {
+    
     return this.repo.post(this.subUrl+'/add',model);
   }
   // search(viewModel:any) {

@@ -18,6 +18,10 @@ namespace OLMS.BackEnd.API.Controllers
         [ActionName("Add")]
         public IHttpActionResult Post(T model)
         {
+            if (!ModelState.IsValid)
+            {
+                return this.BadRequest(ModelState);
+            }
             bool add = service.Add(model);
             return this.Ok(add);
         }

@@ -24,6 +24,11 @@ export abstract class BaseController<T extends Entity>  {
    
     async save() {
         console.log(this.model);
+        this.model.created=new Date();
+        this.model.createdBy="me";
+        this.model.modified=new Date();
+        this.model.modifiedBy="me";
+        this.model.id="1";
         await this.service.save(this.model).toPromise();
 
     }

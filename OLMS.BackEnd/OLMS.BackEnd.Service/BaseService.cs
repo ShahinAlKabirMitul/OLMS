@@ -30,6 +30,7 @@ namespace OLMS.BackEnd.Service
 
         public bool Add(T model)
         {
+           
             model.Id = Guid.NewGuid().ToString();
             model.CreatedBy = "Admin";
             model.Created = System.DateTime.Now;
