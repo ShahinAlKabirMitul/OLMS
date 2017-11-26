@@ -3,18 +3,59 @@
 <div class="row">
   <div class="col-xl-10">
     <form #f="ngForm">
+        <div class="row">
+            <div class="col-md-12">
+               <div class="form-group">
+                   <label for="">Title</label>
+                   <input #title="ngModel" name="title" [(ngModel)]="model.title" type="text" class="form-control" required>
+                   <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+                     Enter Name
+                   </div>
+                 </div>
+            </div>
+         </div>
+
+     <div class="row">
+       <div class="col-md-12">
+          <div class="form-group">
+              <label for="">Teacher</label>
+              <mat-form-field  class="form-control">
+                  <mat-select >
+                    <mat-option *ngFor="let food of teachers |async" [value]="food.id">
+                      {{ food.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </div>
+       </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+           <div class="form-group">
+               <label for="">Price</label>
+               <input #price="ngModel" name="price" [(ngModel)]="model.price" type="text" class="form-control" required>
+               <div class="alert alert-danger" *ngIf="price.touched && price.invalid">
+                 Enter Price
+               </div>
+             </div>
+        </div>
+     </div>
+
+     <div class="row">
+        <div class="col-md-12">
+           <div class="form-group">
+               <label for="">Tags</label>
+               <input #tags="ngModel" name="tags" [(ngModel)]="model.tags" type="text" class="form-control" required>
+               <div class="alert alert-danger" *ngIf="price.tags && price.tags">
+                 Enter Price
+               </div>
+             </div>
+        </div>
+     </div>
+    
       
      
-
-      <mat-form-field>
-        <mat-select placeholder="Favorite food">
-          <mat-option *ngFor="let food of teachers |async" [value]="food.id">
-            {{ food.name}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-
-
        <button 
        [disabled]="!f.valid"
        (click)="save()"
