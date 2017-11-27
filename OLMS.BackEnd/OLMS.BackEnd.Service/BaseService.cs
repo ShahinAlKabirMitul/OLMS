@@ -19,13 +19,14 @@ namespace OLMS.BackEnd.Service
         }
         public  IQueryable<T> SearchQueryable(BaseRequestModel<T> request)
         {
-            IQueryable<T> students = repository.Get();
+            IQueryable<T> queryable = repository.Get();
             var expression = request.GetExpression();
-            students = students.Where(expression);
+            queryable = queryable.Where(expression);
             
-            students = request.OrderByFunc()(students);
-            students = request.SkipAndTake(students);
-            return students;
+            queryable = request.OrderByFunc()(queryable);
+            queryable = request.SkipAndTake(queryable);
+            queryable = request.IncludeParents(queryable);
+            return queryable;
         }
 
         public bool Add(T model)

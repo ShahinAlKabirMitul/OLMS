@@ -6,7 +6,8 @@ namespace OLMS.BackEnd.Model
     {
         public BusinessDbContext() : base("DefaultBusinessConnection")
         {
-
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<Student> Students { set; get; }

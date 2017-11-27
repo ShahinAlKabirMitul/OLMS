@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.Entity;
+using System.Linq;
 using System.Linq.Expressions;
 using OLMS.BackEnd.Model;
 
@@ -21,8 +23,8 @@ namespace OLMS.BackEnd.RequestModel
                     x.Title.ToLower().Contains(Keyword.ToLower()) ||
                     x.Tags.ToLower().Contains(Keyword.ToLower()) ||
                     x.SubTitle.ToLower().Contains(Keyword.ToLower()) ||
-                    x.CourseSummary.ToLower().Contains(Keyword.ToLower()) ||
-                    x.CourseShortDescription.ToLower().Contains(Keyword.ToLower());
+                    x.Teacher.Name.ToLower().Contains(Keyword.ToLower());
+
 
 
 
@@ -51,6 +53,11 @@ namespace OLMS.BackEnd.RequestModel
             this.ExpressionObj = ExpressionObj.And(baseExpression);
 
             return ExpressionObj;
+        }
+
+        public override IQueryable<Course> IncludeParents(IQueryable<Course> queryable)
+        {
+           return queryable.Include(s => s.Teacher);
         }
     }
 }

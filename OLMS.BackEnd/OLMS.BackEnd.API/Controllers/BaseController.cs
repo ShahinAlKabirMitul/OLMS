@@ -6,7 +6,8 @@ using OLMS.BackEnd.ViewModel;
 
 namespace OLMS.BackEnd.API.Controllers
 {
-    public class BaseController<T,TR,TV> :ApiController where T:Entity where TR:BaseRequestModel<T> where TV:BaseViewModel<T>
+    public class BaseController<T,TR,TV> :ApiController where T:Entity where TR:BaseRequestModel<T>
+        where TV:BaseViewModel<T>
     {
         private readonly BaseService<T, TR, TV> service;
         public BaseController()

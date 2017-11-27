@@ -70,6 +70,11 @@ namespace OLMS.BackEnd.RequestModel
 
         public abstract Expression<Func<T, bool>> GetExpression();
 
+        public virtual IQueryable<T> IncludeParents(IQueryable<T> queryable)
+        {
+            return queryable;
+        }
+
     }
 
     public static class ExpressionHelper
