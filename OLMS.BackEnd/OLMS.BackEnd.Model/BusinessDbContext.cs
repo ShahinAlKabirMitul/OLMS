@@ -13,5 +13,8 @@ namespace OLMS.BackEnd.Model
         public DbSet<Student> Students { set; get; }
         public DbSet<Teacher> Teachers { set; get; }
         public DbSet<Course> Courses { set; get; }
+        public DbSet<Content> Contents { get; set; }
+        public DbSet<Enrollment> Enrollments { get; set; }
+        public DbSet<StudentContent> StudentContents { get; set; }
     }
 }

@@ -15,19 +15,14 @@ namespace OLMS.BackEnd.API.Models
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
             // Add custom user claims here
             return userIdentity;
-        }
-    }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
-        {
+            // Our Own Properties
+
         }
-        
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
+
+        //public class  ApplicationRole:IdentityRole
+        //{
+        //    // Our Own Role 
+        //}
     }
 }

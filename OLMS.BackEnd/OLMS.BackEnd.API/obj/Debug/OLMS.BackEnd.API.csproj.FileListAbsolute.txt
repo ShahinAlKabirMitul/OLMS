@@ -433,3 +433,5 @@ C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\O
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.csproj.CoreCompileInputs.cache
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.dll
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.pdb
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.Migrations.InitialDB.resources
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.csproj.GenerateResource.Cache

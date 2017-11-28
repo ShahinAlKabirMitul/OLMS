@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessDbContext.cs" />
+    <Compile Include="Content.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="Enrollment.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Migrations\201711180834256_Init.cs" />
     <Compile Include="Migrations\201711180834256_Init.Designer.cs">
@@ -66,9 +68,14 @@
     <Compile Include="Migrations\201711181640528_modify course,teacher.Designer.cs">
       <DependentUpon>201711181640528_modify course,teacher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711271701269_Add_Content&amp;Entrolment&amp;StudentContent.cs" />
+    <Compile Include="Migrations\201711271701269_Add_Content&amp;Entrolment&amp;StudentContent.Designer.cs">
+      <DependentUpon>201711271701269_Add_Content&amp;Entrolment&amp;StudentContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentContent.cs" />
     <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711181640528_modify course,teacher.resx">
       <DependentUpon>201711181640528_modify course,teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711271701269_Add_Content&amp;Entrolment&amp;StudentContent.resx">
+      <DependentUpon>201711271701269_Add_Content&amp;Entrolment&amp;StudentContent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
