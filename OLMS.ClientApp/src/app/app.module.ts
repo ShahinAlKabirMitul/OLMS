@@ -1,3 +1,5 @@
+import { RegistrationService } from './service/registration.service';
+import { RegistrationComponent } from './account/registration/registration.component';
 import { BaseService } from './common/base.service';
 
 
@@ -37,6 +39,7 @@ import {MatInputModule} from '@angular/material/input';
 import { CourseCardComponent } from './course/course-card/course-card.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +55,7 @@ import { CourseCardComponent } from './course/course-card/course-card.component'
     DashbordComponent,
     StudentEntryComponent,
     CourseCardComponent,
+    RegistrationComponent,
     
  
     
@@ -80,7 +84,8 @@ import { CourseCardComponent } from './course/course-card/course-card.component'
     TeacherService,
     RepogitoryService,
     UrlService,
-    CourseService
+    CourseService,
+    RegistrationService
   ],
   bootstrap: [AppComponent]
 })

@@ -323,6 +323,7 @@ namespace OLMS.BackEnd.API.Controllers
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
+           // model.ConfirmPassword
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

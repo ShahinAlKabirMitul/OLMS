@@ -1,3 +1,4 @@
+import { RegistrationComponent } from '../account/registration/registration.component';
 import { TeacherEntryComponent } from '../teacher/teacher-entry/teacher-entry.component';
 import { StudentEntryComponent } from '../student/student-entry/student-entry.component';
 import { DashbordComponent } from '../dashbord/dashbord.component';
@@ -22,6 +23,7 @@ const appRouting:Routes=[
   {path:'class',component:ClassListComponent},
   {path:'course',component:CourseListComponent},
   {path:'course/new',component:CourseEntryComponent},
+  {path:'registration',component:RegistrationComponent},
  
 ]
 @NgModule({
