@@ -37,6 +37,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { CourseCardComponent } from './course/course-card/course-card.component';
+import { LoginComponent } from './account/login/login.component';
+import { LoginService } from './service/login.service';
 
 
 
@@ -56,6 +58,7 @@ import { CourseCardComponent } from './course/course-card/course-card.component'
     StudentEntryComponent,
     CourseCardComponent,
     RegistrationComponent,
+    LoginComponent,
     
  
     
@@ -85,7 +88,8 @@ import { CourseCardComponent } from './course/course-card/course-card.component'
     RepogitoryService,
     UrlService,
     CourseService,
-    RegistrationService
+    RegistrationService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

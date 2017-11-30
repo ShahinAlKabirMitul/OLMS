@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:58031/api/'
+  api: 'http://localhost:58031/api/',
+  apiLogin: 'http://localhost:58031/Token'
 };

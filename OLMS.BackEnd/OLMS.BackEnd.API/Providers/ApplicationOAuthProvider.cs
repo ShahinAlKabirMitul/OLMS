@@ -29,7 +29,9 @@ namespace OLMS.BackEnd.API.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
+            //context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
+         
 
             ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
 
@@ -90,7 +92,8 @@ namespace OLMS.BackEnd.API.Providers
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
-                { "userName", userName }
+                { "userName", userName },
+                {"requestId",Guid.NewGuid().ToString() }
             };
             return new AuthenticationProperties(data);
         }

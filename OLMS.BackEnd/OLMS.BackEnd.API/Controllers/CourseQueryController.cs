@@ -8,6 +8,6 @@ namespace OLMS.BackEnd.API.Controllers
     [RoutePrefix("api/CourseQuery")]
     public class CourseQueryController : BaseQueryController<Course, CourseRequestModel, CourseViewModel>
     {
-
+       
     }
 }

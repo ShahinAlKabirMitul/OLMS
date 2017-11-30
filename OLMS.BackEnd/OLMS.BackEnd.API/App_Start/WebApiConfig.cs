@@ -15,19 +15,22 @@ namespace OLMS.BackEnd.API
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+
+
+            ICorsPolicyProvider policy = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(policy);
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
-            config.Formatters.Clear();
-            config.Formatters.Add(new JsonMediaTypeFormatter());
-            //HttpConfiguration config = GlobalConfiguration.Configuration;
-            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
-
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
-            var cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
+            config.Formatters.Clear();
+            config.Formatters.Add(new JsonMediaTypeFormatter());
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            // authentication scheme add
+
+            config.Filters.Add(new AuthorizeAttribute());
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -36,6 +39,28 @@ namespace OLMS.BackEnd.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //// Web API configuration and services
+            //// Configure Web API to use only bearer token authentication.
+            //config.SuppressDefaultHostAuthentication();
+            //config.Formatters.Clear();
+            //config.Formatters.Add(new JsonMediaTypeFormatter());
+            ////HttpConfiguration config = GlobalConfiguration.Configuration;
+            //config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
+
+            //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+            //var cors = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(cors);
+            //// Web API routes
+            //config.MapHttpAttributeRoutes();
+
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
         }
     }
 }

@@ -16,6 +16,7 @@ namespace OLMS.BackEnd.API.Controllers
         {
             _studentService = new BaseService<T, TR, TV>();
         }
+        [AllowAnonymous]
         [HttpPost]
         [Route("Search")]
         [ActionName("Search")]

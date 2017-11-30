@@ -37,13 +37,13 @@ C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramework.xml
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.Init.resources
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.modifyteacher.resources
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.modifyteacherdeleteindexofdescription.resources
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.modifycourseteacher.resources
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.Add_ContentEntrolmentStudentContent.resources
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csproj.GenerateResource.Cache
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csproj.CoreCompileInputs.cache
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.dll
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.pdb
-C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.Migrations.Add_ContentEntrolmentStudentContent.resources
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache

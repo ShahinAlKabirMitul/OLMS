@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using OLMS.BackEnd.API.Models;
+using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.API.Controllers
 {
@@ -13,11 +17,15 @@ namespace OLMS.BackEnd.API.Controllers
     {
         [Authorize]
         // GET api/values
-        public IEnumerable<string> Get()
+        public async Task<ApplicationUser> Get()
         {
             var name = User.Identity.Name;
-           
-            return new string[] { "value1"+name, "value2"+Guid.NewGuid()};
+            var manager = Request.GetOwinContext().Get<ApplicationUserManager>();
+            ApplicationUser applicationManger = await manager.FindByNameAsync(name);
+            ApplicationDbContext.Create();
+            BusinessDbContext.Create();
+            return applicationManger;
+           // return new string[] { "value1"+name, "value2"+Guid.NewGuid()};
         }
 
         // GET api/values/5

@@ -9,6 +9,10 @@ namespace OLMS.BackEnd.Model
             this.Configuration.LazyLoadingEnabled = false;
             this.Configuration.ProxyCreationEnabled = false;
         }
+        public static BusinessDbContext Create()
+        {
+            return new BusinessDbContext();
+        }
 
         public DbSet<Student> Students { set; get; }
         public DbSet<Teacher> Teachers { set; get; }
