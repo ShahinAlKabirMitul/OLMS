@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-8">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h3 class="panel-title">Add New Content</h3>
+              </div>
+              <div class="panel-body">
+                  <form name="userForm" role="form" ng-submit="vm.addContent()" novalidate>
+
+                      <div class="form-group">
+                          <label for="name">Select Course</label>
+                        
+                      </div>
+
+                      <div class="form-group">
+                          <label for="serialNumber">Serial Number</label>
+                          <input #serialNumber="ngModel" name="serialNumber" [(ngModel)]="model.serialNumber" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="serialNumber.touched && serialNumber.invalid">
+                            Enter Serial number 
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="title">Title</label>
+                          <input #title="ngModel" name="title" [(ngModel)]="model.title" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="title.touched && title.invalid">
+                            Enter Title
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="description">Description</label>
+                          <input #description="ngModel" name="description" [(ngModel)]="model.description" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
+                            Enter Description
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="url">Content Url</label>
+                          <input #url="ngModel" name="description" [(ngModel)]="model.url" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="url.touched && url.invalid">
+                            Enter Url
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="contentDuration">Content Duraiton</label>
+                          <input #Duraiton="ngModel" name="Duraiton" [(ngModel)]="model.Duraiton" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="Duraiton.touched && Duraiton.invalid">
+                            Enter Url
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="tags">Tags</label>
+                          <input #tags="ngModel" name="Duraiton" [(ngModel)]="model.tags" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="tags.touched && tags.invalid">
+                            Enter Url
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="category">Category</label>
+                          
+                      </div>
+
+                      <div class="row text-right">
+                          <div class="col-lg-12">
+                              <button type="submit" class="btn btn-success" (click)="save()" >Add Content</button>
+                              <a class="btn btn-primary" href="#/">Basck to Courses</a>
+                          </div>
+                      </div>
+
+                  </form>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>

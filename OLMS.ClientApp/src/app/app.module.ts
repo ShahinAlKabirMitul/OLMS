@@ -39,6 +39,7 @@ import {MatInputModule} from '@angular/material/input';
 import { CourseCardComponent } from './course/course-card/course-card.component';
 import { LoginComponent } from './account/login/login.component';
 import { LoginService } from './service/login.service';
+import { ContentComponent } from './course/content/content.component';
 
 
 
@@ -59,6 +60,7 @@ import { LoginService } from './service/login.service';
     CourseCardComponent,
     RegistrationComponent,
     LoginComponent,
+    ContentComponent,
     
  
     
