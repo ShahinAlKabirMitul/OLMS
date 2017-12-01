@@ -1,3 +1,4 @@
+import { UserProfile } from './model/userProfile';
 import { RegistrationService } from './service/registration.service';
 import { RegistrationComponent } from './account/registration/registration.component';
 import { BaseService } from './common/base.service';
@@ -40,6 +41,9 @@ import { CourseCardComponent } from './course/course-card/course-card.component'
 import { LoginComponent } from './account/login/login.component';
 import { LoginService } from './service/login.service';
 import { ContentComponent } from './course/content/content.component';
+import { ContentService } from './service/content.service';
+import { UserService } from './service/user.service';
+import { CommonService } from './shared/common.service';
 
 
 
@@ -91,7 +95,11 @@ import { ContentComponent } from './course/content/content.component';
     UrlService,
     CourseService,
     RegistrationService,
-    LoginService
+    LoginService,
+    ContentService,
+    UserService,
+    CommonService,
+    UserProfile
   ],
   bootstrap: [AppComponent]
 })

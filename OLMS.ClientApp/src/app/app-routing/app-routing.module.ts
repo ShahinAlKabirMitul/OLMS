@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseEntryComponent } from '../course/course-entry/course-entry.component';
+import { ContentComponent } from '../course/content/content.component';
 
 const appRouting: Routes =[
   {path: '',redirectTo:'/dashbord',pathMatch:'full'},
@@ -24,6 +25,7 @@ const appRouting: Routes =[
   {path: 'class',component:ClassListComponent},
   {path: 'course',component:CourseListComponent},
   {path: 'course/new',component:CourseEntryComponent},
+  {path: 'content/new',component:ContentComponent},
   {path: 'registration',component:RegistrationComponent},
   {path: 'login',component:LoginComponent},
 

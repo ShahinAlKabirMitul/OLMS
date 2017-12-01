@@ -27,6 +27,18 @@ namespace OLMS.BackEnd.API.Controllers
             return this.Ok(students);
         }
 
+        
+        [HttpPost]
+        [Route("Search")]
+        [ActionName("Search")]
+        public IHttpActionResult SearchAuth(TR request)
+        {
+            // StudentService service = new StudentService();
+            var students = _studentService.Search(request);
+            return this.Ok(students);
+        }
+
+
         [HttpPost]
         [Route("Get")]
         [ActionName("Get")]

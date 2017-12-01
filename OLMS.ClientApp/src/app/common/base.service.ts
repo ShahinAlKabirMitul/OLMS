@@ -21,7 +21,7 @@ export class BaseService<T> {
 
   save(model) {
     
-    return this.repo.post(this.subUrl+'/add',model);
+    return this.repo.postAuth(this.subUrl+'/add',model);
   }
   // search(viewModel:any) {
   //   return this.repo.post(this.subUrl+'query',viewModel);
@@ -33,5 +33,9 @@ export class BaseService<T> {
      return this.repo.post(this.subUrl+'query',viewModel).map( res=>res.json());
     // return data.subscribe(s=>)
    }
+   searchAuth(viewModel:any):Observable<T[]> {
+    return this.repo.postAuth(this.subUrl+'query',viewModel).map( res=>res.json());
+   // return data.subscribe(s=>)
+  }
 
 }

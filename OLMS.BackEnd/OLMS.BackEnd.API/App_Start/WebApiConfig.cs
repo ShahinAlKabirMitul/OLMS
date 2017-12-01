@@ -14,11 +14,7 @@ namespace OLMS.BackEnd.API
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
-        {
-
-
-            ICorsPolicyProvider policy = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(policy);
+        { 
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
