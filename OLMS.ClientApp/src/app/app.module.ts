@@ -1,3 +1,4 @@
+import { AuthGuard } from './common/authGuard';
 import { UserProfile } from './model/userProfile';
 import { RegistrationService } from './service/registration.service';
 import { RegistrationComponent } from './account/registration/registration.component';
@@ -40,10 +41,12 @@ import {MatInputModule} from '@angular/material/input';
 import { CourseCardComponent } from './course/course-card/course-card.component';
 import { LoginComponent } from './account/login/login.component';
 import { LoginService } from './service/login.service';
-import { ContentComponent } from './course/content/content.component';
+
 import { ContentService } from './service/content.service';
 import { UserService } from './service/user.service';
 import { CommonService } from './shared/common.service';
+import { ContentListComponent } from './course/content/content-list/content-list.component';
+import { ContentEntryComponent } from './course/content/content-entry/content-entry.component';
 
 
 
@@ -64,7 +67,9 @@ import { CommonService } from './shared/common.service';
     CourseCardComponent,
     RegistrationComponent,
     LoginComponent,
-    ContentComponent,
+  
+    ContentListComponent,
+    ContentEntryComponent,
     
  
     
@@ -82,7 +87,8 @@ import { CommonService } from './shared/common.service';
     ,
     MatDatepickerModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    
   
     
     
@@ -99,7 +105,8 @@ import { CommonService } from './shared/common.service';
     ContentService,
     UserService,
     CommonService,
-    UserProfile
+    UserProfile,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

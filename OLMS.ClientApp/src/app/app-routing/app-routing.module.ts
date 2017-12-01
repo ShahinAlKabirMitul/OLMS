@@ -11,23 +11,70 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseEntryComponent } from '../course/course-entry/course-entry.component';
-import { ContentComponent } from '../course/content/content.component';
+
+import { AuthGuard } from '../common/authGuard';
+import { ContentEntryComponent } from '../course/content/content-entry/content-entry.component';
+import { ContentListComponent } from '../course/content/content-list/content-list.component';
 
 const appRouting: Routes =[
   {path: '',redirectTo:'/dashbord',pathMatch:'full'},
   {path: 'dashbord', component:DashbordComponent},
-  {path: 'student', component:StudentListComponent},
-  {path: 'student/new',component:StudentEntryComponent},
-  {path: 'student/:id',component:StudentEntryComponent},
-  {path: 'teacher',component:TeacherListComponent},
-  {path: 'teacher/new',component:TeacherEntryComponent},
-  {path: 'teacher/:id',component:TeacherEntryComponent},
-  {path: 'class',component:ClassListComponent},
-  {path: 'course',component:CourseListComponent},
-  {path: 'course/new',component:CourseEntryComponent},
-  {path: 'content/new',component:ContentComponent},
-  {path: 'registration',component:RegistrationComponent},
-  {path: 'login',component:LoginComponent},
+  {  path: 'student',
+     component:StudentListComponent ,
+     canActivate:[AuthGuard]
+  },
+  { 
+    path: 'student/new',
+    component:StudentEntryComponent,
+    canActivate:[AuthGuard]
+  },
+  { 
+    path: 'student/:id',
+    component:StudentEntryComponent,
+    canActivate:[AuthGuard]
+  },
+  { 
+    path: 'teacher',
+    component:TeacherListComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'teacher/new',
+    component:TeacherEntryComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'teacher/:id',
+    component:TeacherEntryComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'class',
+    component:ClassListComponent,
+    canActivate:[AuthGuard],
+  },
+  { 
+    path: 'course',
+    component:CourseListComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'course/new',
+    component:CourseEntryComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'content',
+    component:ContentListComponent,
+    canActivate:[AuthGuard]
+ },
+  { path: 'content/new',
+    component:ContentEntryComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'registration',
+    component:RegistrationComponent,
+    canActivate:[AuthGuard]
+  },
+  { path: 'login',
+    component:LoginComponent,
+   
+  },
 
 ]
 @NgModule({

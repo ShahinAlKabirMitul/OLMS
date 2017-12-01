@@ -39,7 +39,7 @@
 
                       <div class="form-group">
                           <label for="url">Content Url</label>
-                          <input #url="ngModel" name="description" [(ngModel)]="model.url" type="text" class="form-control" required>
+                          <input #url="ngModel" name="url" [(ngModel)]="model.url" type="text" class="form-control" required>
                           <div class="alert alert-danger" *ngIf="url.touched && url.invalid">
                             Enter Url
                           </div>
@@ -47,9 +47,9 @@
 
                       <div class="form-group">
                           <label for="contentDuration">Content Duraiton</label>
-                          <input #Duraiton="ngModel" name="Duraiton" [(ngModel)]="model.Duraiton" type="text" class="form-control" required>
-                          <div class="alert alert-danger" *ngIf="Duraiton.touched && Duraiton.invalid">
-                            Enter Url
+                          <input #duraiton="ngModel" name="duraiton" [(ngModel)]="model.duraiton" type="text" class="form-control" required>
+                          <div class="alert alert-danger" *ngIf="duraiton.touched && duraiton.invalid">
+                            Enter Duration
                           </div>
                       </div>
 
@@ -57,7 +57,7 @@
                           <label for="tags">Tags</label>
                           <input #tags="ngModel" name="Duraiton" [(ngModel)]="model.tags" type="text" class="form-control" required>
                           <div class="alert alert-danger" *ngIf="tags.touched && tags.invalid">
-                            Enter Url
+                            Enter Tags
                           </div>
                       </div>
 
