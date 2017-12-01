@@ -47,8 +47,9 @@ import { UserService } from './service/user.service';
 import { CommonService } from './shared/common.service';
 import { ContentListComponent } from './course/content/content-list/content-list.component';
 import { ContentEntryComponent } from './course/content/content-entry/content-entry.component';
+import { LogoutComponent } from './account/logout/logout.component';
 
-
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ContentEntryComponent } from './course/content/content-entry/content-en
   
     ContentListComponent,
     ContentEntryComponent,
+    LogoutComponent,
     
  
     
@@ -89,7 +91,7 @@ import { ContentEntryComponent } from './course/content/content-entry/content-en
     MatFormFieldModule,
     MatInputModule,
     
-  
+    NgbModule.forRoot()
     
     
   ],

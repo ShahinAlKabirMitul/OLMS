@@ -10,7 +10,25 @@
       <a class="nav-item nav-link" routerLinkActive="active" routerLink="/course">Course</a>
       <a class="nav-item nav-link" routerLinkActive="active" routerLink="/content">Content</a>
       <a class="nav-item nav-link" routerLinkActive="active" routerLink="/registration">Registration</a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/login">Login</a>
+   
+      <ul class="navbar-nav">
+          <ng-template #anonymousUser>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login">Login</a>
+              </li>
+            </ng-template>
+            <li ngbDropdown *ngIf=" authService.isAuthenticated()  ;else anonymousUser" class="nav-item dropdown ">
+                <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{Profile.currentUser.userName}}</a>
+                <div ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdown01">
+                 
+                  <a class="dropdown-item" (click)=logOut()>Log Out</a>
+                 
+                </div>
+              </li>
+              
+      </ul>
+     
       
     </div>
   </div>

@@ -10,6 +10,7 @@ export class UserProfile {
         claims: null
     };
     constructor(private router: Router) {
+        
     }
 
     setProfile(profile: IProfile): void {
