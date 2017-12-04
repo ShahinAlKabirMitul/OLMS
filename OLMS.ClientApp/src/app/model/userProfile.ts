@@ -6,7 +6,7 @@ export class UserProfile {
     userProfile: IProfile = {
         token: "",
         expiration: "",
-        currentUser: { id: '', userName: '', email: '' },
+        currentUser: { id: '', userName: '', email: '',landingRoute:'' },
         claims: null
     };
     constructor(private router: Router) {
@@ -25,6 +25,7 @@ console.log('set profile',profile);
         sessionStorage.setItem('expires_in', profile['expires_in']);
        // sessionStorage.setItem('nameid', nameid);
         sessionStorage.setItem('userName', profile['userName']);
+        sessionStorage.setItem('landingRoute', profile['landingRoute']);
        
       
         this.userProfile.currentUser.id = sessionStorage.getItem('access_token');
@@ -38,10 +39,11 @@ console.log('set profile',profile);
             this.userProfile.token = accessToken;
             this.userProfile.expiration = sessionStorage.getItem('expires_in');
             if (this.userProfile.currentUser == null) {
-                this.userProfile.currentUser = { id: '', userName: '', email: '' }
+                this.userProfile.currentUser = { id: '', userName: '', email: '',landingRoute:'' }
             }
             this.userProfile.currentUser.id = sessionStorage.getItem('userName');
             this.userProfile.currentUser.userName = sessionStorage.getItem('userName');
+            this.userProfile.currentUser.landingRoute = sessionStorage.getItem('landingRoute');
         }
 
         return this.userProfile;

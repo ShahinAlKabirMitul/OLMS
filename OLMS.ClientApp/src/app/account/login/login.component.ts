@@ -33,10 +33,12 @@ login() {
   console.log('model'+this.model);
   var result = this.userService.login(userName, password).subscribe(
     response => {
+        console.log('login response',response);
         if (this.userService.redirectUrl) {
             this.router.navigateByUrl(this.userService.redirectUrl);
         } else {
-            this.router.navigate(['/']);
+           let landingRoute=response.landingRoute;
+            this.router.navigate([landingRoute]);
         }
     },
     error => {

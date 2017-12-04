@@ -93,7 +93,8 @@ namespace OLMS.BackEnd.API.Providers
             IDictionary<string, string> data = new Dictionary<string, string>
             {
                 { "userName", userName },
-                {"requestId",Guid.NewGuid().ToString() }
+                {"requestId",Guid.NewGuid().ToString() },
+                {"landingRoute","/student" }
             };
             return new AuthenticationProperties(data);
         }

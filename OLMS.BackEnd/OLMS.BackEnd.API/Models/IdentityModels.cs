@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -24,5 +25,11 @@ namespace OLMS.BackEnd.API.Models
         //{
         //    // Our Own Role 
         //}
+    }
+
+    public class ApplicationRole:IdentityRole
+    {
+        [MaxLength(20)]
+        public string LandingRoute { get; set; }
     }
 }

@@ -27,8 +27,6 @@ namespace OLMS.BackEnd.API.Controllers
             return this.Ok(students);
         }
 
-      
-
 
         [HttpPost]
         [Route("Get")]

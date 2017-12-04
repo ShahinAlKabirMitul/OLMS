@@ -20,4 +20,5 @@ interface IUser {
     id: string;
     userName: string;
     email: string;
+    landingRoute:string;
 }
