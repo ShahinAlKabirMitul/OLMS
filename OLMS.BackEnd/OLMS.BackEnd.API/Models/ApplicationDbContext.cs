@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using System.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace OLMS.BackEnd.API.Models
 {
@@ -13,5 +14,7 @@ namespace OLMS.BackEnd.API.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Permission> Permissions { set; get; }
+        public DbSet<Resource>Resources { set; get; }
     }
 }

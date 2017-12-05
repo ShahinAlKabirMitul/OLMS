@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -31,5 +32,40 @@ namespace OLMS.BackEnd.API.Models
     {
         [MaxLength(20)]
         public string LandingRoute { get; set; }
+    }
+
+    public class Resource
+    {
+        public string Id { get; set; }
+        [Index]
+        [MaxLength(256)]
+        [Required]
+        public string Name { get; set; }
+        [MaxLength(30)]
+        [Index]
+        [Required]
+        public string Type { get; set; }
+        [Index]
+        [Required]
+        public bool IsPublic { get; set; }
+    }
+
+    public class Permission
+    {
+        public string Id { get; set; }
+
+        [Index]
+        [MaxLength(128)]
+        [Required]
+        public string RoleId { get; set; }
+        [Index]
+        [MaxLength(128)]
+        [Required]
+        public string ResourceId { get; set; }
+        [Index]
+        [Required]
+        public bool IsAllowed { get; set; }
+        [Index]
+        public bool IsDisable { get; set; }
     }
 }

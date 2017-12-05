@@ -438,3 +438,4 @@ C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\OLMS.Ba
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Cors.dll
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\bin\Microsoft.Owin.Cors.xml
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.Migrations.AddLandingRoute.resources
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.API\obj\Debug\OLMS.BackEnd.API.Migrations.PermissionResouce.resources
