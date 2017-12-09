@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
-using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.API.Models
 {
@@ -23,58 +20,5 @@ namespace OLMS.BackEnd.API.Models
 
         }
 
-        //public class  ApplicationRole:IdentityRole
-        //{
-        //    // Our Own Role 
-        //}
-    }
-
-    public class ApplicationRole:IdentityRole
-    {
-        [MaxLength(20)]
-        public string LandingRoute { get; set; }
-    }
-
-    public class Resource:Entity
-    {
-     
-        [Index]
-        [MaxLength(256)]
-        [Required]
-        public string Name { get; set; }
-        [MaxLength(30)]
-        [Index]
-        [Required]
-        public string Type { get; set; }
-        [Index]
-        [Required]
-        public bool IsPublic { get; set; }
-    }
-
-    public class Permission:Entity
-    {
-
-        [Index]
-        [MaxLength(128)]
-        [Required]
-        public string RoleId { get; set; }
-
-        [ForeignKey("RoleId")]
-        public virtual ApplicationRole ApplicationRole { get; set; }
-
-        [Index]
-        [MaxLength(128)]
-        [Required]
-
-        public string ResourceId { get; set; }
-
-        [ForeignKey("ResourceId")]
-        public virtual Resource Resource { get; set; }
-
-        [Index]
-        [Required]
-        public bool IsAllowed { get; set; }
-        [Index]
-        public bool IsDisable { get; set; }
     }
 }
