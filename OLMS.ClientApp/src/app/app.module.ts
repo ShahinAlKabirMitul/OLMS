@@ -55,6 +55,7 @@ import { RoleService } from './service/role.service';
 import { ResourceComponent } from './account/resource/resource.component';
 import { ResourceService } from './service/resource.service';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { PermissionComponent } from './account/permission/permission.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     LogoutComponent,
     RoleComponent,
     ResourceComponent,
+    PermissionComponent,
 
     
  
