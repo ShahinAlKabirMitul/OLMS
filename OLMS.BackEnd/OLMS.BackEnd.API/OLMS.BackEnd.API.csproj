@@ -266,6 +266,10 @@
     <Compile Include="Migrations\201712090838525_up.Designer.cs">
       <DependentUpon>201712090838525_up.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712091053174_Update Role .cs" />
+    <Compile Include="Migrations\201712091053174_Update Role .Designer.cs">
+      <DependentUpon>201712091053174_Update Role .cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -384,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712090838525_up.resx">
       <DependentUpon>201712090838525_up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712091053174_Update Role .resx">
+      <DependentUpon>201712091053174_Update Role .cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
