@@ -256,6 +256,10 @@
     <Compile Include="Migrations\201712051757461_ Permission&amp;Resouce.Designer.cs">
       <DependentUpon>201712051757461_ Permission&amp;Resouce.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712090812323_UpdateIdentityModel.cs" />
+    <Compile Include="Migrations\201712090812323_UpdateIdentityModel.Designer.cs">
+      <DependentUpon>201712090812323_UpdateIdentityModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -365,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712051757461_ Permission&amp;Resouce.resx">
       <DependentUpon>201712051757461_ Permission&amp;Resouce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712090812323_UpdateIdentityModel.resx">
+      <DependentUpon>201712090812323_UpdateIdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

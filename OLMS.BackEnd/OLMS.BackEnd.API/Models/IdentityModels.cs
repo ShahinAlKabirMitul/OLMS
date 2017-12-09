@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using OLMS.BackEnd.Model;
 
 namespace OLMS.BackEnd.API.Models
 {
@@ -34,9 +35,9 @@ namespace OLMS.BackEnd.API.Models
         public string LandingRoute { get; set; }
     }
 
-    public class Resource
+    public class Resource:Entity
     {
-        public string Id { get; set; }
+     
         [Index]
         [MaxLength(256)]
         [Required]
@@ -50,18 +51,26 @@ namespace OLMS.BackEnd.API.Models
         public bool IsPublic { get; set; }
     }
 
-    public class Permission
+    public class Permission:Entity
     {
-        public string Id { get; set; }
 
         [Index]
         [MaxLength(128)]
         [Required]
         public string RoleId { get; set; }
+
+        [ForeignKey("RoleId")]
+        public virtual ApplicationRole ApplicationRole { get; set; }
+
         [Index]
         [MaxLength(128)]
         [Required]
+
         public string ResourceId { get; set; }
+
+        [ForeignKey("ResourceId")]
+        public virtual Resource Resource { get; set; }
+
         [Index]
         [Required]
         public bool IsAllowed { get; set; }
