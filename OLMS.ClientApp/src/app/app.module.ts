@@ -52,6 +52,7 @@ import { LogoutComponent } from './account/logout/logout.component';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { RoleComponent } from './account/role/role.component';
 import { RoleService } from './service/role.service';
+import { ResourceComponent } from './account/resource/resource.component';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { RoleService } from './service/role.service';
     ContentEntryComponent,
     LogoutComponent,
     RoleComponent,
+    ResourceComponent,
 
     
  
