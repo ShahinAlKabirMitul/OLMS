@@ -1,10 +1,11 @@
+import { overrideOptions } from '@angular/cli/utilities/override-options';
 import { BaseController } from '../../common/controller/baseController';
 
 
 
 
 import { StudentService } from '../../service/student.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Student } from '../../model/student';
 
 @Component({
@@ -12,7 +13,7 @@ import { Student } from '../../model/student';
   templateUrl: './student-entry.component.html',
   styleUrls: ['./student-entry.component.css']
 })
-export class StudentEntryComponent extends BaseController<Student>  implements OnInit {
+export class StudentEntryComponent extends BaseController<Student>  implements OnInit ,OnDestroy {
 
   constructor(service:StudentService) {
     super(service);
@@ -21,7 +22,11 @@ export class StudentEntryComponent extends BaseController<Student>  implements O
 
   ngOnInit() {
   }
+  ngOnDestroy(){
+    this.reset();
+  }
 reset(){
   this.model=new Student();
 }
+
 }

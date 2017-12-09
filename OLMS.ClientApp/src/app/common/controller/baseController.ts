@@ -22,7 +22,7 @@ export abstract class BaseController<T extends Entity>  {
 
     }
    
-    async save() {
+    async  save() {
         console.log(this.model);
 
         this.model.created=new Date();
@@ -33,6 +33,8 @@ export abstract class BaseController<T extends Entity>  {
         await this.service.save(this.model).toPromise().then( (s)=>{
            if(s.status==200)
              alert('Save Succssfully');
+            this.reset();
+          
         } ).catch( (s)=>{
             alert(s);
         } );
