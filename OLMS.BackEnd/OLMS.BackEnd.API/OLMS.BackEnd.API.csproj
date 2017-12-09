@@ -236,6 +236,7 @@
     <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\EnrollmentQueryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IdentityController\ApplicationRolesController.cs" />
     <Compile Include="Controllers\IdentityController\PermissionsController.cs" />
     <Compile Include="Controllers\IdentityController\ResourcesController.cs" />
     <Compile Include="Controllers\StudentController.cs" />

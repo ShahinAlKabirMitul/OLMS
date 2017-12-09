@@ -51,6 +51,8 @@ import { LogoutComponent } from './account/logout/logout.component';
 
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { RoleComponent } from './account/role/role.component';
+import { RoleService } from './service/role.service';
+
 
 @NgModule({
   declarations: [
@@ -74,6 +76,7 @@ import { RoleComponent } from './account/role/role.component';
     ContentEntryComponent,
     LogoutComponent,
     RoleComponent,
+
     
  
     
@@ -93,6 +96,7 @@ import { RoleComponent } from './account/role/role.component';
     MatFormFieldModule,
     MatInputModule,
     
+    
     NgbModule.forRoot()
     
     
@@ -110,7 +114,8 @@ import { RoleComponent } from './account/role/role.component';
     UserService,
     CommonService,
     UserProfile,
-    AuthGuard
+    AuthGuard,
+    RoleService,
   ],
   bootstrap: [AppComponent]
 })

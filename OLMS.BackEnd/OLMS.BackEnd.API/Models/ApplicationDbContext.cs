@@ -16,5 +16,7 @@ namespace OLMS.BackEnd.API.Models
         }
         public DbSet<Permission> Permissions { set; get; }
         public DbSet<Resource>Resources { set; get; }
+
+        public System.Data.Entity.DbSet<OLMS.BackEnd.API.Models.ApplicationRole> IdentityRoles { get; set; }
     }
 }

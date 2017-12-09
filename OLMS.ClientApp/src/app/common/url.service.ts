@@ -8,12 +8,14 @@ export class UrlService {
   course:string;
   register:string;
   content:string;
+  role:string;
   constructor() { 
     this.student="Student";
     this.teacher="Teacher";
     this.course="Course";
     this.register="Account/register";
     this.content="Content";
+    this.role="Role";
   }
 
 }
