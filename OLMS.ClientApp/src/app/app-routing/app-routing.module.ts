@@ -1,3 +1,4 @@
+import { RoleComponent } from '../account/role/role.component';
 import { LoginComponent } from '../account/login/login.component';
 import { RegistrationComponent } from '../account/registration/registration.component';
 import { TeacherEntryComponent } from '../teacher/teacher-entry/teacher-entry.component';
@@ -75,6 +76,11 @@ const appRouting: Routes =[
     component:LoginComponent,
    
   },
+  { path: 'role',
+  component:RoleComponent,
+  canActivate:[AuthGuard]
+ 
+},
 
 ]
 @NgModule({

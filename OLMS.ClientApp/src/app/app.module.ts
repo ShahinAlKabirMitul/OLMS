@@ -50,6 +50,7 @@ import { ContentEntryComponent } from './course/content/content-entry/content-en
 import { LogoutComponent } from './account/logout/logout.component';
 
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { RoleComponent } from './account/role/role.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     ContentListComponent,
     ContentEntryComponent,
     LogoutComponent,
+    RoleComponent,
     
  
     
