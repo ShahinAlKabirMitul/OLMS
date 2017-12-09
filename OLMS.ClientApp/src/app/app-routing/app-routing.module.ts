@@ -1,3 +1,4 @@
+import { ResourceComponent } from '../account/resource/resource.component';
 import { RoleComponent } from '../account/role/role.component';
 import { LoginComponent } from '../account/login/login.component';
 import { RegistrationComponent } from '../account/registration/registration.component';
@@ -79,7 +80,10 @@ const appRouting: Routes =[
   { path: 'role',
   component:RoleComponent,
   canActivate:[AuthGuard]
- 
+},
+{ path: 'resource',
+component:ResourceComponent,
+canActivate:[AuthGuard]
 },
 
 ]

@@ -25,4 +25,7 @@ export class RegistrationComponent implements OnInit {
       alert( s );
     });
   }
+  reset(){
+    this.model=new User();
+  }
 }

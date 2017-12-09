@@ -32,7 +32,7 @@
      <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-              <label for="">Password</label>
+              <label for="">Retype Password</label>
               <input type="password" #ConfirmPassword="ngModel" [(ngModel)]="model.ConfirmPassword" name="ConfirmPassword" class="form-control" required >
               <div class="alert alert-danger" *ngIf="ConfirmPassword.touched && ConfirmPassword.invalid">
                 Enter Password
@@ -45,7 +45,7 @@
      
       <button type="button"  [disabled]="!f.valid"
       (click)="save()"  class="btn btn-primary"  >Save</button>
-      <button type="button" class="btn btn-primary">Reset</button>
+      <button type="button" (click)="reset()" class="btn btn-primary">Reset</button>
     </div>
   </div>
 

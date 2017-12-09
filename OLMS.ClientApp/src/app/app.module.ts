@@ -53,6 +53,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { RoleComponent } from './account/role/role.component';
 import { RoleService } from './service/role.service';
 import { ResourceComponent } from './account/resource/resource.component';
+import { ResourceService } from './service/resource.service';
 
 
 @NgModule({
@@ -118,6 +119,7 @@ import { ResourceComponent } from './account/resource/resource.component';
     UserProfile,
     AuthGuard,
     RoleService,
+    ResourceService,
   ],
   bootstrap: [AppComponent]
 })
