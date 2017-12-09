@@ -54,7 +54,7 @@ import { RoleComponent } from './account/role/role.component';
 import { RoleService } from './service/role.service';
 import { ResourceComponent } from './account/resource/resource.component';
 import { ResourceService } from './service/resource.service';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -98,6 +98,7 @@ import { ResourceService } from './service/resource.service';
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCheckboxModule,
     
     
     NgbModule.forRoot()

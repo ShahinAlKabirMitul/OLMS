@@ -13,6 +13,8 @@ using OLMS.BackEnd.API.Models;
 
 namespace OLMS.BackEnd.API.Controllers.IdentityController
 {
+    [Authorize]
+    [RoutePrefix("api/Resource")]
     public class ResourcesController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -72,9 +74,11 @@ namespace OLMS.BackEnd.API.Controllers.IdentityController
         }
 
         // POST: api/Resources
+        [Route("Add")]
         [ResponseType(typeof(Resource))]
         public async Task<IHttpActionResult> PostResource(Resource resource)
         {
+            resource.Id = Guid.NewGuid().ToString();
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -98,7 +102,7 @@ namespace OLMS.BackEnd.API.Controllers.IdentityController
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = resource.Id }, resource);
+            return Ok(resource.Id);
         }
 
         // DELETE: api/Resources/5
