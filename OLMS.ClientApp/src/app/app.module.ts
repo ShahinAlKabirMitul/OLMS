@@ -32,12 +32,12 @@ import { CourseEntryComponent } from './course/course-entry/course-entry.compone
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { StudentEntryComponent } from './student/student-entry/student-entry.component';
 import { CourseService } from './service/course.service';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule} from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { CourseCardComponent } from './course/course-card/course-card.component';
 import { LoginComponent } from './account/login/login.component';
 import { LoginService } from './service/login.service';
@@ -49,18 +49,17 @@ import { ContentListComponent } from './course/content/content-list/content-list
 import { ContentEntryComponent } from './course/content/content-entry/content-entry.component';
 import { LogoutComponent } from './account/logout/logout.component';
 
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { RoleComponent } from './account/role/role.component';
 import { RoleService } from './service/role.service';
 import { ResourceComponent } from './account/resource/resource.component';
 import { ResourceService } from './service/resource.service';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PermissionComponent } from './account/permission/permission.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-  
     StudentListComponent,
     NavbarComponent,
     TeacherListComponent,
@@ -74,16 +73,12 @@ import { PermissionComponent } from './account/permission/permission.component';
     CourseCardComponent,
     RegistrationComponent,
     LoginComponent,
-  
     ContentListComponent,
     ContentEntryComponent,
     LogoutComponent,
     RoleComponent,
     ResourceComponent,
     PermissionComponent,
-
-    
- 
     
   ],
   imports: [
@@ -93,19 +88,13 @@ import { PermissionComponent } from './account/permission/permission.component';
     HttpModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     MatSelectModule,
-    MatNativeDateModule
-    ,
+    MatNativeDateModule,
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    
-    
     NgbModule.forRoot()
-    
-    
   ],
   providers: [
     BaseService,

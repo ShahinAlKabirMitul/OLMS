@@ -52,10 +52,12 @@ export class UserService {
           password: password
       };
       console.log('credentials',credentials);
-      let m='username='+userName+'&password='+password+'&grant_type=password';
+    //  let m='username='+userName+'&password='+password+'&grant_type=password';
+      let m =`username=${userName}&password=${password}&grant_type=password`;
+      let data =`username=${userName}&password=${password}&grant_type=password`;
       let url = this.commonService.getBaseUrl();
      console.log('Url',url);
-      return this.http.post(url, m, options)
+      return this.http.post(url, data, options)
           .map((response: Response) => {
               var userProfile: IProfile = response.json();
               this.authProfile.setProfile(userProfile);

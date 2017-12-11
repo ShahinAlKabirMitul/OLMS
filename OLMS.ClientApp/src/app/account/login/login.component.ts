@@ -42,6 +42,7 @@ login() {
         }
     },
     error => {
+      console.log('error', error);
         var results = error['_body'];
         alert(error.statusText );
     });

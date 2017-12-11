@@ -11,7 +11,8 @@ using OLMS.BackEnd.ViewModel;
 namespace OLMS.BackEnd.API.Controllers
 {
     [RoutePrefix("api/ContentQuery")]
-    public class ContentQueryController : BaseQueryController<Content, ContentRequestModel, ContentViewModel>
+    public class ContentQueryController : ApiController
     {
+       
     }
 }

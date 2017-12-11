@@ -29,11 +29,11 @@ export class BaseService<T> {
    getDataById(id: string):Observable<T> {
     return this.repo.get(this.subUrl+'query',id).map( (res)=>{ return <T> res.json()})
   }
+  //  search(viewModel:any):Observable<T[]> {
+  //    return this.repo.post(this.subUrl+'query',viewModel).map( res=>res.json());
+  //   // return data.subscribe(s=>)
+  //  }
    search(viewModel:any):Observable<T[]> {
-     return this.repo.post(this.subUrl+'query',viewModel).map( res=>res.json());
-    // return data.subscribe(s=>)
-   }
-   searchAuth(viewModel:any):Observable<T[]> {
     return this.repo.postAuth(this.subUrl+'query',viewModel).map( res=>res.json());
    // return data.subscribe(s=>)
   }

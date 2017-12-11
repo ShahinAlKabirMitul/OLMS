@@ -20,6 +20,7 @@ export class RepogitoryService {
   }
 
   post(subUrl:string,data:any){
+    
     return  this.http.post(this.baseUrl+subUrl,data,this.options);
 
    }

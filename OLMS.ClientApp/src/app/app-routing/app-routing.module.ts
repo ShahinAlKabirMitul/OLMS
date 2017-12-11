@@ -1,3 +1,4 @@
+import { PermissionComponent } from '../account/permission/permission.component';
 import { ResourceComponent } from '../account/resource/resource.component';
 import { RoleComponent } from '../account/role/role.component';
 import { LoginComponent } from '../account/login/login.component';
@@ -85,6 +86,11 @@ const appRouting: Routes =[
 component:ResourceComponent,
 canActivate:[AuthGuard]
 },
+{ path: 'permission',
+component:PermissionComponent,
+canActivate:[AuthGuard]
+},
+
 
 ]
 @NgModule({
