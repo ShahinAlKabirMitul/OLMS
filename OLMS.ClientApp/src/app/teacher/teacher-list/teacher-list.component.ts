@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 import { BaseService } from '../../common/base.service';
 import { Observable } from 'rxjs/Rx';
 import { BaseRequestModel } from '../../request.model/base.request';
@@ -16,8 +17,8 @@ import { BaseController } from '../../common/controller/baseController';
   styleUrls: ['./teacher-list.component.css']
 })
 export class TeacherListComponent extends BaseController<Teacher> implements OnInit {
-  constructor(public teacherService: TeacherService, private router: Router) {
-    super(teacherService);
+  constructor(public teacherService: TeacherService, private router: Router,public authProfile:UserProfile) {
+    super(teacherService,authProfile);
     this.reset();
 
   }

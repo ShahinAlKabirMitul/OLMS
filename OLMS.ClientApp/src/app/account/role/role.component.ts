@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Role } from '../../model/role';
 import { BaseController } from '../../common/controller/baseController';
@@ -12,8 +13,8 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class RoleComponent extends BaseController<Role> implements OnInit,OnDestroy {
 
-  constructor(public service:RoleService,private router:Router,private route:ActivatedRoute) { 
-    super(service);
+  constructor(public service:RoleService,private router:Router,private route:ActivatedRoute,public authProfile:UserProfile) { 
+    super(service,authProfile);
   }
 
  

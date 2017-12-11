@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 import { overrideOptions } from '@angular/cli/utilities/override-options';
 import { BaseController } from '../../common/controller/baseController';
 
@@ -15,8 +16,8 @@ import { Student } from '../../model/student';
 })
 export class StudentEntryComponent extends BaseController<Student>  implements OnInit ,OnDestroy {
 
-  constructor(service:StudentService) {
-    super(service);
+  constructor(service:StudentService,public authProfile:UserProfile) {
+    super(service,authProfile);
     this.reset();
  }
 

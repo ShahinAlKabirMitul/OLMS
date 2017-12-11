@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 import { BaseController } from '../../common/controller/baseController';
 import { StudentService } from './../../service/student.service';
 import { BaseService } from '../../common/base.service';
@@ -20,8 +21,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentListComponent extends BaseController<Student> implements OnInit {
 
-  constructor(public service: StudentService, private router: Router) {
-    super(service);
+  constructor(public service: StudentService, private router: Router,public profile:UserProfile) {
+    super(service,profile);
     this.reset();
     console.log(' I am StudentList')
   }

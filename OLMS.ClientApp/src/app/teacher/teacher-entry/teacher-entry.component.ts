@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 import { BaseController } from '../../common/controller/baseController';
 import { selector } from 'rxjs/operator/publish';
 
@@ -25,8 +26,8 @@ export class TeacherEntryComponent extends BaseController<Teacher>  implements O
  
   title='Teacher Entry';
   id:string;
-  constructor(public service:TeacherService,private router:Router,private route:ActivatedRoute) { 
-    super(service);
+  constructor(public service:TeacherService,private router:Router,private route:ActivatedRoute,public authProfile:UserProfile) { 
+    super(service,authProfile);
    // this.model=new Teacher();
     this.reset();
   

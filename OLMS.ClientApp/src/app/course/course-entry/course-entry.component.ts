@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 import { Component, OnInit } from '@angular/core';
 import { BaseController } from '../../common/controller/baseController';
 import { Course } from '../../model/Course';
@@ -17,8 +18,8 @@ export class CourseEntryComponent extends BaseController<Course> {
 
  public teachers: Observable<Teacher[]>;
  
-  constructor(service:CourseService,public teacherService:TeacherService) {
-    super(service)
+  constructor(service:CourseService,public teacherService:TeacherService,public authProfile:UserProfile) {
+    super(service,authProfile)
     this.reset();
     this.loadTeacher();
 

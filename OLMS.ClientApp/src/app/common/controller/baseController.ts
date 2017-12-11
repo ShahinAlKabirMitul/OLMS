@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 
 import { Entity } from './../../model/entity';
 import { BaseService } from './../base.service';
@@ -6,7 +7,9 @@ import { Observable } from 'rxjs/Rx';
 export abstract class BaseController<T extends Entity>  {
     public model: T;
     service: BaseService<T>;
-    constructor(baseService: BaseService<T>) {
+
+
+    constructor(baseService: BaseService<T>,public authProfile:UserProfile) {
         this.service = baseService;
         this.requestModel = new BaseRequestModel();
         this.requestModel.page = 1;
@@ -14,8 +17,8 @@ export abstract class BaseController<T extends Entity>  {
         this.requestModel.orderBy = 'Modified';
         this.model = this.createInstence(Entity) as T;
         console.log(this.model);
-
     }
+    
     createInstence<Entity>(c: new () => Entity): Entity {
         return new c();
 
@@ -24,9 +27,9 @@ export abstract class BaseController<T extends Entity>  {
     async  save() {
         console.log(this.model);
         this.model.created=new Date();
-        this.model.createdBy="me";
+        this.model.createdBy=this.authProfile.getProfile().currentUser.userName;
         this.model.modified=new Date();
-        this.model.modifiedBy="me";
+        this.model.modifiedBy=this.authProfile.getProfile().currentUser.userName;
         this.model.id="1";
         await this.service.save(this.model).toPromise().then( (s)=>{
            if(s.status==200)
