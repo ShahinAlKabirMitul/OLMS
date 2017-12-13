@@ -1,3 +1,4 @@
+import { UserProfile } from '../../../model/userProfile';
 import { BaseRequestModel } from '../../../request.model/base.request';
 import { Observable } from 'rxjs/Rx';
 import { Content } from '../../../model/content';
@@ -15,7 +16,7 @@ import { CourseService } from '../../../service/course.service';
 export class ContentEntryComponent extends BaseController<Content> implements OnInit {
 
   public courses: Observable<Course[]>;
-  constructor(public service:ContentService,private courseServices:CourseService) {super(service);
+  constructor(public service:ContentService,private courseServices:CourseService,public authProfile:UserProfile) {super(service,authProfile);
   }
  
    ngOnInit() {

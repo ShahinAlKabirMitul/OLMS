@@ -1,3 +1,4 @@
+import { UserProfile } from '../../model/userProfile';
 
 
 import { Resource, ResourceType } from '../../model/resource';
@@ -16,8 +17,8 @@ export class ResourceComponent extends BaseController<Resource> implements OnIni
   
   
 
-  constructor(service:ResourceService) {
-    super(service);
+  constructor(service:ResourceService,public authProfile:UserProfile) {
+    super(service,authProfile);
     this.reset();
      this.type = [
       new ResourceType('0', 'API'),

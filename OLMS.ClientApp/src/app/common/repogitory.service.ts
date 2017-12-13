@@ -2,29 +2,28 @@
 import { contentHeaders } from './headers';
 import { Headers, Http, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { environment } from './../../environments/environment';
 import { UserProfile } from '../model/userProfile';
 
 @Injectable()
 export class RepogitoryService {
 
-  baseUrl:string;
+ 
   header=new Headers({'Content-Type':'application/json'}) 
    options = new RequestOptions(
     { headers: contentHeaders });
 
 
   constructor(private http:Http,private authProfile:UserProfile) { 
-    this.baseUrl=environment.api;
+   
     
   }
 
-  post(subUrl:string,data:any){
+  post(url:string,data:any){
     
-    return  this.http.post(this.baseUrl+subUrl,data,this.options);
+    return  this.http.post(url,data,this.options);
 
    }
-   postAuth(subUrl:string,data:any){
+   postAuth(url:string,data:any){
     console.log('PostAuth');
     let options = null;
     let profile = this.authProfile.getProfile();
@@ -36,11 +35,11 @@ export class RepogitoryService {
         options = new RequestOptions({ headers: headers });
     }
 
-    return  this.http.post(this.baseUrl+subUrl,data,options);
+    return  this.http.post(url,data,options);
 
    }
 
-  get(subUrl:string,data:any){
-    return this.http.get(this.baseUrl+subUrl+"/"+data);
+  get(url:string,data:any){
+    return this.http.get(url+"/"+data);
   } 
 }
