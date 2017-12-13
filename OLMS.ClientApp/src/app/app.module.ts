@@ -112,6 +112,7 @@ import { PermissionComponent } from './account/permission/permission.component';
     AuthGuard,
     RoleService,
     ResourceService,
+    {provide:ErrorHandler,useClass:AppErrorHandler}
   ],
   bootstrap: [AppComponent]
 })

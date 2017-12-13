@@ -1,3 +1,8 @@
+import { AppError } from '../common/error/app-error';
+import { NotAuthorized } from '../common/error/notauthorized';
+import { BadInout } from '../common/error/bad-input';
+import { NotFoundError } from '../common/error/NotFoundError';
+import { Observable } from 'rxjs/Rx';
 import { contentHeaders } from '../common/headers';
 
 
@@ -24,8 +29,26 @@ export class RegistrationService {
    }
    reister(model:User) {
     
-    return this.http.post(this.baseUrl+this.urlService.register,model,{ headers:new Headers(this.headers) })
+    return this.http.post(this.baseUrl+this.urlService.register,model,{ headers:new Headers(this.headers) }).catch(this.handleError);
   }
+
+  private handleError(error:Response){
+    if(error.status===404){
+      return Observable.throw(new NotFoundError())
+          .catch(this.handleError);
+    }
+    else if(error.status===400)
+      return Observable.throw(new BadInout(error.json()));
+      else if(error.status===401){
+        
+        return Observable.throw(new NotAuthorized());
+      }
+     
+    else{
+      return Observable.throw(new AppError());
+    }
+  }
+  
   login(model:User) {
    
     

@@ -26,17 +26,12 @@ export class BaseService<T> {
     let url=this.baseApiUrl+this.modelUrl+'/add'
     return this.repo.postAuth(url,model);
   }
-  // search(viewModel:any) {
-  //   return this.repo.post(this.subUrl+'query',viewModel);
-  //  }
+
    getDataById(id: string):Observable<T> {
     let url=this.baseApiUrl+this.modelUrl+'query'
     return this.repo.get(url,id).map( (res)=>{ return <T> res.json()})
   }
-  //  search(viewModel:any):Observable<T[]> {
-  //    return this.repo.post(this.subUrl+'query',viewModel).map( res=>res.json());
-  //   // return data.subscribe(s=>)
-  //  }
+  
    search(viewModel:any):Observable<T[]> {
     let url=this.baseApiUrl+this.modelUrl+'query'
     return this.repo.postAuth(url,viewModel).map( res=>res.json());

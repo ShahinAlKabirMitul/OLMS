@@ -1,9 +1,14 @@
+import { NotFoundError } from '../error/NotFoundError';
+import { AppError } from '../error/app-error';
 import { UserProfile } from '../../model/userProfile';
 
 import { Entity } from './../../model/entity';
 import { BaseService } from './../base.service';
 import { BaseRequestModel } from './../../request.model/base.request';
 import { Observable } from 'rxjs/Rx';
+import { error } from 'selenium-webdriver';
+import { NotAuthorized } from '../error/notauthorized';
+import { BadInout } from '../error/bad-input';
 export abstract class BaseController<T extends Entity>  {
     public model: T;
     service: BaseService<T>;
@@ -25,7 +30,7 @@ export abstract class BaseController<T extends Entity>  {
     }
    
     async  save() {
-        console.log(this.model);
+     
         this.model.created=new Date();
         this.model.createdBy=this.authProfile.getProfile().currentUser.userName;
         this.model.modified=new Date();
@@ -35,9 +40,24 @@ export abstract class BaseController<T extends Entity>  {
            if(s.status==200)
             alert('Save Succssfully');
             this.reset();
+
           
-        } ).catch( (s)=>{
-            alert(s);
+          
+        } ).catch( (error: AppError)=>{
+            if (error instanceof NotFoundError) {
+                alert('Data Not Found');
+            }
+            else if(error instanceof NotAuthorized){
+                alert('You are not authozid for this action');
+            }
+            else if(error instanceof BadInout){
+                alert('Bad Input');
+            }
+            else{
+                alert('Something wrong');
+            }
+           
+
         } );
 
     }

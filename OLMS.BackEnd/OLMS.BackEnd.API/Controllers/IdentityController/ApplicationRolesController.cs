@@ -13,7 +13,7 @@ using OLMS.BackEnd.API.Models;
 
 namespace OLMS.BackEnd.API.Controllers.IdentityController
 {
-    [Authorize]
+    [Authorize(Roles="Admin")]
     [RoutePrefix("api/Role")]
 
     public class ApplicationRolesController : ApiController

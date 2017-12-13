@@ -72,7 +72,7 @@ const appRouting: Routes =[
   },
   { path: 'registration',
     component:RegistrationComponent,
-    canActivate:[AuthGuard]
+    
   },
   { path: 'login',
     component:LoginComponent,

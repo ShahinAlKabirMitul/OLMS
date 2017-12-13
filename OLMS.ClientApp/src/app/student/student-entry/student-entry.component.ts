@@ -20,7 +20,11 @@ export class StudentEntryComponent extends BaseController<Student>  implements O
     super(service,authProfile);
     this.reset();
  }
-
+ async save(){
+   // dskfh
+   console.log('I am Student Entry Save function');
+   super.save();
+ }
   ngOnInit() {
   }
   ngOnDestroy(){
