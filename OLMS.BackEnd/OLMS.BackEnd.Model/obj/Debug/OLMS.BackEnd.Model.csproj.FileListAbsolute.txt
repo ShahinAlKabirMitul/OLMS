@@ -46,3 +46,4 @@ C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csproj.CoreCompileInputs.cache
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.dll
 C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.pdb
+C:\Users\mitul\Documents\Git-Repo\OLMS\OLMS.BackEnd\OLMS.BackEnd.Model\obj\Debug\OLMS.BackEnd.Model.csprojResolveAssemblyReference.cache

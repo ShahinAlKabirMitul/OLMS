@@ -3,12 +3,13 @@ import { Router } from '@angular/router';
 import { NotFoundError } from './error/NotFoundError';
 import { AppError } from './error/app-error';
 import { BadInout } from './error/bad-input';
-import { Observable } from 'rxjs/Rx';
 
+import 'rxjs/add/operator/map';
 import { contentHeaders } from './headers';
 import { Headers, Http, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { UserProfile } from '../model/userProfile';
+import { Observable } from 'rxjs/Observable';
 
 
 
