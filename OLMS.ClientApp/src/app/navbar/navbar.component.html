@@ -1,39 +1,59 @@
-<nav class="navbar navbar-toggleable-md navbar navbar-inverse bg-primary">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-toggleable-md navbar navbar navbar-inverse bg-primary">
+
+  <a class="navbar-brand" routerLinkActive="active" routerLink="/">
+    <i class="fa fa-pagelines" aria-hidden="true"> Learning Management System</i>
+  
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    (click)="isExpanded = !isExpanded" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" routerLinkActive="active" routerLink="/" >OLMS</a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link " routerLinkActive="active" routerLink="/student" >Student <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link"  routerLinkActive="active" routerLink="/teacher">Teacher</a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/course">Course</a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/content">Content</a>
-      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/registration">Registration</a>
-   
-      <ul class="navbar-nav">
-          <ng-template #anonymousUser>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/login">Login</a>
-              </li>
-            </ng-template>
-            <li ngbDropdown *ngIf=" authService.isAuthenticated();else anonymousUser" class="nav-item dropdown ">
-                <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {{Profile.currentUser.userName}}</a>
-                <div ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdown01">
-                 
-                  <a class="dropdown-item" (click)=logOut()>Log Out</a>
-                 
-                </div>
-              </li>
-              
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link " routerLinkActive="active" routerLink="/student">Student
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/teacher">Teacher</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/course">Course</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/content">Content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link" routerLinkActive="active" routerLink="/registration">Registration</a>
+        </li>
       </ul>
-     
-      
+
+      <ul class="navbar-nav ">
+        <ng-template #anonymousUser>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+        </ng-template>
+        <li ngbDropdown *ngIf=" authService.isAuthenticated();else anonymousUser" class="nav-item dropdown ">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{Profile.currentUser.userName}}</a>
+          <div ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdown01">
+
+            <a class="dropdown-item" (click)=logOut()>Log Out</a>
+            <a class="dropdown-item" >My Profile</a>
+            <a class="dropdown-item" >My Course</a>
+          </div>
+        </li>
+
+      </ul>
+
+
     </div>
   </div>
 </nav>
-<div class="container-fluid" *ngIf=" authService.isAuthenticated();" >
+<div class="container-fluid" *ngIf=" authService.isAuthenticated();">
   <div class="row">
     <div class="col-md-12 text-center">
       <p class="">
@@ -62,3 +82,4 @@
 
   </div>
 </div>
+
