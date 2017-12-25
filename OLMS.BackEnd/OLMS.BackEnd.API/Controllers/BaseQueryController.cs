@@ -8,13 +8,10 @@ namespace OLMS.BackEnd.API.Controllers
 {
     public class BaseQueryController<T, TR, TV> : ApiController where T : Entity where TR : BaseRequestModel<T> where TV : BaseViewModel<T>
     {
-        private readonly BaseService<T, TR, TV> _studentService;
-
-
-
+        private readonly BaseService<T, TR, TV> baseService;
         public BaseQueryController()
         {
-            _studentService = new BaseService<T, TR, TV>();
+            baseService = new BaseService<T, TR, TV>();
         }
       
         [HttpPost]
@@ -23,7 +20,7 @@ namespace OLMS.BackEnd.API.Controllers
         public IHttpActionResult Search(TR request)
         {
             // StudentService service = new StudentService();
-            var students = _studentService.Search(request);
+            var students = baseService.Search(request);
             return this.Ok(students);
         }
 
@@ -33,7 +30,7 @@ namespace OLMS.BackEnd.API.Controllers
         [ActionName("Get")]
         public TV Get(string id)
         {
-            var data = _studentService.Detail(id);
+            var data = baseService.Detail(id);
             return data;
         }
     }
