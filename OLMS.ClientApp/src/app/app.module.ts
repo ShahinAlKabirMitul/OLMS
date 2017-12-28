@@ -49,7 +49,7 @@ import { ContentListComponent } from './course/content/content-list/content-list
 import { ContentEntryComponent } from './course/content/content-entry/content-entry.component';
 import { LogoutComponent } from './account/logout/logout.component';
 
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RoleComponent } from './account/role/role.component';
 import { RoleService } from './service/role.service';
 import { ResourceComponent } from './account/resource/resource.component';

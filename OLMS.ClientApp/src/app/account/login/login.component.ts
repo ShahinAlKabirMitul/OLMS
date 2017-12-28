@@ -27,17 +27,16 @@ export class LoginComponent implements OnInit {
 //  })
 // }
 login() {
-  
   let userName = this.model.email;
   let password = this.model.password;
-  console.log('model'+this.model);
+  console.log('model' + this.model);
   var result = this.userService.login(userName, password).subscribe(
     response => {
-        console.log('login response',response);
+        console.log('login response', response);
         if (this.userService.redirectUrl) {
             this.router.navigateByUrl(this.userService.redirectUrl);
         } else {
-           let landingRoute=response.landingRoute;
+           let landingRoute = response.landingRoute;
             this.router.navigate([landingRoute]);
         }
     },

@@ -24,42 +24,42 @@ export class UserService {
       private commonService: CommonService) { }
 
   isAuthenticated() {
+      // tslint:disable-next-line:prefer-const
       let profile = this.authProfile.getProfile();
-      var validToken = profile.token != "" && profile.token != null;
-      var isTokenExpired = this.isTokenExpired(profile);
+      const validToken = profile.token !== '' && profile.token != null;
+      const isTokenExpired = this.isTokenExpired(profile);
       return validToken && !isTokenExpired;
   }
   isAuthorized() {
-      let profile = this.authProfile.getProfile();
-      var validToken = profile.token != "" && profile.token != null;
-      var isTokenExpired = this.isTokenExpired(profile);
+      const profile = this.authProfile.getProfile();
+      const validToken = profile.token !== '' && profile.token != null;
+      const isTokenExpired = this.isTokenExpired(profile);
       return validToken && !isTokenExpired;
   }
   isTokenExpired(profile: IProfile) {
-      var expiration = new Date(profile.expiration)
+      const expiration = new Date(profile.expiration);
       return expiration < new Date();
   }
 
   login(userName: string, password: string) {
-      console.log('User Login'+userName+'-'+password);
-    
-      let options = new RequestOptions(
+      console.log('User Login' + userName + '-' + password);
+      const options = new RequestOptions(
           { headers: contentHeaders });
 
-      var credentials = {
+      const credentials = {
           grant_type: 'password',
           email: userName,
           password: password
       };
-      console.log('credentials',credentials);
+      console.log('credentials', credentials);
     //  let m='username='+userName+'&password='+password+'&grant_type=password';
-      let m =`username=${userName}&password=${password}&grant_type=password`;
-      let data =`username=${userName}&password=${password}&grant_type=password`;
-      let url = this.commonService.getBaseUrl();
-     console.log('Url',url);
+      const m = `username=${userName}&password=${password}&grant_type=password`;
+      const data = `username=${userName}&password=${password}&grant_type=password`;
+      const url = this.commonService.getBaseUrl();
+     console.log('Url', url );
       return this.http.post(url, data, options)
           .map((response: Response) => {
-              var userProfile: IProfile = response.json();
+              const userProfile: IProfile = response.json();
               this.authProfile.setProfile(userProfile);
               return response.json();
           }).catch(this.commonService.handleFullError);
@@ -68,10 +68,10 @@ export class UserService {
       if (!userName || !password) {
           return;
       }
-      let options = new RequestOptions(
+      const options = new RequestOptions(
           { headers: contentHeaders });
 
-      var credentials = {
+      const credentials = {
           email: userName,
           password: password,
           confirmPassword: confirmPassword
