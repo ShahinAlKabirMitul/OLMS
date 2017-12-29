@@ -7,4 +7,10 @@
     margin: 0 auto;
     height: 400px;
   }
-  
+  .cardmitul{
+    display: block;
+    width: 200px;
+    height:200px;
+   
+    box-sizing: content-box;
+  }

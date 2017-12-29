@@ -1,16 +1,21 @@
 <form #f="ngForm" >
 
  <hr>
-
-  <div style="width:100%; height: 200px">
-    <carousel [sources]="imageSources" [config]="config">
-    </carousel>
+  <div class="row">
+      <div style="width:100%; height: 200px">
+          <carousel [sources]="imageSources" [config]="config">
+          </carousel>
+        </div>
   </div>
+
   <hr>
   <div class="row">
     <ng-container *ngFor="let p of courses | async ;let i=index">
-      <div class="col" style="height: 50px ; width: 50px">
-        <course-card [course]=p></course-card>
+      <div class="col">
+        <div class="row" >
+            <course-card [course]=p></course-card>
+        </div>
+       
         
       </div>
       
