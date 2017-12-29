@@ -1,3 +1,9 @@
+import { SlideComponent } from './ImageSlider/slide/slide.component';
+import { PinsComponent } from './ImageSlider/pins/pins.component';
+import { ArrowsComponent } from './ImageSlider/arrows/arrows.component';
+import { CarouselComponent } from './ImageSlider/carousel/carousel.component';
+import { WindowWidthService } from './service/window-width.service';
+import { CarouselServiceService } from './service/carousel-service.service';
 import { AuthGuard } from './common/authGuard';
 import { UserProfile } from './model/userProfile';
 import { RegistrationService } from './service/registration.service';
@@ -56,6 +62,11 @@ import { ResourceComponent } from './account/resource/resource.component';
 import { ResourceService } from './service/resource.service';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PermissionComponent } from './account/permission/permission.component';
+import { CarouselModule } from 'angular4-carousel';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -79,7 +90,11 @@ import { PermissionComponent } from './account/permission/permission.component';
     RoleComponent,
     ResourceComponent,
     PermissionComponent,
-    
+    CarouselComponent,
+    ArrowsComponent,
+    PinsComponent,
+    SlideComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -94,7 +109,8 @@ import { PermissionComponent } from './account/permission/permission.component';
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    CarouselModule
   ],
   providers: [
     BaseService,
@@ -112,7 +128,10 @@ import { PermissionComponent } from './account/permission/permission.component';
     AuthGuard,
     RoleService,
     ResourceService,
-    {provide:ErrorHandler,useClass:AppErrorHandler}
+    {provide: ErrorHandler, useClass: AppErrorHandler},
+    CarouselServiceService,
+    
+    WindowWidthService
   ],
   bootstrap: [AppComponent]
 })
