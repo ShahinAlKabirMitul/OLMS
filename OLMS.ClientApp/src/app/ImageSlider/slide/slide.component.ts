@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-@Component({
+@Component({ 
   selector: 'carousel-slide',
   templateUrl: './slide.component.html',
   styleUrls: ['./slide.component.css']
